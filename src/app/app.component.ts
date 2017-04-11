@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 
+import { BlogListComponent } from './blog-list/blog-list.component';
+
 @Component({
-  selector: 'app-root',
+  selector: 'ck-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
