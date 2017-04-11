@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-import { BlogListComponent } from './blog-list/blog-list.component';
-
 @Component({
   selector: 'ck-root',
   templateUrl: './app.component.html',
@@ -9,4 +7,5 @@ import { BlogListComponent } from './blog-list/blog-list.component';
 })
 export class AppComponent {
   title = 'app works!';
+  blogEntries = [ 'one', 'two', 'three' ];
 }
