@@ -1,16 +1,17 @@
-import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
-import {BlogFormComponent} from './blog-form.component';
+import { BlogFormComponent } from './blog-form.component';
+import { ShowErrorComponent } from '../show-error/show-error.component';
 
 describe('BlogFormComponent', () => {
     let component: BlogFormComponent;
-    let fixture: ComponentFixture < BlogFormComponent >;
+    let fixture: ComponentFixture <BlogFormComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
                 imports: [ FormsModule ],
-                declarations: [ BlogFormComponent ]
+                declarations: [ BlogFormComponent, ShowErrorComponent ]
             }).compileComponents();
     }));
 

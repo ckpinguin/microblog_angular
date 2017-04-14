@@ -4,12 +4,13 @@ import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {BlogListComponent} from './blog-list/blog-list.component';
 import {BlogFormComponent} from './blog-form/blog-form.component';
+import {ShowErrorComponent} from './show-error/show-error.component';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [FormsModule],
-            declarations: [AppComponent, BlogListComponent, BlogFormComponent]
+            declarations: [AppComponent, BlogListComponent, BlogFormComponent, ShowErrorComponent]
         }).compileComponents();
     }));
 
