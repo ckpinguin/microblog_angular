@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { BlogEntry } from '../model/blog-entry/blog-entry';
+import { BlogEntry } from '../model/model-interfaces';
 
 @Component({
   selector: 'ck-blog-list',
