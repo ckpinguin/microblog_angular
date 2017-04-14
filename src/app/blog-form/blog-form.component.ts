@@ -1,6 +1,8 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+import { BlogEntry } from '../model/model-interfaces';
+
 @Component({
     selector: 'ck-blog-form',
     templateUrl: './blog-form.component.html',
@@ -9,8 +11,11 @@ import { NgForm } from '@angular/forms';
 export class BlogFormComponent implements OnInit {
     @ViewChild(NgForm) form: NgForm; // just to have it for unit tests
     @Output() saveEntry = new EventEmitter();
+    entry: BlogEntry;
 
-    constructor() { }
+    constructor() {
+        this.entry = {};
+    }
 
     ngOnInit() {
     }
@@ -20,7 +25,8 @@ export class BlogFormComponent implements OnInit {
     }
 
     onSubmit(formValue: any) {
-        this.emitSaveEntry(formValue);
+        this.entry = formValue;
+        this.emitSaveEntry(this.entry);
     }
 
 }

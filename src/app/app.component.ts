@@ -1,21 +1,17 @@
 import { Component } from '@angular/core';
 
-import { BlogEntry } from './model/blog-entry/blog-entry';
+import { BlogEntry } from './model/model-interfaces';
 
 @Component({
   selector: 'ck-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.styl']
 })
 export class AppComponent {
   title = 'CK\'s microblog!';
   blogEntries: Array<BlogEntry> = [];
 
   saveBlogEntry(newEntry) {
-/*      const entry = new BlogEntry();
-      entry.title = newEntry.title;
-      entry.image = newEntry.image;
-      entry.text = newEntry.text;*/
       this.blogEntries.push(newEntry);
   }
 
