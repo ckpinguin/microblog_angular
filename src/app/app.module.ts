@@ -5,14 +5,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
-import { BlogEntryComponent } from './blog-entry/blog-entry.component';
 import { BlogFormComponent } from './blog-form/blog-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogListComponent,
-    BlogEntryComponent,
     BlogFormComponent
   ],
   imports: [

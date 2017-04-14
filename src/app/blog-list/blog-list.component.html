@@ -1,4 +1,6 @@
 <p>
     List of blog entries:
 </p>
-<ck-blog-entry *ngFor="let entry of entries" [title]="entry"></ck-blog-entry>
+<ul>
+    <li *ngFor="let entry of entries">{{entry?.title}}</li>
+</ul>

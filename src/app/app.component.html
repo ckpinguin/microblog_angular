@@ -1,4 +1,5 @@
 <h1>
     {{title}}
 </h1>
+<ck-blog-form (saveEntry)="saveBlogEntry($event)"></ck-blog-form>
 <ck-blog-list [entries]="blogEntries"></ck-blog-list>
