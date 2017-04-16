@@ -2,5 +2,13 @@
     List of blog entries:
 </p>
 <ul>
-    <li *ngFor="let entry of entries">{{entry?.title}}</li>
+    <div class="blog-entry" *ngFor="let entry of entries">
+        <div class="blog-image">
+            <img [src]="entry.image" />
+        </div>
+        <div class="blog-summary">
+            <h2>{{entry?.title}}</h2>
+            <p>{{entry?.text}}</p>
+        </div>
+    </div>
 </ul>

@@ -15,9 +15,10 @@
         </textarea>
         <ck-show-error path="text" text="Text"></ck-show-error>
     </div>
-    <div class="control">
+    <div class="form-control">
         <label>Bild-URL:</label>
-        <input type="text" id="image" name="image" ngmodel />
+        <input type="text" id="image" name="image"
+            [(ngModel)]="entry.image" #image="ngModel" />
     </div>
     <button type="submit" class="btn btn-default"
         [disabled]="!form.valid">

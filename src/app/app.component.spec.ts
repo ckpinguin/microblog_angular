@@ -1,16 +1,18 @@
-import {TestBed, async} from '@angular/core/testing';
-import {FormsModule} from '@angular/forms';
+import { TestBed, async } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
 
-import {AppComponent} from './app.component';
-import {BlogListComponent} from './blog-list/blog-list.component';
-import {BlogFormComponent} from './blog-form/blog-form.component';
-import {ShowErrorComponent} from './show-error/show-error.component';
+import { AppComponent } from './app.component';
+import { LayoutComponent } from './layout/layout.component';
+import { NavBarComponent } from './navbar/navbar.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
+import { BlogFormComponent } from './blog-form/blog-form.component';
+import { ShowErrorComponent } from './show-error/show-error.component';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [FormsModule],
-            declarations: [AppComponent, BlogListComponent, BlogFormComponent, ShowErrorComponent]
+            declarations: [AppComponent, LayoutComponent, NavBarComponent, BlogListComponent, BlogFormComponent, ShowErrorComponent]
         }).compileComponents();
     }));
 

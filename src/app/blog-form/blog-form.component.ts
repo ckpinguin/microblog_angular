@@ -25,6 +25,7 @@ export class BlogFormComponent implements OnInit {
     }
 
     onSubmit(formValue: any) {
+        console.log(formValue);
         this.entry = formValue;
         this.emitSaveEntry(this.entry);
     }

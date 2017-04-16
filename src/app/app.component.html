@@ -1,5 +1,5 @@
-<h1>
-    {{title}}
-</h1>
-<ck-blog-form (saveEntry)="saveBlogEntry($event)"></ck-blog-form>
-<ck-blog-list [entries]="blogEntries"></ck-blog-list>
+<ck-layout>
+    <h1 title>{{title}}</h1>
+    <ck-blog-form (saveEntry)="saveBlogEntry($event)" mainContent></ck-blog-form>
+    <ck-blog-list [entries]="blogEntries" mainContent></ck-blog-list>
+</ck-layout>
