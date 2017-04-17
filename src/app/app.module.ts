@@ -13,6 +13,7 @@ import { LoginService } from './services/login.service';
 import { UserService } from './services/user.service';
 import { LayoutComponent } from './layout/layout.component';
 import { NavBarComponent } from './navbar/navbar.component';
+import { BlogItemComponent } from './blog-item/blog-item.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavBarComponent } from './navbar/navbar.component';
     ShowErrorComponent,
     LoginComponent,
     LayoutComponent,
-    NavBarComponent
+    NavBarComponent,
+    BlogItemComponent
   ],
   imports: [
     BrowserModule,

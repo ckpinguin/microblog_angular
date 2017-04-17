@@ -1,4 +1,11 @@
-<ck-navbar></ck-navbar>
-<ng-content select=[title]></ng-content>
-<ng-content select=[mainContent]></ng-content>
-<ng-content select=[footer]></ng-content>
+<div class="layout">
+    <ck-navbar></ck-navbar>
+    <ng-content select=[title]></ng-content>
+    <ng-content select=[mainContent]></ng-content>
+    <div class="jumbotron">
+        <ng-content select=[attentionItem]></ng-content>
+    </div>
+    <ng-content select=[listContent]></ng-content>
+    <!-- TODO: footer should be a compoent -->
+    <ng-content select=[footer]></ng-content>
+</div>

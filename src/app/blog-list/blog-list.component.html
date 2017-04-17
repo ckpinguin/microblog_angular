@@ -1,14 +1,6 @@
-<p>
-    List of blog entries:
-</p>
-<ul>
-    <div class="blog-entry" *ngFor="let entry of entries">
-        <div class="blog-image">
-            <img [src]="entry.image" />
-        </div>
-        <div class="blog-summary">
-            <h2>{{entry?.title}}</h2>
-            <p>{{entry?.text}}</p>
-        </div>
-    </div>
-</ul>
+<div className="BlogList">
+    <p>
+        List of blog entries:
+    </p>
+    <ck-blog-item [item]="entry" *ngFor="let entry of entries"></ck-blog-item>
+</div>
