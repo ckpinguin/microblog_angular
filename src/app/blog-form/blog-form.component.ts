@@ -9,11 +9,13 @@ import { BlogEntry } from '../model/model-interfaces';
     styleUrls: ['./blog-form.component.styl']
 })
 export class BlogFormComponent implements OnInit {
-    @Input('newEntry') entry: BlogEntry;
+    @Input('newEntry') newEntry: BlogEntry;
     @Output() saveEntry = new EventEmitter();
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
+    entry: BlogEntry;
 
     constructor() {
+        this.entry = {};
     }
 
     ngOnInit() {
@@ -25,6 +27,7 @@ export class BlogFormComponent implements OnInit {
 
     onSubmit(formValue: any) {
         this.emitSaveEntry(formValue);
+        this.entry = this.newEntry;
     }
 
 }
