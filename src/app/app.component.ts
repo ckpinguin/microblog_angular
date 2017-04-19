@@ -10,9 +10,11 @@ import { BlogEntry } from './model/model-interfaces';
 export class AppComponent {
     title = 'CK\'s microblog!';
     blogEntries: Array<BlogEntry>;
+    newEntry: BlogEntry;
 
     constructor() {
         this.blogEntries = this.getInitialState();
+        this.newEntry = {};
     }
 
     getInitialState(): Array<BlogEntry> {
@@ -35,8 +37,16 @@ export class AppComponent {
         ];
     }
 
-    saveBlogEntry(newEntry): void {
-        this.blogEntries.push(newEntry);
+    getNextId(): number {
+        const currentId = this.blogEntries[this.blogEntries.length - 1].id;
+        return currentId + 1;
+    }
+
+    saveBlogEntry(entry): void {
+        entry.id = this.getNextId();
+        this.blogEntries.push(entry);
+        console.log('saved entry: ', entry);
+        this.newEntry = {};
     }
 
 }
