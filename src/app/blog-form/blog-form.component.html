@@ -3,8 +3,9 @@
     <div class="form-group">
         <label>Titel</label>
         <input type="text" class="form-control"
-            id="title" name="title" placeholder="Titel eingeben..."
+            id="title" name="title"
             [(ngModel)]="entry.title" #title="ngModel"
+            placeholder="Titel eingeben..."
             required minlength="5" maxlength="128"/>
         <ck-show-error path="title" text="Titel"></ck-show-error>
     </div>
@@ -22,7 +23,8 @@
     <div class="form-control">
         <label>Bild-URL:</label>
         <input type="text" id="image" name="image"
-            [(ngModel)]="entry.image" #image="ngModel" />
+            [(ngModel)]="entry.image" #image="ngModel"
+            placeholder="Bildadresse eingeben..." />
         <ck-show-error path="text" text="Text"></ck-show-error>
     </div>
     <button type="submit" class="btn btn-default"

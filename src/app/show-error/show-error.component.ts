@@ -22,6 +22,7 @@ export class ShowErrorComponent {
         for (const code in control.errors) {
             if (control.errors.hasOwnProperty(code)) {
                 const error = control.errors[code];
+                console.log(error);
                 let message = '';
                 switch (code) {
                     case 'required':
