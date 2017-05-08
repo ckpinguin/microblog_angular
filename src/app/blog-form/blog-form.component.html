@@ -20,9 +20,9 @@
     <!-- TODO: async http-check for image availability? 
          Be aware: that would impede reproducability for any
          performance tests, if done with external images! -->
-    <div class="form-control">
+    <div class="form-group">
         <label>Bild-URL</label>
-        <input type="text" id="image" name="image"
+        <input class="form-control" type="text" id="image" name="image"
             [(ngModel)]="entry.image" #image="ngModel"
             placeholder="Bildadresse eingeben..." />
         <ck-show-error path="text" text="Text"></ck-show-error>

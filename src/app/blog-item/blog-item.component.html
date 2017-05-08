@@ -3,7 +3,13 @@
         <img *ngIf="item.image" [src]="item.image" [alt]="item.title" />
     </div>
     <div class="blog-summary">
-        <h2>{{item?.title}}</h2>
+        <h2>
+            {{item?.title}}<br />
+            <div class="fa fa-trash"
+                 onClick="() => onDelete(item.id)"></div>
+            <div class="fa fa-edit"
+                 onClick="() => onEdit(item.id)"></div>
+        </h2>
         <p>{{item?.text}}</p>
     </div>
 </div>

@@ -1,10 +1,10 @@
 <div class="container">
     <ck-layout>
         <h1 title>{{title}}</h1>
-        <ck-blog-form (saveEntry)="saveBlogEntry($event)" [newEntry]="newEntry" mainContent></ck-blog-form>
+        <ck-blog-form (saveEntry)="saveBlogEntry($event)"
+                      [newEntry]="newEntry"
+                      mainContent></ck-blog-form>
         <p attentionItem>Attention item</p>
-        <!--<ck-blog-item [item]="blogEntries[0]" attentionItem></ck-blog-item>-->
-        <!--<ck-blog-highlight [entry]="blogEntries[0]" attentionItem></ck-blog-highlight>-->
         <ck-blog-list [entries]="blogEntries" listContent></ck-blog-list>
         <p footer>© Christof Kälin</p>
     </ck-layout>
