@@ -6,9 +6,9 @@
         <h2>
             {{item?.title}}<br />
             <div class="fa fa-trash"
-                 onClick="() => onDelete(item.id)"></div>
+                 (click)="onDelete(item.id)"></div>
             <div class="fa fa-edit"
-                 onClick="() => onEdit(item.id)"></div>
+                 (click)="onEdit(item.id)"></div>
         </h2>
         <p>{{item?.text}}</p>
     </div>

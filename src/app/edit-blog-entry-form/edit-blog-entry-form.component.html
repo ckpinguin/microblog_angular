@@ -1,6 +1,9 @@
 <form novalidate (ngSubmit)="onSubmit(form.value); form.reset()"
         #form="ngForm">
     <div class="form-group">
+        <input type="hidden" class="hidden"
+            id="id" name="id"
+            [(ngModel)]="entry.id" #id="ngModel" />
         <label>Titel</label>
         <input type="text" class="form-control"
             id="title" name="title"

@@ -10,5 +10,4 @@ export class LoginService {
         return true; // dummy
     }
 
-  
 }

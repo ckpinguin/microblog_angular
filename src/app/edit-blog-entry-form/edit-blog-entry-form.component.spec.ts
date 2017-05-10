@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
-import { BlogFormComponent } from './blog-form.component';
+import { EditBlogEntryFormComponent } from './edit-blog-entry-form.component';
 import { ShowErrorComponent } from '../show-error/show-error.component';
 
-describe('BlogFormComponent', () => {
-    let component: BlogFormComponent;
-    let fixture: ComponentFixture <BlogFormComponent>;
+describe('EditBlogEntryFormComponent', () => {
+    let component: EditBlogEntryFormComponent;
+    let fixture: ComponentFixture <EditBlogEntryFormComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
                 imports: [ FormsModule ],
-                declarations: [ BlogFormComponent, ShowErrorComponent ]
+                declarations: [ EditBlogEntryFormComponent, ShowErrorComponent ]
             }).compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(BlogFormComponent);
+        fixture = TestBed.createComponent(EditBlogEntryFormComponent);
         component = fixture.componentInstance;
         fixture.autoDetectChanges(true);
     });

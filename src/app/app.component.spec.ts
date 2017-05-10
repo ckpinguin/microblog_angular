@@ -6,7 +6,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { NavBarComponent } from './navbar/navbar.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogItemComponent } from './blog-item/blog-item.component';
-import { BlogFormComponent } from './blog-form/blog-form.component';
+import { EditBlogEntryFormComponent } from './edit-blog-entry-form/edit-blog-entry-form.component';
 import { ShowErrorComponent } from './show-error/show-error.component';
 
 describe('AppComponent', () => {
@@ -19,7 +19,7 @@ describe('AppComponent', () => {
                 NavBarComponent,
                 BlogListComponent,
                 BlogItemComponent,
-                BlogFormComponent,
+                EditBlogEntryFormComponent,
                 ShowErrorComponent
             ]
         }).compileComponents();
