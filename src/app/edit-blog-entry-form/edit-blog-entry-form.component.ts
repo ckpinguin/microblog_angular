@@ -19,10 +19,12 @@ import { BlogService } from '../services/blog.service';
 })
 export class EditBlogEntryFormComponent implements OnInit {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
-    entry: BlogEntry;
+    // entry: BlogEntry;
+
+    showForm = true;
 
     constructor(private blogService: BlogService) {
-        this.entry = blogService.newEntry;
+        // this.entry = this.blogService.getCurrentEntry();
     }
 
     ngOnInit() {
@@ -30,13 +32,24 @@ export class EditBlogEntryFormComponent implements OnInit {
 
     // We use the service instead of emitting @Output, but
     // structure stays the same if we need any security checks here
-    emitSaveEntry(blogEntry: any) {
+    emitSaveEntry(blogEntry: String) {
         this.blogService.saveEntry(blogEntry);
     }
 
+    get entry(): BlogEntry {
+        if (this.blogService.getCurrentEntry != null)
+            this.showForm = true;
+        return this.blogService.getCurrentEntry();
+    }
+
     onSubmit(formValue: any) {
+        this.showForm = false;
         this.emitSaveEntry(formValue);
-        this.entry = this.blogService.newEntry;
+        // this.entry = this.blogService.newEntry;
+        setTimeout(() => {
+                this.form.reset();
+                this.showForm = true;
+        });
     }
 
 }

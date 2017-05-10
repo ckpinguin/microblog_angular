@@ -1,5 +1,6 @@
 <form novalidate (ngSubmit)="onSubmit(form.value); form.reset()"
-        #form="ngForm">
+        #form="ngForm"
+        *ngIf="showForm">
     <div class="form-group">
         <input type="hidden" class="hidden"
             id="id" name="id"
@@ -33,5 +34,10 @@
     <button type="submit" class="btn btn-default"
         [disabled]="!form.valid">
         Blogeintrag speichern
+    </button>
+    <button class="btn btn-default"
+        [disabled]="form.pristine || form.submitting"
+        (click)="form.reset()">
+        Formular leeren
     </button>
 </form>

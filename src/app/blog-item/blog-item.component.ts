@@ -10,17 +10,17 @@ import { BlogService } from '../services/blog.service';
 })
 export class BlogItemComponent implements OnInit {
     @Input() item: BlogEntry;
-    
+
     constructor(private blogService: BlogService) { }
 
     ngOnInit() {
     }
 
-    onEdit(id: number) {
-        //this.blogService.saveEntry();
+    onEdit(id: string) {
+        this.blogService.setCurrentEntry(id);
     }
 
-    onDelete(id: any) {
+    onDelete(id: string) {
         this.blogService.deleteBlogEntry(id);
     }
 }
