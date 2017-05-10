@@ -1,9 +1,14 @@
 <div class="container">
-    <ck-layout>
+    <div class="NavBar">
+        <ck-navbar></ck-navbar>
+    </div>
+    <div class="title">
         <h1 title>{{title}}</h1>
-        <ck-edit-blog-entry-form mainContent></ck-edit-blog-entry-form>
-        <p attentionItem>Attention item</p>
-        <ck-blog-list listContent></ck-blog-list>
-        <p footer>© Christof Kälin</p>
-    </ck-layout>
+    </div>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="footer">
+        <p>© Christof Kälin</p>
+    </div>
 </div>

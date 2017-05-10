@@ -22,7 +22,7 @@ export class ShowErrorComponent {
         for (const code in control.errors) {
             if (control.errors.hasOwnProperty(code)) {
                 const error = control.errors[code];
-                console.log(error);
+                // console.log(error); // spammer :-)
                 let message = '';
                 switch (code) {
                     case 'required':

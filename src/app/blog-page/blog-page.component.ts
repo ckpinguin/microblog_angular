@@ -1,17 +1,13 @@
-import {Component, OnInit, Inject} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
-import { BlogEntry } from './model/model-interfaces';
-
 @Component({
-    selector: 'ck-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.styl']
+    selector: 'ck-blog-page',
+    templateUrl: './blog-page.component.html',
+    styleUrls: ['./blog-page.component.styl']
 })
-export class AppComponent implements OnInit {
-    title = 'CK\'s microblog!';
-
+export class BlogPageComponent implements OnInit {
 
     constructor(private activatedRoute: ActivatedRoute, private titleService: Title) { }
 
@@ -21,6 +17,5 @@ export class AppComponent implements OnInit {
             this.titleService.setTitle(title);
         }
     }
-
 
 }

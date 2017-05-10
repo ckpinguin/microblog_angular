@@ -1,0 +1,39 @@
+<form novalidate (ngSubmit)="onSubmit(form.value); form.reset()"
+        #form="ngForm"
+        *ngIf="showForm">
+    <div class="form-group">
+        <input type="hidden" class="hidden"
+            id="id" name="id"
+            [(ngModel)]="user.id" #id="ngModel" />
+        <label>Name</label>
+        <input type="text" class="form-control"
+            id="name" name="name"
+            [(ngModel)]="user.name" #name="ngModel"
+            placeholder="Name eingeben..."
+            required minlength="5" maxlength="128"/>
+        <ck-show-error path="name" text="Name"></ck-show-error>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" id="email" name="email"
+            [(ngModel)]="user.email" #email="ngModel"
+            placeholder="Email eingeben..."/>
+        <ck-show-error path="email" text="Email"></ck-show-error>
+    </div>
+    <div class="form-group">
+        <label>Passwort</label>
+        <input type="password" class="form-control" id="image" name="image"
+            [(ngModel)]="user.password" #image="ngModel"
+            placeholder="Passwort eingeben..." />
+        <ck-show-error path="password" text="Passwort"></ck-show-error>
+    </div>
+    <button type="submit" class="btn btn-default"
+        [disabled]="!form.valid">
+        Login
+    </button>
+    <button class="btn btn-default"
+        [disabled]="form.pristine || form.submitting"
+        (click)="form.reset()">
+        Eingaben zurücksetzen
+    </button>
+</form>

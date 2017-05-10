@@ -1,18 +1,9 @@
 <div class="Layout">
-    <div class="NavBar">
-        <ck-navbar></ck-navbar>
-    </div>
     <div class="title">
         <ng-content select=[title]></ng-content>
     </div>
-    <div class="mainContent">
-        <ng-content select=[mainContent]></ng-content>
-    </div>
-    <div class="jumbotron">
-        <ng-content select=[attentionItem]></ng-content>
-    </div>
-    <div class="listContent">
-        <ng-content select=[listContent]></ng-content>
+    <div class="content">
+        <router-outlet name="popup"></router-outlet>
     </div>
     <!-- TODO: footer should be a compoent -->
     <div class="footer">

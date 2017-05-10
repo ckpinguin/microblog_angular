@@ -1,3 +1,6 @@
+/**
+ * In Typescript, interfaces are only used for type-safety
+ */
 export interface BlogEntry {
     id?: string;
     title?: string;
@@ -12,6 +15,8 @@ export interface Tag {
 }
 
 export interface User {
+    id?: string;
     name?: string;
     email?: string;
+    password?: string;
 }
