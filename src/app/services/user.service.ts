@@ -20,7 +20,7 @@ export class UserService {
 
     constructor() {
         this.users = this.initialState;
-        this.currentUser = {};
+        // this.currentUser = {};
     }
 
     get initialState(): Array<User> {
@@ -32,27 +32,33 @@ export class UserService {
         return this.users;
     }
 
+    getUserByName(name: String): User {
+        return this.users.find(e =>
+            e.name === name
+        );
+    }
+
     getCurrentUser(): User {
         return this.currentUser;
     }
 
     setCurrentUser(id: string): void {
         this.currentUser = Object.assign({}, this.users.find(e => e.id === id));
-        console.log('current entry is now: ', this.currentUser);
+        console.log('current user is now: ', this.currentUser);
     }
 
     saveUser(user: User): void {
         // update or create?
         if (this.users.findIndex(e => e.id === user.id) >= 0) {
-            console.log('service found existing entry: ', user);
+            console.log('service found existing user: ', user);
             this.updateUser(user);
         } else {
-            console.log('service will save (concat) a new entry');
+            console.log('service will save (concat) a new user');
             user.id = UserService.guid();
             this.users = this.users.concat([user]);
         }
-        console.log('service saved entry: ', user);
-        console.log('service blog entries now: ', this.users);
+        console.log('service saved user: ', user);
+        console.log('service users now: ', this.users);
     }
 
     updateUser(updatedUser: User): void {

@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { BlogEntry } from '../model/model-interfaces';
-import { BlogService } from '../services/blog.service';
+import { BlogEntry } from '../../model/model-interfaces';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
     selector: 'ck-blog-item',

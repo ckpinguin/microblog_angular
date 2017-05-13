@@ -7,8 +7,8 @@ import {
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { BlogEntry } from '../model/model-interfaces';
-import { BlogService } from '../services/blog.service';
+import { BlogEntry } from '../../model/model-interfaces';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
     selector: 'ck-edit-blog-entry-form',
@@ -42,7 +42,6 @@ export class EditBlogEntryFormComponent implements OnInit {
     onSubmit(formValue: any) {
         this.showForm = false;
         this.emitSaveEntry(formValue);
-        // this.entry = this.blogService.newEntry;
         this.form.reset();
         this.showForm = true;
     }
