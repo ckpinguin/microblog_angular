@@ -1,6 +1,9 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+
+import { LoginService } from '../login.service';
+import { NavigationService } from '../../../routing/navigation.service';
 
 @Component({
     selector: 'ck-login-form',
@@ -9,21 +12,24 @@ import { Location } from '@angular/common';
 })
 export class LoginFormComponent {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
-    @Output('onSubmit') loginEvent: EventEmitter<any> = new EventEmitter();
-    @Output('onCancel') cancelEvent: EventEmitter<boolean> = new EventEmitter();
     constructor(
-        private location: Location
+        private navigationService: NavigationService,
+        private activatedRoute: ActivatedRoute,
+        private loginService: LoginService
         ) { }
 
-
     onSubmit(formValue: any) {
-        // this.showForm = false;
-        this.loginEvent.emit(formValue);
-        this.form.reset();
+        const queryParams = this.activatedRoute.snapshot.queryParams;
+        const result = this.loginService.login(formValue.name, formValue.password);
+        if (result) {
+            this.navigationService.navigateHome(queryParams);
+        }
+            this.form.reset();
     }
 
-    cancel() {
-        this.cancelEvent.emit();
+    onCancel(cancel: boolean) {
+        const queryParams = this.activatedRoute.snapshot.queryParams;
+        this.navigationService.navigateHome(queryParams);
     }
 
 }

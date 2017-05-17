@@ -15,8 +15,8 @@ export class LoginPageComponent implements OnInit {
 
     constructor(
         private loginService: LoginService,
-        private activatedRoute: ActivatedRoute,
-        private navigationService: NavigationService
+        private navigationService: NavigationService,
+        private activatedRoute: ActivatedRoute
     ) { }
 
     ngOnInit() {
@@ -25,18 +25,4 @@ export class LoginPageComponent implements OnInit {
             this.showForm = false;
         }
     }
-
-    onLogin(formValue: any) {
-        const queryParams = this.activatedRoute.snapshot.queryParams;
-        const result = this.loginService.login(formValue.name, formValue.password);
-        if (result) {
-            this.navigationService.navigateHome(queryParams);
-        }
-    }
-
-    onCancel(cancel: boolean) {
-        const queryParams = this.activatedRoute.snapshot.queryParams;
-        this.navigationService.navigateHome(queryParams);
-    }
-
 }
