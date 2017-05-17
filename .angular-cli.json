@@ -19,6 +19,7 @@
         "prefix": "ck",
         "styles": [
             "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "./assets/css/bootstrap/flatly/bootstrap.min.css",
             "../node_modules/font-awesome/css/font-awesome.css",
             "styles.styl"
         ],
