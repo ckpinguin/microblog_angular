@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 
 // Shared components
 import { ShowErrorComponent } from './components/show-error/show-error.component';
-import { LayoutComponent } from './components/layout/layout.component';
 import { NavBarComponent } from './components/navbar/navbar.component';
 
 // Login module
@@ -40,7 +39,6 @@ import { NavigationService } from './modules/routing/navigation.service';
     EditBlogEntryFormComponent,
     ShowErrorComponent,
     LoginFormComponent,
-    LayoutComponent,
     NavBarComponent,
     BlogItemComponent,
     BlogPageComponent,
