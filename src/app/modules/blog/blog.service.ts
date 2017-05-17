@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { BlogEntry } from '../model/model-interfaces';
+import { BlogEntry } from './model-interfaces';
 
-import { initialBlogEntries } from '../model/initialBlogEntries';
+import { initialBlogEntries } from './initialBlogEntries';
 
 @Injectable()
 export class BlogService {

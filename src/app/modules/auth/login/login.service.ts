@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { User } from '../model/model-interfaces';
-import { UserService } from '../services/user.service';
+// Coupling!
+import { User } from '../../users/model-interfaces';
+import { UserService } from '../../users/user.service';
 
 import md5 from 'md5';
 

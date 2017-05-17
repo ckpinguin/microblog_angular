@@ -2,7 +2,7 @@ import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing'
 
 import { LoginFormComponent } from './login-form.component';
 
-import { LoginService } from '../services/login.service';
+import { LoginService } from '../login.service';
 
 describe('LoginFormComponent', () => {
     let component: LoginFormComponent;

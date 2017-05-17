@@ -2,12 +2,12 @@ import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './layout/layout.component';
-import { NavBarComponent } from './navbar/navbar.component';
-import { BlogListComponent } from './blog-list/blog-list.component';
-import { BlogItemComponent } from './blog-item/blog-item.component';
-import { EditBlogEntryFormComponent } from './edit-blog-entry-form/edit-blog-entry-form.component';
-import { ShowErrorComponent } from './show-error/show-error.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { NavBarComponent } from './components/navbar/navbar.component';
+import { BlogListComponent } from './modules/blog/blog-list/blog-list.component';
+import { BlogItemComponent } from './modules/blog/blog-item/blog-item.component';
+import { EditBlogEntryFormComponent } from './modules/blog/edit-blog-entry-form/edit-blog-entry-form.component';
+import { ShowErrorComponent } from './components/show-error/show-error.component';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {

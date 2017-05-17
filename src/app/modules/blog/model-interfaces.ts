@@ -13,10 +13,3 @@ export interface BlogEntry {
 export interface Tag {
     label?: string;
 }
-
-export interface User {
-    id?: string;
-    name?: string;
-    email?: string;
-    password?: string;
-}

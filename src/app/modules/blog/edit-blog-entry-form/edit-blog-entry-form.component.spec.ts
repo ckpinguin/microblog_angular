@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 
 import { EditBlogEntryFormComponent } from './edit-blog-entry-form.component';
-import { ShowErrorComponent } from '../show-error/show-error.component';
+import { ShowErrorComponent } from '../../../components/show-error/show-error.component';
 
 describe('EditBlogEntryFormComponent', () => {
     let component: EditBlogEntryFormComponent;

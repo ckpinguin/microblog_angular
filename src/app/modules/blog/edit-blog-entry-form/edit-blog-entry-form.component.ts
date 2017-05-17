@@ -7,8 +7,8 @@ import {
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { BlogEntry } from '../../model/model-interfaces';
-import { BlogService } from '../../services/blog.service';
+import { BlogEntry } from '../model-interfaces';
+import { BlogService } from '../blog.service';
 
 @Component({
     selector: 'ck-edit-blog-entry-form',

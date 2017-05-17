@@ -3,7 +3,7 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import 'rxjs/add/operator/filter';
 
-import { BlogEntry } from './model/model-interfaces';
+// import { BlogEntry } from './modules/blog/model-interfaces';
 
 @Component({
     selector: 'ck-root',
