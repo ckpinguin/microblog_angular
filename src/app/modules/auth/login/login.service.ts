@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 
-// Coupling!
 import { User } from '../../users/model-interfaces';
 import { UserService } from '../../users/user.service';
 

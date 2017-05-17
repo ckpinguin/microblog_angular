@@ -1,21 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
 import { LoginService } from '../login.service';
+import { NavigationService } from '../../../routing/navigation.service';
 
 @Component({
     selector: 'ck-login-page',
-    templateUrl: './login-page.component.html',
-    styleUrls: ['./login-page.component.styl']
+    templateUrl: './login-page.component.html'
 })
 export class LoginPageComponent implements OnInit {
     private title;
     private showForm = true;
 
     constructor(
+        private loginService: LoginService,
         private activatedRoute: ActivatedRoute,
-        private router: Router,
-        private loginService: LoginService
+        private navigationService: NavigationService
     ) { }
 
     ngOnInit() {
@@ -26,19 +27,16 @@ export class LoginPageComponent implements OnInit {
     }
 
     onLogin(formValue: any) {
+        const queryParams = this.activatedRoute.snapshot.queryParams;
         const result = this.loginService.login(formValue.name, formValue.password);
         if (result) {
-            this.navigateHome();
+            this.navigationService.navigateHome(queryParams);
         }
     }
 
     onCancel(cancel: boolean) {
-        this.navigateHome();
+        const queryParams = this.activatedRoute.snapshot.queryParams;
+        this.navigationService.navigateHome(queryParams);
     }
 
-    navigateHome() {
-        const queryParams = this.activatedRoute.snapshot.queryParams;
-        const redirect = queryParams['redirect'] || '/';
-        this.router.navigateByUrl(decodeURI(redirect));
-    }
 }

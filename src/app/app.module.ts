@@ -3,22 +3,32 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// The app
 import { AppComponent } from './app.component';
-import { BlogListComponent } from './modules/blog/blog-list/blog-list.component';
-import { EditBlogEntryFormComponent } from './modules/blog/edit-blog-entry-form/edit-blog-entry-form.component';
+
+// Shared components
 import { ShowErrorComponent } from './components/show-error/show-error.component';
-import { LoginFormComponent } from './modules/auth/login/login-form/login-form.component';
-
-import { LoginService } from './modules/auth/login/login.service';
-import { UserService } from './modules/users/user.service';
-import { BlogService } from './modules/blog/blog.service';
-
 import { LayoutComponent } from './components/layout/layout.component';
 import { NavBarComponent } from './components/navbar/navbar.component';
-import { BlogItemComponent } from './modules/blog/blog-item/blog-item.component';
-import { appRouting, routingComponents } from './app.routing';
-import { BlogPageComponent } from './modules/blog/blog-page/blog-page.component';
+
+// Login module
 import { LoginPageComponent } from './modules/auth/login/login-page/login-page.component';
+import { LoginFormComponent } from './modules/auth/login/login-form/login-form.component';
+import { LoginService } from './modules/auth/login/login.service';
+
+// User module
+import { UserService } from './modules/users/user.service';
+
+// Blog module
+import { BlogPageComponent } from './modules/blog/blog-page/blog-page.component';
+import { BlogListComponent } from './modules/blog/blog-list/blog-list.component';
+import { EditBlogEntryFormComponent } from './modules/blog/edit-blog-entry-form/edit-blog-entry-form.component';
+import { BlogItemComponent } from './modules/blog/blog-item/blog-item.component';
+import { BlogService } from './modules/blog/blog.service';
+
+// Routing
+import { appRouting, routingComponents } from './modules/routing/app.routing';
+import { NavigationService } from './modules/routing/navigation.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +53,7 @@ import { LoginPageComponent } from './modules/auth/login/login-page/login-page.c
     LoginService,
     UserService,
     BlogService,
+    NavigationService,
     Title
     ],
   bootstrap: [AppComponent]

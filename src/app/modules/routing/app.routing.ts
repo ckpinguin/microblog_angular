@@ -1,8 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { LoginPageComponent } from './modules/auth/login/login-page/login-page.component';
-import { AppComponent } from './app.component';
-import { BlogPageComponent } from './modules/blog/blog-page/blog-page.component';
+import { LoginPageComponent } from '../auth/login/login-page/login-page.component';
+import { AppComponent } from '../../app.component';
+import { BlogPageComponent } from '../blog/blog-page/blog-page.component';
 
 export const appRoutes: Routes = [
     { path: '', component: BlogPageComponent, data: {title: 'CK\'s microblog!'} },
