@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import * as tokens from './app.tokens';
+
 // The app
 import { AppComponent } from './app.component';
 
@@ -54,7 +56,8 @@ import { NavigationService } from './modules/routing/navigation.service';
     UserService,
     BlogService,
     NavigationService,
-    Title
+    Title,
+    { provide: tokens.AUTH_ENABLED, useValue: true }
     ],
   bootstrap: [AppComponent]
 })
