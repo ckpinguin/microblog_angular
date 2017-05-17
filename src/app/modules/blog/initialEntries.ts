@@ -1,6 +1,6 @@
 import { BlogEntry } from './model-interfaces';
 
-export const initialBlogEntries = [
+export const initialEntries = [
         {
             id: 'dc2a4182-71a0-4fed-98dd-22b4d5104e40',
             title: 'Testentry',

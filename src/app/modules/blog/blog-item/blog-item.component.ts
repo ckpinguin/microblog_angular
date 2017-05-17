@@ -21,6 +21,6 @@ export class BlogItemComponent implements OnInit {
     }
 
     onDelete(id: string) {
-        this.blogService.deleteBlogEntry(id);
+        this.blogService.deleteEntry(id);
     }
 }

@@ -26,12 +26,6 @@ export class EditBlogEntryFormComponent implements OnInit {
     ngOnInit() {
     }
 
-    // We use the service instead of emitting @Output, but
-    // structure stays the same if we need any security checks here
-    emitSaveEntry(blogEntry: BlogEntry) {
-        this.blogService.saveEntry(blogEntry);
-    }
-
     get entry(): BlogEntry {
         if (this.blogService.getCurrentEntry != null) {
             this.showForm = true;
@@ -41,7 +35,7 @@ export class EditBlogEntryFormComponent implements OnInit {
 
     onSubmit(formValue: any) {
         this.showForm = false;
-        this.emitSaveEntry(formValue);
+        this.blogService.saveEntry(formValue);
         this.form.reset();
         this.showForm = true;
     }

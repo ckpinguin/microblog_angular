@@ -13,7 +13,7 @@ export class BlogListComponent implements OnInit {
     }
 
     get entries(): Array<BlogEntry> {
-        return this.blogService.getBlogEntries();
+        return this.blogService.getEntries();
     }
 
     ngOnInit() {

@@ -28,7 +28,7 @@ export class BlogService {
         return initialBlogEntries;
     }
 
-    getBlogEntries(): Array<BlogEntry> {
+    getEntries(): Array<BlogEntry> {
         // console.log('service returning entries: ', this.blogEntries);
         return this.blogEntries;
     }
@@ -68,7 +68,7 @@ export class BlogService {
         });
     }
 
-    deleteBlogEntry(id: string): void {
+    deleteEntry(id: string): void {
         this.blogEntries = this.blogEntries.filter(e => e.id !== id);
     }
 
