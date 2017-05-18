@@ -1,8 +1,21 @@
 {
+    "extends": [
+        "tslint-eslint-rules"
+    ],
     "rulesDirectory": [
         "node_modules/codelyzer"
     ],
     "rules": {
+        "no-extra-semi": true,
+        "no-multi-spaces": true,
+        "array-bracket-spacing": true,
+        "block-spacing": true,
+        "brace-style": true,
+        "ter-indent": true,
+        "object-curly-spacing": true,
+        "no-var-keyword": true,
+        "ter-prefer-arrow-callback": true,
+        "prefer-const": true,
         "callable-types": true,
         "class-name": true,
         "comment-format": [
@@ -10,6 +23,9 @@
             "check-space"
         ],
         "curly": true,
+        "cyclomatic-complexity": [
+            true, 5
+        ],
         "eofline": true,
         "forin": true,
         "import-blacklist": [true, "rxjs"],
@@ -20,6 +36,7 @@
         ],
         "interface-over-type-literal": true,
         "label-position": true,
+        "max-file-line-count": [true, 300],
         "max-line-length": [
             true,
             140

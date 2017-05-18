@@ -12,7 +12,6 @@ import { NavigationService } from '../../../routing/navigation.service';
 export class LoginPageComponent implements OnInit {
     private title;
     private showForm = true;
-
     constructor(
         private loginService: LoginService,
         private navigationService: NavigationService,
