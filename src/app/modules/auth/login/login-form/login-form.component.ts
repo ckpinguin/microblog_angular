@@ -8,7 +8,7 @@ import { NavigationService } from '../../../routing/navigation.service';
 @Component({
     selector: 'ck-login-form',
     templateUrl: './login-form.component.html',
-    styleUrls: ['./login-form.component.styl'],
+    styleUrls: [ './login-form.component.styl' ],
 })
 export class LoginFormComponent {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
@@ -24,7 +24,7 @@ export class LoginFormComponent {
         if (result) {
             this.navigationService.navigateHome(queryParams);
         }
-            this.form.reset();
+        this.form.reset();
     }
 
     onCancel(cancel: boolean) {
