@@ -13,7 +13,7 @@ import { BlogService } from '../blog.service';
 @Component({
     selector: 'ck-edit-blog-entry-form',
     templateUrl: './edit-blog-entry-form.component.html',
-    styleUrls: ['./edit-blog-entry-form.component.styl']
+    styleUrls: [ './edit-blog-entry-form.component.styl' ]
 })
 export class EditBlogEntryFormComponent implements OnInit {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests

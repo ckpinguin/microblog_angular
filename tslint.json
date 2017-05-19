@@ -10,7 +10,13 @@
         "no-multi-spaces": true,
         "array-bracket-spacing": true,
         "block-spacing": true,
-        "brace-style": true,
+        "brace-style": [
+            true,
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
         "ter-indent": true,
         "object-curly-spacing": true,
         "no-var-keyword": true,
