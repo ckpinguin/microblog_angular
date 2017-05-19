@@ -1,4 +1,4 @@
-import {Component, OnInit, Inject} from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import 'rxjs/add/operator/filter';
@@ -8,7 +8,7 @@ import 'rxjs/add/operator/filter';
 @Component({
     selector: 'ck-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.styl']
+    styleUrls: [ './app.component.styl' ]
 })
 export class AppComponent implements OnInit {
     private defaultTitle;

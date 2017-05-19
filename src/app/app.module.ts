@@ -30,33 +30,35 @@ import { BlogService } from './modules/blog/blog.service';
 // Routing
 import { appRouting, routingComponents } from './modules/routing/app.routing';
 import { NavigationService } from './modules/routing/navigation.service';
+import { BlogComponent } from './modules/blog/blog-component/blog.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    routingComponents,
-    BlogListComponent,
-    EditBlogEntryFormComponent,
-    ShowErrorComponent,
-    LoginFormComponent,
-    NavBarComponent,
-    BlogItemComponent,
-    BlogPageComponent,
-    LoginPageComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    appRouting
-  ],
-  providers: [// Global (i.e. Singleton) services
-    LoginService,
-    UserService,
-    BlogService,
-    NavigationService,
-    Title,
+    declarations: [
+        AppComponent,
+        routingComponents,
+        BlogListComponent,
+        EditBlogEntryFormComponent,
+        ShowErrorComponent,
+        LoginFormComponent,
+        NavBarComponent,
+        BlogItemComponent,
+        BlogPageComponent,
+        LoginPageComponent,
+        BlogComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        appRouting
+    ],
+    providers: [// Global (i.e. Singleton) services
+        LoginService,
+        UserService,
+        BlogService,
+        NavigationService,
+        Title,
     { provide: tokens.AUTH_ENABLED, useValue: true }
     ],
-  bootstrap: [AppComponent]
+    bootstrap: [ AppComponent ]
 })
 export class AppModule { }
