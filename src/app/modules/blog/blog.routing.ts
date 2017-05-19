@@ -1,8 +1,8 @@
 import { Routes, RouterModule } from '@angular/router';
 
+import { BlogComponent } from '../blog/blog-component/blog.component';
 import { BlogPageComponent } from '../blog/blog-page/blog-page.component';
 import { EditBlogEntryFormComponent } from '../blog/edit-blog-entry-form/edit-blog-entry-form.component';
-import { BlogComponent } from '../blog/blog-component/blog.component';
 
 export const blogRoutes: Routes = [ {
     path: '', component: BlogComponent, data: { title: 'Blog' },
@@ -12,5 +12,7 @@ export const blogRoutes: Routes = [ {
     ] }
 ];
 export const blogRoutingComponents = [
-    BlogPageComponent, EditBlogEntryFormComponent
+    BlogPageComponent, EditBlogEntryFormComponent, BlogComponent
 ];
+export const blogRoutingProviders = [ ];
+export const blogRouting = RouterModule.forChild(blogRoutes);

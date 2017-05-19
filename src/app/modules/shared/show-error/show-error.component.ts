@@ -4,7 +4,7 @@ import { NgForm, FormGroup } from '@angular/forms';
 @Component({
     selector: 'ck-show-error',
     templateUrl: './show-error.component.html',
-    styleUrls: ['./show-error.component.styl']
+    styleUrls: [ './show-error.component.styl' ]
 })
 export class ShowErrorComponent {
     @Input('path') controlPath;
@@ -25,15 +25,15 @@ export class ShowErrorComponent {
                 // console.log(error); // spammer :-)
                 let message = '';
                 switch (code) {
-                    case 'required':
-                        message = `${this.displayName} ist ein Pflichtfeld`;
-                        break;
-                    case 'minlength':
-                        message = `${this.displayName} muss mindestens
+                case 'required':
+                    message = `${this.displayName} ist ein Pflichtfeld`;
+                    break;
+                case 'minlength':
+                    message = `${this.displayName} muss mindestens
                                    ${error.requiredLength}  Zeichen enthalten`;
-                        break;
-                    default:
-                        message = `${name} ist nicht gültig`;
+                    break;
+                default:
+                    message = `${name} ist nicht gültig`;
                 }
                 messages.push(message);
             }

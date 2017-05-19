@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'ck-blog-page',
     templateUrl: './blog-page.component.html',
-    styleUrls: ['./blog-page.component.styl']
+    styleUrls: [ './blog-page.component.styl' ]
 })
 export class BlogPageComponent implements OnInit {
     private title;

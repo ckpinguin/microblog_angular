@@ -11,9 +11,9 @@ export class BlogService {
 
     static guid = () => {
         const s4 = () => {
-        return Math.floor((1 + Math.random()) * 0x10000)
-            .toString(16)
-            .substring(1);
+            return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
         };
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
         s4() + '-' + s4() + s4() + s4();
@@ -22,7 +22,7 @@ export class BlogService {
     constructor() {
         this.entries = this.initialState;
         this.currentEntry = {};
-     }
+    }
 
     get initialState(): Array<BlogEntry> {
         return initialEntries;
@@ -49,7 +49,7 @@ export class BlogService {
         } else {
             console.log('service will save (concat) a new entry');
             entry.id = BlogService.guid();
-            this.entries = this.entries.concat([entry]);
+            this.entries = this.entries.concat([ entry ]);
         }
         console.log('service saved entry: ', entry);
         console.log('service blog entries now: ', this.entries);

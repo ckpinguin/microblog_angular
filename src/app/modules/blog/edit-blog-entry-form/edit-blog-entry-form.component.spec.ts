@@ -10,9 +10,9 @@ describe('EditBlogEntryFormComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-                imports: [ FormsModule ],
-                declarations: [ EditBlogEntryFormComponent, ShowErrorComponent ]
-            }).compileComponents();
+            imports: [ FormsModule ],
+            declarations: [ EditBlogEntryFormComponent, ShowErrorComponent ]
+        }).compileComponents();
     }));
 
     beforeEach(() => {

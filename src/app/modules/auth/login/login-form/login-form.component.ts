@@ -3,7 +3,8 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 
 import { LoginService } from '../login.service';
-import { NavigationService } from '../../../routing/navigation.service';
+
+import { NavigationService } from '../../../shared/navigation.service';
 
 @Component({
     selector: 'ck-login-form',
