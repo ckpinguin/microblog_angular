@@ -10,7 +10,7 @@ export class UserService {
 
     static guid = () => {
         const s4 = () => {
-        return Math.floor((1 + Math.random()) * 0x10000)
+            return Math.floor((1 + Math.random()) * 0x10000)
             .toString(16)
             .substring(1);
         };
@@ -55,7 +55,7 @@ export class UserService {
         } else {
             console.log('service will save (concat) a new user');
             user.id = UserService.guid();
-            this.users = this.users.concat([user]);
+            this.users = this.users.concat([ user ]);
         }
         console.log('service saved user: ', user);
         console.log('service users now: ', this.users);

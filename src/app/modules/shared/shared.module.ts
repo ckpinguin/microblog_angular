@@ -8,6 +8,16 @@ import { NavBarComponent } from './navbar/navbar.component';
 import { ShowErrorComponent } from './show-error/show-error.component';
 
 import { NavigationService } from './navigation.service';
+// Some services from their respective modules need to be availabe
+// for other modules too, so we import them here. This still is 
+// not a clean solution. This has to do with the quite special
+// concept of a "module" in angular: The module in the first place
+// is about handling lazy-loading, not about organizing. Even though
+// it makes sense to have everything located in the corresponding
+// module, even services that ought to be available shared/global.
+import { BlogService } from '../blog/blog.service';
+import { LoginService } from '../auth/login/login.service';
+import { UserService } from '../user/user.service';
 
 @NgModule({
     imports: [
@@ -37,7 +47,11 @@ export class SharedModule {
     static forRoot(): ModuleWithProviders {
         return {
             ngModule: SharedModule,
-            providers: [ NavigationService ]
+            providers: [
+                NavigationService,
+                BlogService,
+                LoginService,
+                UserService ]
         };
     }
 }

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { User } from '../../users/model-interfaces';
-import { UserService } from '../../users/user.service';
+import { User } from '../../user/model-interfaces';
+import { UserService } from '../../user/user.service';
 
 import md5 from 'md5';
 
