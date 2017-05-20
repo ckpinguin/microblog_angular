@@ -18,6 +18,7 @@ import { NavigationService } from './navigation.service';
 import { BlogService } from '../blog/blog.service';
 import { LoginService } from '../auth/login/login.service';
 import { UserService } from '../user/user.service';
+import { LoginGuard } from '../auth/login/login.guard';
 
 @NgModule({
     imports: [
@@ -51,7 +52,9 @@ export class SharedModule {
                 NavigationService,
                 BlogService,
                 LoginService,
-                UserService ]
+                UserService,
+                LoginGuard
+            ]
         };
     }
 }

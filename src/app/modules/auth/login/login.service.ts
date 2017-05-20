@@ -28,4 +28,8 @@ export class LoginService {
         return this.userService.getCurrentUser();
     }
 
+    isLoggedIn(): boolean {
+        return false;
+    }
+
 }

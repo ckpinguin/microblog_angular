@@ -3,17 +3,18 @@ import { Routes, RouterModule } from '@angular/router';
 import { BlogComponent } from './blog-component/blog.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { EditBlogEntryFormComponent } from './edit-blog-entry-form/edit-blog-entry-form.component';
+import { LoginGuard } from '../auth/login/login.guard';
 
 export const blogRoutes: Routes = [ {
     // path '' is the component holding the outlet
     path: '', component: BlogComponent, data: { title: 'Blog' },
     children: [
         { path: '', component: BlogPageComponent },
-        { path: 'edit/:id', component: EditBlogEntryFormComponent },
+        { path: 'edit/:id', canActivate: [ LoginGuard ], component: EditBlogEntryFormComponent },
     ] }
 ];
 export const blogRoutingComponents = [
     BlogPageComponent, EditBlogEntryFormComponent, BlogComponent
 ];
-export const blogRoutingProviders = [ ];
+export const blogRoutingProviders = [ LoginGuard ];
 export const blogRouting = RouterModule.forChild(blogRoutes);
