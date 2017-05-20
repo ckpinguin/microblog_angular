@@ -10,7 +10,10 @@ export const blogRoutes: Routes = [ {
     path: '', component: BlogComponent, data: { title: 'Blog' },
     children: [
         { path: '', component: BlogPageComponent },
-        { path: 'edit/:id', canActivate: [ LoginGuard ], component: EditBlogEntryFormComponent },
+        { path: 'edit/:id',
+            canActivate: [ LoginGuard ],
+            // outlet: 'blog-page',
+            component: EditBlogEntryFormComponent },
     ] }
 ];
 export const blogRoutingComponents = [

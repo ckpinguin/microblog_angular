@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './modules/shared/shared.module';
 
 // Services
-import { UserService } from './modules/user/user.service';
+import { UserService } from './modules/auth/user/user.service';
 import { LoginService } from './modules/auth/login/login.service';
 import { BlogService } from './modules/blog/blog.service';
 

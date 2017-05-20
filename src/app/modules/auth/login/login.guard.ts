@@ -8,15 +8,14 @@ import { LoginService } from './login.service';
 export class LoginGuard implements CanActivate {
     constructor(
         private loginService: LoginService,
-        private router: Router) {
-
-    }
+        private router: Router) { }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)
         : boolean | Observable <boolean> | Promise <boolean> {
         if (!this.loginService.isLoggedIn()) {
+            console.log('not logged in');
             const url = encodeURI(state.url);
-            this.router.navigate(['/login'], {
+            this.router.navigateByUrl('/login', {
                 queryParams: {
                     redirect: url
                 }

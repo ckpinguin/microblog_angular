@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 
-import { User } from '../../user/model-interfaces';
-import { UserService } from '../../user/user.service';
+import { User } from '../user/model-interfaces';
+import { UserService } from '../user/user.service';
 
 import md5 from 'md5';
 
 @Injectable()
 export class LoginService {
+    currentUser: User;
 
     constructor(private userService: UserService) {}
 
@@ -15,7 +16,7 @@ export class LoginService {
         if (user) {
             if (md5(password) === user.password) {
                 console.log('password correct, logging in');
-                this.userService.setCurrentUser(user.id);
+                this.setCurrentUser(user.id);
                 return true;
             }
             console.log('password wrong!');
@@ -23,13 +24,18 @@ export class LoginService {
         return false;
     }
 
-    get currentUser(): User {
-        console.log('login service getting current user: ', this.userService.getCurrentUser());
-        return this.userService.getCurrentUser();
+    getCurrentUser(): User {
+        return this.currentUser;
+    }
+
+    setCurrentUser(id: string): void {
+        this.currentUser = Object.assign({}, this.userService.users.find(e => e.id === id));
+        console.log('current user is now: ', this.currentUser);
     }
 
     isLoggedIn(): boolean {
-        return false;
+        console.log('currentUser: ', this.currentUser);
+        return (this.currentUser !== undefined);
     }
 
 }

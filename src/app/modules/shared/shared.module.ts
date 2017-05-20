@@ -17,7 +17,7 @@ import { NavigationService } from './navigation.service';
 // module, even services that ought to be available shared/global.
 import { BlogService } from '../blog/blog.service';
 import { LoginService } from '../auth/login/login.service';
-import { UserService } from '../user/user.service';
+import { UserService } from '../auth/user/user.service';
 import { LoginGuard } from '../auth/login/login.guard';
 
 @NgModule({

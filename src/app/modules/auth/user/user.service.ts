@@ -5,7 +5,6 @@ import { initialUsers } from './initialUsers';
 
 @Injectable()
 export class UserService {
-    currentUser: User;
     users: Array<User>;
 
     static guid = () => {
@@ -28,23 +27,17 @@ export class UserService {
     }
 
     getUsers(): Array<User> {
-        // console.log('service returning entries: ', this.blogEntries);
         return this.users;
+    }
+
+    setUsers(users: Array<User>) {
+        this.users = users;
     }
 
     getUserByName(name: String): User {
         return this.users.find(e =>
             e.name === name
         );
-    }
-
-    getCurrentUser(): User {
-        return this.currentUser;
-    }
-
-    setCurrentUser(id: string): void {
-        this.currentUser = Object.assign({}, this.users.find(e => e.id === id));
-        console.log('current user is now: ', this.currentUser);
     }
 
     saveUser(user: User): void {

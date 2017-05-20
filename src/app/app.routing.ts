@@ -4,14 +4,12 @@ import { AppComponent } from './app.component';
 
 import { BlogModule } from './modules/blog/blog.module';
 import { AuthModule } from './modules/auth/auth.module';
-import { UserModule } from './modules/user/user.module';
 
 export const appRoutes: Routes = [
     { path: '', redirectTo: '/blog', pathMatch: 'full', data: { title: 'CK\'s microblog!' } },
     // We lazy-load the modules with a preloading strategy (loads in background)
     { path: 'login', loadChildren: 'app/modules/auth/auth.module#AuthModule' },
     { path: 'blog', loadChildren: 'app/modules/blog/blog.module#BlogModule' },
-    { path: 'user', loadChildren: 'app/modules/user/user.module#UserModule' },
     { path : '**', redirectTo: '/blog' }
 ];
 export const appRouting = RouterModule.forRoot(appRoutes, {

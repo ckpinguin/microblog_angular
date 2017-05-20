@@ -10,7 +10,7 @@ export class BlogPageComponent implements OnInit {
     private title;
     constructor(
         private activatedRoute: ActivatedRoute,
-        ) { }
+    ) { }
 
     ngOnInit() {
         this.title = this.activatedRoute.snapshot.data['title'];
