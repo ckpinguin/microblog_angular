@@ -19,7 +19,7 @@ export const appRoutes: Routes = [
     { path: '', redirectTo: '/blog', pathMatch: 'full', data: { title: 'CK\'s microblog!' } },
     // { path: 'login', component: AuthComponent, children: [...authRoutes] },
     { path: 'login', loadChildren: loadAuthModule },
-    { path: 'blog', canLoad: [], loadChildren: loadBlogModule }
+    { path: 'blog', loadChildren: loadBlogModule }
 ];
 export const appRouting = RouterModule.forRoot(appRoutes);
 export const routingComponents = [

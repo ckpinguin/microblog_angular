@@ -8,7 +8,7 @@ export const blogRoutes: Routes = [ {
     // path '' is the component holding the outlet
     path: '', component: BlogComponent, data: { title: 'Blog' },
     children: [
-        { path: '', component: BlogPageComponent },
+        { path: '**', component: BlogPageComponent },
         { path: 'edit/:id', component: EditBlogEntryFormComponent },
     ] }
 ];

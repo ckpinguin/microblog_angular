@@ -5,9 +5,4 @@ import { Component } from '@angular/core';
     templateUrl: './navbar.component.html',
     styleUrls: [ './navbar.component.styl' ],
 })
-export class NavBarComponent {
-
-    clicked(event) {
-        console.log('clicked: ', event);
-    }
-}
+export class NavBarComponent { }
