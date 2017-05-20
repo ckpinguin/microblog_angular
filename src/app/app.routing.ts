@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -6,25 +6,16 @@ import { BlogModule } from './modules/blog/blog.module';
 import { AuthModule } from './modules/auth/auth.module';
 import { UserModule } from './modules/user/user.module';
 
-export function loadBlogModule() {
-    return BlogModule;
-}
-
-export function loadAuthModule() {
-    return AuthModule;
-}
-
-export function loadUserModule() {
-    return UserModule;
-}
-
 export const appRoutes: Routes = [
     { path: '', redirectTo: '/blog', pathMatch: 'full', data: { title: 'CK\'s microblog!' } },
-    { path: 'login', loadChildren: loadAuthModule },
-    { path: 'blog', loadChildren: loadBlogModule },
-    { path: 'user', loadChildren: loadUserModule }
+    // We lazy-load the modules with a preloading strategy (loads in background)
+    { path: 'login', loadChildren: 'app/modules/auth/auth.module#AuthModule' },
+    { path: 'blog', loadChildren: 'app/modules/blog/blog.module#BlogModule' },
+    { path: 'user', loadChildren: 'app/modules/user/user.module#UserModule' }
 ];
-export const appRouting = RouterModule.forRoot(appRoutes);
+export const appRouting = RouterModule.forRoot(appRoutes, {
+    preloadingStrategy: PreloadAllModules
+});
 export const routingComponents = [
     AppComponent
 ];
