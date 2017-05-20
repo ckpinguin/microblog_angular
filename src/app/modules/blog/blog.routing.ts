@@ -12,7 +12,7 @@ export const blogRoutes: Routes = [ {
         { path: '', component: BlogPageComponent },
         { path: 'edit/:id',
             canActivate: [ LoginGuard ],
-            // outlet: 'blog-page',
+            // outlet: 'blogitemoutlet',
             component: EditBlogEntryFormComponent },
     ] }
 ];

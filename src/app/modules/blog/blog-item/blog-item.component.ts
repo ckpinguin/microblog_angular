@@ -13,7 +13,6 @@ import { BlogService } from '../blog.service';
 export class BlogItemComponent implements OnInit {
     @Input() item: BlogEntry;
     constructor(
-        // private loginService: LoginService,
         private router: Router,
         private blogService: BlogService) { }
 
@@ -22,11 +21,11 @@ export class BlogItemComponent implements OnInit {
 
     onEdit(id: string) {
         this.blogService.setCurrentEntry(id);
-        console.log('trying to navigate to: ', `/blog/edit/${id}`);
-        // this.router.navigate([ {
-        //     outlets: { 'blog-page': `/blog/edit/${id}` }} ]
+        console.log('trying to navigate to: ', `/edit/${id}`);
+        // this.router.navigate([ 'blog/edit/',
+        //     { outlets: { 'blogitemoutlet': [ `${id}` ] } } ]
         // );
-        this.router.navigateByUrl(`/blog/edit/${id}`);
+        this.router.navigateByUrl(`/blog/edit/${id}(blogpageoutlet:null)`);
     }
 
     onDelete(id: string) {
