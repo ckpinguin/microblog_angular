@@ -30,6 +30,7 @@ export class LoginFormComponent {
 
     onCancel(cancel: boolean) {
         const queryParams = this.activatedRoute.snapshot.queryParams;
+        this.form.reset();
         this.navigationService.navigateHome(queryParams);
     }
 

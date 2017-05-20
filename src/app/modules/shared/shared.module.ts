@@ -2,6 +2,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { NavBarComponent } from './navbar/navbar.component';
 import { ShowErrorComponent } from './show-error/show-error.component';
@@ -12,7 +13,8 @@ import { NavigationService } from './navigation.service';
     imports: [
         CommonModule,
         FormsModule,
-        HttpModule
+        HttpModule,
+        RouterModule
     ],
     declarations: [
         ShowErrorComponent,

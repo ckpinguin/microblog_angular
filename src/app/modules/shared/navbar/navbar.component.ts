@@ -3,6 +3,11 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'ck-navbar',
     templateUrl: './navbar.component.html',
-    styleUrls: [ './navbar.component.styl' ]
+    styleUrls: [ './navbar.component.styl' ],
 })
-export class NavBarComponent { }
+export class NavBarComponent {
+
+    clicked(event) {
+        console.log('clicked: ', event);
+    }
+}

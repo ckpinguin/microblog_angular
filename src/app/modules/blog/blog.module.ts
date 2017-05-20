@@ -16,7 +16,7 @@ import { SharedModule } from '../shared/shared.module';
         blogRouting
     ],
     declarations: [
-        blogRoutingComponents,
+        ...blogRoutingComponents,
         BlogListComponent,
         BlogItemComponent,
     ]
