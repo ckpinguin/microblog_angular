@@ -15,7 +15,9 @@ export const initialEntries = [
         text: 'Cats always work :-)',
         image: 'http://random.cat/i/061_-_qxHYGTX.gif',
         date: null,
-        tags: []
+        tags: [],
+        user: 'a8655eb5-ca5c-459a-a094-d0e704e80a69',
+        author: 'The test user himself'
     },
     {
         id: '54726e40-3297-11e7-93ae-92361f002671',

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+
 import { Observable } from 'rxjs/Observable';
 
 import { User } from '../user/model-interfaces';
@@ -9,10 +10,12 @@ import md5 from 'md5';
 
 @Injectable()
 export class LoginService {
-    // currentUser: User;
-    private currentUser: Subject<User> = new Subject<User>();
+    private _currentUser: BehaviorSubject<User> = new BehaviorSubject<User>({});
+    public readonly currentUser: Observable<User> = this._currentUser.asObservable();
 
-    constructor(private userService: UserService) {}
+    private loggedIn = false;
+
+    constructor(private userService: UserService) { }
 
     login(name: string, password: string): boolean {
         const user = this.userService.getUserByName(name);
@@ -20,6 +23,7 @@ export class LoginService {
             if (md5(password) === user.password) {
                 console.log('password correct, logging in');
                 this.setCurrentUser(user.id);
+                this.loggedIn = true;
                 return true;
             }
             console.log('password wrong!');
@@ -27,19 +31,19 @@ export class LoginService {
         return false;
     }
 
-    getCurrentUser(): Observable<User> {
-        return this.currentUser;
+    logout(): void {
+        this.loggedIn = false;
     }
 
     setCurrentUser(id: string): void {
-        const newCurrentUser = Object.assign({}, this.userService.users.find(e => e.id === id));
-        this.currentUser.next(newCurrentUser);
+        const newCurrentUser = this.userService.getUserById(id);
+        this._currentUser.next(newCurrentUser);
         console.log('current user is now: ', newCurrentUser);
     }
 
+    // TODO: rewrite this to work with subscribing
     isLoggedIn(): boolean {
-        console.log('currentUser: ', this.currentUser);
-        return (this.currentUser !== undefined);
+        return this.loggedIn;
     }
 
 }

@@ -13,7 +13,6 @@ import { User } from '../../user/model-interfaces';
 export class LoginPageComponent implements OnInit {
     private title: string;
     private showForm = true;
-    private currentUser: User;
 
     constructor(
         private loginService: LoginService,
@@ -22,11 +21,18 @@ export class LoginPageComponent implements OnInit {
 
     ngOnInit() {
         this.title = this.activatedRoute.snapshot.data['title'];
-        this.loginService.getCurrentUser().subscribe(data => {
-            console.log('User', data.name, 'has logged in!');
-            this.currentUser = data;
+        if (!this.loginService.isLoggedIn()) {
+            console.log('nobody logged in yet');
+            this.showForm = true;
+            this.loginService.currentUser.subscribe(data => {
+                console.log('User', data.name, 'is logged in!');
+                if (data.name !== undefined) {
+                    this.showForm = false;
+                }
+            });
+        } else {
+            // A user is already logged in
             this.showForm = false;
-        });
-
+        }
     }
 }

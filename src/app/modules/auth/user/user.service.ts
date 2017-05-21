@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Observable } from 'rxjs/Observable';
 
 import { User } from './model-interfaces';
 import { initialUsers } from './initialUsers';
 
 @Injectable()
 export class UserService {
-    users: Array<User>;
+    private _users: BehaviorSubject<Array<User>> = new BehaviorSubject<Array<User>>(initialUsers);
+    public readonly users: Observable<Array<User>> = this._users.asObservable();
 
     static guid = () => {
         const s4 = () => {
@@ -17,45 +20,42 @@ export class UserService {
         s4() + '-' + s4() + s4() + s4();
     }
 
-    constructor() {
-        this.users = this.initialState;
-        // this.currentUser = {};
-    }
+    constructor() { }
 
     get initialState(): Array<User> {
         return initialUsers;
     }
 
-    getUsers(): Array<User> {
-        return this.users;
-    }
-
     setUsers(users: Array<User>) {
-        this.users = users;
+        this._users.next(users);
     }
 
     getUserByName(name: String): User {
-        return this.users.find(e =>
+        return this._users.getValue().find(e =>
             e.name === name
         );
     }
 
+    getUserById(id: String): User {
+        return this._users.getValue().find(e => e.id === id);
+    }
+
     saveUser(user: User): void {
         // update or create?
-        if (this.users.findIndex(e => e.id === user.id) >= 0) {
+        if (this._users.getValue().findIndex(e => e.id === user.id) >= 0) {
             console.log('service found existing user: ', user);
             this.updateUser(user);
         } else {
             console.log('service will save (concat) a new user');
             user.id = UserService.guid();
-            this.users = this.users.concat([ user ]);
+            this.setUsers(this._users.getValue().concat([ user ]));
         }
         console.log('service saved user: ', user);
         console.log('service users now: ', this.users);
     }
 
     updateUser(updatedUser: User): void {
-        this.users = this.users.map(e => {
+        this.setUsers(this._users.getValue().map(e => {
             if (e.id !== updatedUser.id) {
                 return e;
             }
@@ -63,11 +63,11 @@ export class UserService {
                 ...e,
                 ...updatedUser // update the changed or new fields
             };
-        });
+        }));
     }
 
     deleteUser(id: string): void {
-        this.users = this.users.filter(e => e.id !== id);
+        this.setUsers(this._users.getValue().filter(e => e.id !== id));
     }
 
 }
