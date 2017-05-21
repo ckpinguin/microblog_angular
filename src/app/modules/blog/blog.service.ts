@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
 
 import { BlogEntry } from './model-interfaces';
 
@@ -6,8 +8,8 @@ import { initialEntries } from './initialEntries';
 
 @Injectable()
 export class BlogService {
-    entries: Array<BlogEntry>;
-    currentEntry: BlogEntry;
+    private entries: Array<BlogEntry>;
+    private currentEntry: Subject<BlogEntry> = new Subject<BlogEntry>();
 
     static guid = () => {
         const s4 = () => {
@@ -21,7 +23,6 @@ export class BlogService {
 
     constructor() {
         this.entries = this.initialState;
-        this.currentEntry = {};
     }
 
     get initialState(): Array<BlogEntry> {
@@ -32,13 +33,14 @@ export class BlogService {
         return this.entries;
     }
 
-    getCurrentEntry(): BlogEntry {
+    getCurrentEntry(): Subject<BlogEntry> {
         return this.currentEntry;
     }
 
     setCurrentEntry(id: string): void {
-        this.currentEntry = Object.assign({}, this.entries.find(e => e.id === id));
-        console.log('current entry is now: ', this.currentEntry);
+        const newCurrent = Object.assign({}, this.entries.find(e => e.id === id));
+        this.currentEntry.next(newCurrent);
+        console.log('current entry is now: ', newCurrent);
     }
 
     saveEntry(entry: BlogEntry): void {

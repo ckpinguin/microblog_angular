@@ -21,11 +21,12 @@ export class BlogItemComponent implements OnInit {
 
     onEdit(id: string) {
         this.blogService.setCurrentEntry(id);
-        console.log('trying to navigate to: ', `/edit/${id}`);
-        // this.router.navigate([ 'blog/edit/',
-        //     { outlets: { 'blogitemoutlet': [ `${id}` ] } } ]
+        // console.log('trying to navigate to: ', `/edit/${id}`);
+        // this.router.navigate([ '/blog',
+        //     { outlets: { 'blogeditoutlet':  [ 'blog', 'edit', id ] } } ]
         // );
-        this.router.navigateByUrl(`/blog/edit/${id}(blogpageoutlet:null)`);
+        // this.router.navigateByUrl(`/blog/edit/(blogeditoutlet:edit/${id})`);
+        this.router.navigateByUrl(`blog/edit/${id}`);
     }
 
     onDelete(id: string) {

@@ -2,7 +2,9 @@
     <h1 title>{{title}}</h1>
 </div>
 <div class="mainContent">
-    <router-outlet name="blogpageoutlet"></router-outlet>
+    <router-outlet></router-outlet>
+    <ck-edit-blog-entry-form></ck-edit-blog-entry-form>
+    <router-outlet name="blogeditoutlet"></router-outlet>
 </div>
 <div class="jumbotron">
     <p>Attention item</p>

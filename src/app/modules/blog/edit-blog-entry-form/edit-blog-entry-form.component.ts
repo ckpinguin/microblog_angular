@@ -6,6 +6,7 @@ import {
     Inject
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Subscriber } from 'rxjs/Subscriber';
 
 import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';
@@ -18,26 +19,32 @@ import { BlogService } from '../blog.service';
 export class EditBlogEntryFormComponent implements OnInit {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
 
-    showForm = true;
+    private showForm = true;
+    private currentEntry: BlogEntry;
 
     constructor(private blogService: BlogService) {
     }
 
     ngOnInit() {
+        this.blogService.getCurrentEntry().subscribe(data => {
+            console.log('received callback from subscription! ', data);
+            this.currentEntry = data;
+            this.showForm = true;
+        });
     }
 
     get entry(): BlogEntry {
-        if (this.blogService.getCurrentEntry != null) {
-            this.showForm = true;
+        if (this.currentEntry) {
+            return this.currentEntry;
         }
-        return this.blogService.getCurrentEntry();
+        this.showForm = false;
+        return {};
     }
 
     onSubmit(formValue: any) {
-        this.showForm = false;
         this.blogService.saveEntry(formValue);
         this.form.reset();
-        this.showForm = true;
+        this.showForm = false;
     }
 
 }
