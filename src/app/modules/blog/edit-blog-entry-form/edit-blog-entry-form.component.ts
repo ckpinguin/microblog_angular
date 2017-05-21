@@ -6,7 +6,6 @@ import {
     Inject
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Subscriber } from 'rxjs/Subscriber';
 
 import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';

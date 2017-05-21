@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, Inject} from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 
 import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';
@@ -9,14 +9,16 @@ import { BlogService } from '../blog.service';
 })
 export class BlogListComponent implements OnInit {
 
+    private entries: Array<BlogEntry>;
+
     constructor(private blogService: BlogService) {
     }
 
-    get entries(): Array<BlogEntry> {
-        return this.blogService.getEntries();
-    }
-
     ngOnInit() {
+        this.blogService.getEntries().subscribe(data => {
+            console.log('received new entries');
+            this.entries = data;
+        });
     }
 
 }

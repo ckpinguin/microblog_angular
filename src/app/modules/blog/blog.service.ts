@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
 
 import { BlogEntry } from './model-interfaces';
@@ -8,7 +9,7 @@ import { initialEntries } from './initialEntries';
 
 @Injectable()
 export class BlogService {
-    private entries: Array<BlogEntry>;
+    private entries: BehaviorSubject<Array<BlogEntry>> = new BehaviorSubject<Array<BlogEntry>>(initialEntries);
     private currentEntry: Subject<BlogEntry> = new Subject<BlogEntry>();
 
     static guid = () => {
@@ -21,16 +22,14 @@ export class BlogService {
         s4() + '-' + s4() + s4() + s4();
     }
 
-    constructor() {
-        this.entries = this.initialState;
-    }
+    constructor() {  }
 
-    get initialState(): Array<BlogEntry> {
-        return initialEntries;
-    }
-
-    getEntries(): Array<BlogEntry> {
+    getEntries(): BehaviorSubject<Array<BlogEntry>> {
         return this.entries;
+    }
+
+    setEntries(entries: Array<BlogEntry>): void {
+        this.entries.next(entries);
     }
 
     getCurrentEntry(): Subject<BlogEntry> {
@@ -38,27 +37,26 @@ export class BlogService {
     }
 
     setCurrentEntry(id: string): void {
-        const newCurrent = Object.assign({}, this.entries.find(e => e.id === id));
+        const newCurrent = Object.assign({}, this.entries.getValue().find(e => e.id === id));
         this.currentEntry.next(newCurrent);
-        console.log('current entry is now: ', newCurrent);
     }
 
     saveEntry(entry: BlogEntry): void {
         // update or create?
-        if (this.entries.findIndex(e => e.id === entry.id) >= 0) {
+        if (this.entries.getValue().findIndex(e => e.id === entry.id) >= 0) {
             console.log('service found existing entry: ', entry);
             this.updateEntry(entry);
         } else {
             console.log('service will save (concat) a new entry');
             entry.id = BlogService.guid();
-            this.entries = this.entries.concat([ entry ]);
+            this.setEntries(this.entries.getValue().concat([ entry ]));
         }
         console.log('service saved entry: ', entry);
         console.log('service blog entries now: ', this.entries);
     }
 
     updateEntry(updatedEntry: BlogEntry): void {
-        this.entries = this.entries.map(e => {
+        this.setEntries(this.entries.getValue().map(e => {
             if (e.id !== updatedEntry.id) {
                 return e;
             }
@@ -66,11 +64,12 @@ export class BlogService {
                 ...e,
                 ...updatedEntry // update the changed or new fields
             };
-        });
+        })
+        );
     }
 
     deleteEntry(id: string): void {
-        this.entries = this.entries.filter(e => e.id !== id);
+        this.setEntries(this.entries.getValue().filter(e => e.id !== id));
     }
 
 }

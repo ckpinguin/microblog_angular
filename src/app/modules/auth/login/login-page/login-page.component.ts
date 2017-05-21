@@ -4,13 +4,17 @@ import { ActivatedRoute } from '@angular/router';
 
 import { LoginService } from '../login.service';
 
+import { User } from '../../user/model-interfaces';
+
 @Component({
     selector: 'ck-login-page',
     templateUrl: './login-page.component.html'
 })
 export class LoginPageComponent implements OnInit {
-    private title;
+    private title: string;
     private showForm = true;
+    private currentUser: User;
+
     constructor(
         private loginService: LoginService,
         private activatedRoute: ActivatedRoute
@@ -18,8 +22,11 @@ export class LoginPageComponent implements OnInit {
 
     ngOnInit() {
         this.title = this.activatedRoute.snapshot.data['title'];
-        if (this.loginService.currentUser) {
+        this.loginService.getCurrentUser().subscribe(data => {
+            console.log('User', data.name, 'has logged in!');
+            this.currentUser = data;
             this.showForm = false;
-        }
+        });
+
     }
 }

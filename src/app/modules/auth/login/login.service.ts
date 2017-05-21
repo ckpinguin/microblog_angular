@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+import { Observable } from 'rxjs/Observable';
 
 import { User } from '../user/model-interfaces';
 import { UserService } from '../user/user.service';
@@ -7,7 +9,8 @@ import md5 from 'md5';
 
 @Injectable()
 export class LoginService {
-    currentUser: User;
+    // currentUser: User;
+    private currentUser: Subject<User> = new Subject<User>();
 
     constructor(private userService: UserService) {}
 
@@ -24,13 +27,14 @@ export class LoginService {
         return false;
     }
 
-    getCurrentUser(): User {
+    getCurrentUser(): Observable<User> {
         return this.currentUser;
     }
 
     setCurrentUser(id: string): void {
-        this.currentUser = Object.assign({}, this.userService.users.find(e => e.id === id));
-        console.log('current user is now: ', this.currentUser);
+        const newCurrentUser = Object.assign({}, this.userService.users.find(e => e.id === id));
+        this.currentUser.next(newCurrentUser);
+        console.log('current user is now: ', newCurrentUser);
     }
 
     isLoggedIn(): boolean {
