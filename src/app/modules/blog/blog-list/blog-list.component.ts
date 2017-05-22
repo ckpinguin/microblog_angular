@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
-import { Router } from '@angular/router';
 
 import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';
@@ -13,8 +12,7 @@ export class BlogListComponent implements OnInit {
     private entries: Array<BlogEntry>;
 
     constructor(
-        private blogService: BlogService,
-        private router: Router
+        private blogService: BlogService
     ) { }
 
     ngOnInit() {
@@ -23,9 +21,4 @@ export class BlogListComponent implements OnInit {
             this.entries = data;
         });
     }
-
-    createNewEntry() {
-        this.router.navigateByUrl(`blog/new`);
-    }
-
 }
