@@ -32,6 +32,11 @@ export class BlogItemComponent implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.routeSubscription.unsubscribe();
     }
+
+    get imageWithPath() {
+        return 'assets/images/' + this.item.image;
+    }
+
     onEdit(id: string) {
         this.blogService.setCurrentEntry(id);
         // console.log('trying to navigate to: ', `/edit/${id}`);
