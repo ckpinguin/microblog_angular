@@ -2,11 +2,14 @@ import {
     Component,
     EventEmitter,
     OnInit,
+    OnChanges,
     ViewChild,
     Input,
     Inject
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
+
+import _ from 'lodash';
 
 import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';
@@ -18,10 +21,11 @@ import { LoginService } from '../../auth/login/login.service';
     templateUrl: './edit-blog-entry-form.component.html',
     styleUrls: [ './edit-blog-entry-form.component.styl' ]
 })
-export class EditBlogEntryFormComponent implements OnInit {
+export class EditBlogEntryFormComponent implements OnInit, OnChanges {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
     @Input() entry: BlogEntry;
 
+    private show: boolean;
     private initialEntry: BlogEntry;
     private currentUserId: string;
     private authorName: string;
@@ -36,6 +40,12 @@ export class EditBlogEntryFormComponent implements OnInit {
             this.currentUserId = data.id;
             this.authorName = data.name;
         });
+    }
+
+    ngOnChanges() {
+        if (!_.isUndefined(this.entry)) {
+            this.show = true;
+        }
     }
 
     getEntry(): BlogEntry {

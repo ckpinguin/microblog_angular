@@ -1,10 +1,11 @@
 <div class="title">
     <h1 title>{{title}}</h1>
 </div>
+<div class="mainContent">
+    <ck-edit-blog-entry-form [entry]="newEntry"></ck-edit-blog-entry-form>
+    <button (click)="createNewEntry()" class="btn">Create New Entry</button>
+</div>
 <div class="jumbotron">
     <p>Attention item</p>
 </div>
-<div class="mainContent">
-    <button (click)="createNewEntry()" class="btn">Create New Entry</button>
-    <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

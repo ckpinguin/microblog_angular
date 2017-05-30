@@ -8,6 +8,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BlogPageComponent implements OnInit {
     private title;
+    private newEntry;
+
     constructor(
         private activatedRoute: ActivatedRoute,
         private router: Router
@@ -18,7 +20,8 @@ export class BlogPageComponent implements OnInit {
     }
 
     createNewEntry() {
-        this.router.navigateByUrl(`blog/new`);
+        console.log('creating new entry');
+        this.newEntry = {};
     }
 
 }
