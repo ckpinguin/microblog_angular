@@ -1,6 +1,5 @@
-<form novalidate (ngSubmit)="onSubmit(form.value); form.reset()"
-        #form="ngForm"
-        *ngIf="showForm">
+<form novalidate (ngSubmit)="onSubmit(form.value)"
+        #form="ngForm">
     <div class="form-group">
         <input type="hidden" class="hidden"
             id="id" name="id"
@@ -43,7 +42,7 @@
     </button>
     <button class="btn btn-default"
         [disabled]="form.pristine || form.submitting"
-        (click)="form.reset()">
+        (click)="onCancel()">
         Formular leeren
     </button>
 </form>

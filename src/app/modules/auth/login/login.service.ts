@@ -38,7 +38,6 @@ export class LoginService {
     setCurrentUser(id: string): void {
         const newCurrentUser = this.userService.getUserById(id);
         this._currentUser.next(newCurrentUser);
-        console.log('current user is now: ', newCurrentUser);
     }
 
     // TODO: rewrite this to work with subscribing

@@ -3,6 +3,7 @@ import {
     EventEmitter,
     OnInit,
     ViewChild,
+    Input,
     Inject
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -11,6 +12,7 @@ import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';
 import { LoginService } from '../../auth/login/login.service';
 
+
 @Component({
     selector: 'ck-edit-blog-entry-form',
     templateUrl: './edit-blog-entry-form.component.html',
@@ -18,9 +20,9 @@ import { LoginService } from '../../auth/login/login.service';
 })
 export class EditBlogEntryFormComponent implements OnInit {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
+    @Input() entry: BlogEntry;
 
-    private showForm = false;
-    private currentEntry: BlogEntry;
+    private initialEntry: BlogEntry;
     private currentUserId: string;
     private authorName: string;
 
@@ -28,11 +30,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.blogService.currentEntry.subscribe(data => {
-            console.log('received currentEntry from subscription! ', data);
-            this.currentEntry = data;
-            this.showForm = true;
-        });
+        this.initialEntry = Object.assign({}, this.entry);
         this.loginService.currentUser.subscribe(data => {
             console.log('received currentUser from subscription! ', data);
             this.currentUserId = data.id;
@@ -40,21 +38,21 @@ export class EditBlogEntryFormComponent implements OnInit {
         });
     }
 
-    get entry(): BlogEntry {
-        if (this.currentEntry) {
-            return { ...this.currentEntry,
-                user: this.currentUserId,
-                author: this.authorName
-            };
-        }
-        this.showForm = false;
-        return {};
+    getEntry(): BlogEntry {
+        return { ...this.entry,
+            user: this.currentUserId,
+            author: this.authorName
+        };
     }
 
     onSubmit(formValue: any) {
-        this.blogService.saveEntry(formValue);
-        this.form.reset();
-        this.showForm = false;
+        if (!this.form.pristine) {
+            this.blogService.saveEntry(formValue);
+        }
+    }
+
+    onCancel() {
+        this.entry = this.initialEntry;
     }
 
 }

@@ -10,7 +10,7 @@ export const appRoutes: Routes = [
     // We lazy-load the modules with a preloading strategy (loads in background)
     { path: 'login', loadChildren: 'app/modules/auth/auth.module#AuthModule' },
     { path: 'blog', loadChildren: 'app/modules/blog/blog.module#BlogModule' },
-    { path : '**', redirectTo: '/blog' }
+    // { path : '**', redirectTo: '/blog' }
 ];
 export const appRouting = RouterModule.forRoot(appRoutes, {
     preloadingStrategy: PreloadAllModules

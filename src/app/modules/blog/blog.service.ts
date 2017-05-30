@@ -52,6 +52,15 @@ export class BlogService {
         console.log('service saved entry: ', entry);
     }
 
+    startEditingEntry(id: string): void {
+        const entry: BlogEntry = this.getEntryById(id);
+        this.updateEntry({ ...entry, editing: true });
+    }
+
+    finishEditingEntry(entry: BlogEntry): void {
+        this.updateEntry({ ...entry, editing: false });
+    }
+
     updateEntry(updatedEntry: BlogEntry): void {
         this.setEntries(this._entries.getValue().map(e => {
             if (e.id !== updatedEntry.id) {

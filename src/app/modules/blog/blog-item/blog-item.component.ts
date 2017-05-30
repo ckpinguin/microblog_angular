@@ -13,6 +13,7 @@ import { BlogService } from '../blog.service';
 export class BlogItemComponent implements OnInit, OnDestroy {
     @Input() item: BlogEntry;
     private routeSubscription: Subscription;
+    private editing = false;
 
     constructor(
         private router: Router,
@@ -23,9 +24,9 @@ export class BlogItemComponent implements OnInit, OnDestroy {
         this.routeSubscription = this.route.params
             .subscribe(params => {
                 const id = (params['id'] || '');
-                this.item = ('undefined' === typeof this.item)
-                     ? this.item = this.blogService.getEntryById(id)
-                     : this.item;
+                this.item = ('undefined' === typeof this.item) // if no item was inputted
+                     ? this.item = this.blogService.getEntryById(id) // what is in the db
+                     : this.item; // what we got from input
             });
     }
 
@@ -47,10 +48,12 @@ export class BlogItemComponent implements OnInit, OnDestroy {
         // this.router.navigateByUrl(`blog/edit/${id}`);
         const navigationExtras: any = {
             queryParams: { id: id },
-                // outlets: {edit: 'edit'}
+            outlets: { edit: 'edit' }
         };
+        this.editing = true;
+        this.blogService.startEditingEntry(id);
         // this.router.navigate([ `/blog/item/${id}/edit` ], navigationExtras);
-        this.router.navigateByUrl(`blog/item/${id}/edit`);
+        // this.router.navigateByUrl(`blog/item/${id}/edit`);
     }
 
     onDelete(id: string) {

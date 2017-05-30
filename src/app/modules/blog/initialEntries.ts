@@ -7,6 +7,9 @@ export const initialEntries = [
         text: 'Just a little\n test',
         image: 'cat1.jpg',
         date: null,
+        user: null,
+        author: null,
+        editing: false,
         tags: []
     },
     {
@@ -16,6 +19,7 @@ export const initialEntries = [
         image: 'cat2.gif',
         date: null,
         tags: [],
+        editing: false,
         user: 'a8655eb5-ca5c-459a-a094-d0e704e80a69',
         author: 'The test user himself'
     },
@@ -25,6 +29,9 @@ export const initialEntries = [
         text: 'Told ya, everybody loves cats',
         image: null,
         date: null,
-        tags: []
+        editing: false,
+        tags: [],
+        user: null,
+        author: null
     }
 ];
