@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { BlogService } from '../blog.service';
+
 @Component({
     selector: 'ck-blog-page',
     templateUrl: './blog-page.component.html',
@@ -12,7 +14,8 @@ export class BlogPageComponent implements OnInit {
 
     constructor(
         private activatedRoute: ActivatedRoute,
-        private router: Router
+        private router: Router,
+        private blogService: BlogService
     ) { }
 
     ngOnInit() {

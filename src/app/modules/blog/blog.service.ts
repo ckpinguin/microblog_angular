@@ -24,7 +24,11 @@ export class BlogService {
         s4() + '-' + s4() + s4() + s4();
     }
 
-    constructor() { }
+    constructor() { 
+        this.entries.subscribe(data => {
+            console.log('entries changed: ', data);
+        });
+    }
 
     setEntries(entries: Array<BlogEntry>): void {
         this._entries.next(entries);

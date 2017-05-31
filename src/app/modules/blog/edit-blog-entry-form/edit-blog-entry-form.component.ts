@@ -23,9 +23,9 @@ import { LoginService } from '../../auth/login/login.service';
 })
 export class EditBlogEntryFormComponent implements OnInit, OnChanges {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
-    @Input() entry: BlogEntry;
+    @Input() inputEntry: BlogEntry;
 
-    private initialEntry: BlogEntry;
+    private _entry: BlogEntry;
     private currentUserId: string;
     private authorName: string;
 
@@ -34,7 +34,7 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
 
     ngOnInit() {
         console.log('form called with entry: ', this.entry);
-        this.initialEntry = Object.assign({}, this.entry);
+        this.entry = Object.assign({}, this.inputEntry);
         this.loginService.currentUser.subscribe(data => {
             console.log('received currentUser from subscription! ', data);
             this.currentUserId = data.id;
@@ -44,15 +44,21 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
 
     ngOnChanges() {
         console.log('form changed entry: ', this.entry);
+        //this.oldEntry = Object.assign({}, this.entry);
     }
 
-    getEntry(): BlogEntry {
+    get entry(): BlogEntry {
         return { 
-            ...this.entry,
+            ...this._entry,
             user: this.currentUserId,
             author: this.authorName
         };
     }
+
+    set entry(entry: BlogEntry) {
+        this._entry = entry;
+    }
+
 
     onSubmit(formValue: any) {
         if (!this.form.pristine) {
@@ -63,8 +69,8 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
     // TODO: find a way to mark the form as pristine when
     // cancelling (still keeping the old values!)
     onCancel() {
-        // this.form.reset();
-        this.entry = this.initialEntry;
+        this.form.reset();
+        // this.entry = this.oldEntry;
         this.blogService.finishEditingEntry(this.entry.id);
         // this.form.markAsPristine();
         // this.form.resetForm();

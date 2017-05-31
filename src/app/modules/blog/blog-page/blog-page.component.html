@@ -2,7 +2,7 @@
     <h1 title>{{title}}</h1>
 </div>
 <div class="mainContent">
-    <ck-edit-blog-entry-form [entry]="newEntry"></ck-edit-blog-entry-form>
+    <ck-edit-blog-entry-form [inputEntry]="newEntry"></ck-edit-blog-entry-form>
     <button *ngIf="!newEntry.editing" (click)="createNewEntry()" class="btn">Create New Entry</button>
 </div>
 <div class="jumbotron">
