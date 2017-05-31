@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { BlogService } from '../blog.service';
+import { BlogEntry } from '../model-interfaces';
 
 @Component({
     selector: 'ck-blog-page',
@@ -9,8 +10,8 @@ import { BlogService } from '../blog.service';
     styleUrls: [ './blog-page.component.styl' ]
 })
 export class BlogPageComponent implements OnInit {
-    private title;
-    private newEntry = this.blogService.newEntry;
+    private title: String;
+    private newEntry: BlogEntry;
 
     constructor(
         private activatedRoute: ActivatedRoute,
@@ -20,14 +21,14 @@ export class BlogPageComponent implements OnInit {
 
     ngOnInit() {
         this.title = this.activatedRoute.snapshot.data['title'];
+        // this.newEntry = this.blogService.newEntry;
+        this.blogService.newEntry.subscribe(data => {
+            this.newEntry = data;
+        });
     }
 
     createNewEntry() {
-        this.newEntry = {
-            ...this.newEntry,
-            editing: true
-        }
-        console.log('creating new entry: ', this.newEntry);
+        this.blogService.startEditingEntry(this.newEntry.id);
     }
 
 }

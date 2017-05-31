@@ -11,8 +11,12 @@ export class BlogService {
     private _entries: BehaviorSubject<Array<BlogEntry>> = new BehaviorSubject<Array<BlogEntry>>(initialEntries);
     public readonly entries: Observable<Array<BlogEntry>> = this._entries.asObservable();
 
-    private _currentEntry: BehaviorSubject<BlogEntry> = new BehaviorSubject<BlogEntry>({});
-    public readonly currentEntry: Observable<BlogEntry> = this._currentEntry.asObservable();
+    private _newEntry: BehaviorSubject<BlogEntry> = new BehaviorSubject<BlogEntry>(
+        {
+            id: BlogService.guid(),
+            editing: false
+        });
+    public readonly newEntry: Observable<BlogEntry> = this._newEntry.asObservable();
 
     static guid = () => {
         const s4 = () => {
@@ -24,9 +28,12 @@ export class BlogService {
         s4() + '-' + s4() + s4() + s4();
     }
 
-    constructor() { 
+    constructor() {
         this.entries.subscribe(data => {
             console.log('entries changed: ', data);
+        });
+        this.newEntry.subscribe(data => {
+            console.log('new entry changed: ', data);
         });
     }
 
@@ -35,12 +42,11 @@ export class BlogService {
     }
 
     getEntryById(id: string): BlogEntry {
+        if (this._newEntry.getValue().id === id) {
+            // console.log('getEntryById found newEntry: ', this._newEntry.getValue());
+            return this._newEntry.getValue();
+        }
         return this._entries.getValue().find(e => e.id === id);
-    }
-
-    setCurrentEntry(id: string): void {
-        const newCurrent = Object.assign({}, this._entries.getValue().find(e => e.id === id));
-        this._currentEntry.next(newCurrent);
     }
 
     saveEntry(entry: BlogEntry): void {
@@ -51,7 +57,7 @@ export class BlogService {
             this.finishEditingEntry(entry.id);
         } else {
             console.log('service will save (concat) a new entry');
-            //entry.id = BlogService.guid(); // not our responsibility!
+            // entry.id = BlogService.guid(); // not our responsibility!
             this.setEntries(this._entries.getValue().concat([ entry ]));
             this.finishEditingEntry(entry.id);
         }
@@ -64,21 +70,17 @@ export class BlogService {
         // TODO: maybe set all other entries to editing: false?
     }
 
-    get newEntry(): BlogEntry {
-        const entry = {
-            id: BlogService.guid(),
-            editing: false
-        };
-        this.saveEntry(entry);
-        return entry;
-    }
-
     finishEditingEntry(id: string): void {
         const entry: BlogEntry = this.getEntryById(id);
         this.updateEntry({ ...entry, editing: false });
     }
 
     updateEntry(updatedEntry: BlogEntry): void {
+        // first check, if we update the `newEntry`:
+        if (updatedEntry.id === this._newEntry.getValue().id) {
+            this._newEntry.next(updatedEntry);
+            return;
+        }
         this.setEntries(this._entries.getValue().map(e => {
             if (e.id !== updatedEntry.id) {
                 return e;

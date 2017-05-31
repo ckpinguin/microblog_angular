@@ -39,7 +39,6 @@ export class BlogItemComponent implements OnInit, OnDestroy {
     }
 
     onEdit(id: string) {
-        this.blogService.setCurrentEntry(id);
         // console.log('trying to navigate to: ', `/edit/${id}`);
         // this.router.navigate([ '/blog',
         //     { outlets: { 'blogeditoutlet':  [ 'blog', 'edit', id ] } } ]
