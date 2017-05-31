@@ -34,7 +34,7 @@ export class EditBlogEntryFormComponent implements OnInit {
         ) { }
 
     ngOnInit() {
-        console.log('form called with entry: ', this.entry);
+        console.log('form called with entry: ', this.inputEntry);
         this.entry = Object.assign({}, this.inputEntry);
         this.loginService.currentUser.subscribe(data => {
             console.log('received currentUser from subscription! ', data);

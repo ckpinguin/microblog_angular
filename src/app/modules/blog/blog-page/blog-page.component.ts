@@ -10,7 +10,7 @@ import { BlogService } from '../blog.service';
 })
 export class BlogPageComponent implements OnInit {
     private title;
-    private newEntry = {};
+    private newEntry = this.blogService.newEntry;
 
     constructor(
         private activatedRoute: ActivatedRoute,
@@ -23,8 +23,11 @@ export class BlogPageComponent implements OnInit {
     }
 
     createNewEntry() {
-        console.log('creating new entry');
-        this.newEntry = { editing: true };
+        this.newEntry = {
+            ...this.newEntry,
+            editing: true
+        }
+        console.log('creating new entry: ', this.newEntry);
     }
 
 }

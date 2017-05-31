@@ -51,7 +51,7 @@ export class BlogService {
             this.finishEditingEntry(entry.id);
         } else {
             console.log('service will save (concat) a new entry');
-            entry.id = BlogService.guid();
+            //entry.id = BlogService.guid(); // not our responsibility!
             this.setEntries(this._entries.getValue().concat([ entry ]));
             this.finishEditingEntry(entry.id);
         }
@@ -62,6 +62,15 @@ export class BlogService {
         const entry: BlogEntry = this.getEntryById(id);
         this.updateEntry({ ...entry, editing: true });
         // TODO: maybe set all other entries to editing: false?
+    }
+
+    get newEntry(): BlogEntry {
+        const entry = {
+            id: BlogService.guid(),
+            editing: false
+        };
+        this.saveEntry(entry);
+        return entry;
     }
 
     finishEditingEntry(id: string): void {
