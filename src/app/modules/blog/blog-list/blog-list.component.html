@@ -1,7 +1,7 @@
 <div class="listContent">
     <router-outlet></router-outlet>
-    <!--<ng-container *ngFor="let entry of entries">
-        <ck-edit-blog-entry-form *ngIf="entry.editing" [entry]="entry" ></ck-edit-blog-entry-form>
-    </ng-container>-->
-    <ck-blog-item [item]="entry" *ngFor="let entry of entries"></ck-blog-item>
+    <ng-container *ngFor="let entry of entries">
+        <ck-edit-blog-entry-form *ngIf="entry.editing" [entry]="entry"></ck-edit-blog-entry-form>
+        <ck-blog-item [item]="entry"></ck-blog-item>
+    </ng-container>
 </div>

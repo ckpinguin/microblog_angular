@@ -1,5 +1,5 @@
 <form novalidate (ngSubmit)="onSubmit(form.value)"
-        #form="ngForm" *ngIf="show">
+        #form="ngForm" *ngIf="entry.editing"> 
     <div class="form-group">
         <input type="hidden" class="hidden"
             id="id" name="id"

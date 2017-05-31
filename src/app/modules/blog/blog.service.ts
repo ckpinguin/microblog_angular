@@ -44,10 +44,12 @@ export class BlogService {
         if (this._entries.getValue().findIndex(e => e.id === entry.id) >= 0) {
             console.log('service found existing entry: ', entry);
             this.updateEntry(entry);
+            this.finishEditingEntry(entry.id);
         } else {
             console.log('service will save (concat) a new entry');
             entry.id = BlogService.guid();
             this.setEntries(this._entries.getValue().concat([ entry ]));
+            this.finishEditingEntry(entry.id);
         }
         console.log('service saved entry: ', entry);
     }
@@ -55,9 +57,11 @@ export class BlogService {
     startEditingEntry(id: string): void {
         const entry: BlogEntry = this.getEntryById(id);
         this.updateEntry({ ...entry, editing: true });
+        // TODO: maybe set all other entries to editing: false?
     }
 
-    finishEditingEntry(entry: BlogEntry): void {
+    finishEditingEntry(id: string): void {
+        const entry: BlogEntry = this.getEntryById(id);
         this.updateEntry({ ...entry, editing: false });
     }
 

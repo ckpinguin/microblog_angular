@@ -10,7 +10,7 @@ export const blogRoutes: Routes = [ {
     // path '' is the component holding the chief outlet
     path: '', component: BlogPageComponent, data: { title: 'Blog' },
     children: [
-        { path: '', component: BlogListComponent },
+        // { path: '', component: BlogListComponent },
         { path: 'new',
             canActivate: [ LoginGuard ],
             component: EditBlogEntryFormComponent,
@@ -18,7 +18,7 @@ export const blogRoutes: Routes = [ {
         },
         { path: 'item/:id',
             component: BlogItemComponent,
-            //outlet: 'item-outlet',
+            // outlet: 'item-outlet',
             children: [
                 { path: '', component: EditBlogEntryFormComponent }
             ]

@@ -1,6 +1,5 @@
 <div class="blog-item">
     <router-outlet></router-outlet>
-    <ck-edit-blog-entry-form *ngIf="item.editing" [entry]="item"></ck-edit-blog-entry-form>
     <hr />
     <div class="blog-image">
         <img *ngIf="item.image" [src]="imageWithPath" [alt]="item.title" />

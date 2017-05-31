@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BlogPageComponent implements OnInit {
     private title;
-    private newEntry;
+    private newEntry = {};
 
     constructor(
         private activatedRoute: ActivatedRoute,
@@ -21,7 +21,7 @@ export class BlogPageComponent implements OnInit {
 
     createNewEntry() {
         console.log('creating new entry');
-        this.newEntry = {};
+        this.newEntry = { editing: true };
     }
 
 }
