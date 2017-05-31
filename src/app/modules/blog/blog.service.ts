@@ -12,10 +12,8 @@ export class BlogService {
     public readonly entries: Observable<Array<BlogEntry>> = this._entries.asObservable();
 
     private _newEntry: BehaviorSubject<BlogEntry> = new BehaviorSubject<BlogEntry>(
-        {
-            id: BlogService.guid(),
-            editing: false
-        });
+        this.createFreshEntry()
+    );
     public readonly newEntry: Observable<BlogEntry> = this._newEntry.asObservable();
 
     static guid = () => {
@@ -37,19 +35,9 @@ export class BlogService {
         });
     }
 
-    setEntries(entries: Array<BlogEntry>): void {
-        this._entries.next(entries);
-    }
+    // This is the public API:
 
-    getEntryById(id: string): BlogEntry {
-        if (this._newEntry.getValue().id === id) {
-            // console.log('getEntryById found newEntry: ', this._newEntry.getValue());
-            return this._newEntry.getValue();
-        }
-        return this._entries.getValue().find(e => e.id === id);
-    }
-
-    saveEntry(entry: BlogEntry): void {
+    public saveEntry(entry: BlogEntry): void {
         // update or create?
         if (this._entries.getValue().findIndex(e => e.id === entry.id) >= 0) {
             console.log('service found existing entry: ', entry);
@@ -57,28 +45,60 @@ export class BlogService {
             this.finishEditingEntry(entry.id);
         } else {
             console.log('service will save (concat) a new entry');
-            // entry.id = BlogService.guid(); // not our responsibility!
             this.setEntries(this._entries.getValue().concat([ entry ]));
             this.finishEditingEntry(entry.id);
+            // Now create a new entry for the new entry form
+            this.setNewEntry(this.createFreshEntry());
         }
         console.log('service saved entry: ', entry);
     }
 
-    startEditingEntry(id: string): void {
+    public startEditingEntry(id: string): void {
         const entry: BlogEntry = this.getEntryById(id);
         this.updateEntry({ ...entry, editing: true });
-        // TODO: maybe set all other entries to editing: false?
+        // close other forms (only one edit at a time)
+        this.stopEditingOthersThan(entry);
     }
 
-    finishEditingEntry(id: string): void {
+    public finishEditingEntry(id: string): void {
         const entry: BlogEntry = this.getEntryById(id);
         this.updateEntry({ ...entry, editing: false });
     }
 
-    updateEntry(updatedEntry: BlogEntry): void {
+    public deleteEntry(id: string): void {
+        this.setEntries(this._entries.getValue().filter(e => e.id !== id));
+    }
+
+    public getEntryById(id: string): BlogEntry {
+        if (this._newEntry.getValue().id === id) {
+            // console.log('getEntryById found newEntry: ', this._newEntry.getValue());
+            return this._newEntry.getValue();
+        }
+        return this._entries.getValue().find(e => e.id === id);
+    }
+    // End of public API
+
+
+    private setEntries(entries: Array<BlogEntry>): void {
+        this._entries.next(entries);
+    }
+
+    private setNewEntry(entry: BlogEntry): void {
+        console.log('setting newEntry from: ', this._newEntry.getValue(), ' to: ', entry);
+        this._newEntry.next(entry);
+    }
+
+    private createFreshEntry(): BlogEntry {
+        return {
+            id: BlogService.guid(),
+            editing: false
+        };
+    }
+
+    private updateEntry(updatedEntry: BlogEntry): void {
         // first check, if we update the `newEntry`:
         if (updatedEntry.id === this._newEntry.getValue().id) {
-            this._newEntry.next(updatedEntry);
+            this.setNewEntry(updatedEntry);
             return;
         }
         this.setEntries(this._entries.getValue().map(e => {
@@ -92,8 +112,15 @@ export class BlogService {
         }));
     }
 
-    deleteEntry(id: string): void {
-        this.setEntries(this._entries.getValue().filter(e => e.id !== id));
+    private stopEditingOthersThan(entry: BlogEntry) {
+        this.setEntries(this._entries.getValue().map(e => {
+            if (e.id === entry.id) {
+                return e;
+            }
+            return {
+                ...e,
+                editing: false
+            };
+        }));
     }
-
 }
