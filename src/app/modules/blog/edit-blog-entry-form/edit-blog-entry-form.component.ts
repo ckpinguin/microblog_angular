@@ -25,7 +25,7 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
     @Input() entry: BlogEntry;
 
-    private show: boolean;
+    private show: boolean; // used to close the form component individually
     private initialEntry: BlogEntry;
     private currentUserId: string;
     private authorName: string;
@@ -43,9 +43,9 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
     }
 
     ngOnChanges() {
-        if (!_.isUndefined(this.entry)) {
-            this.show = true;
-        }
+        // if (!_.isUndefined(this.entry)) {
+        //     this.show = true;
+        // }
     }
 
     getEntry(): BlogEntry {
@@ -58,11 +58,19 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
     onSubmit(formValue: any) {
         if (!this.form.pristine) {
             this.blogService.saveEntry(formValue);
+            this.show = false;
         }
+        this.show = false;
     }
 
+    // TODO: find a way to mark the form as pristine when
+    // cancelling (still keeping the old values!)
     onCancel() {
+        // this.form.reset();
         this.entry = this.initialEntry;
+        this.show = false;
+        // this.form.markAsPristine();
+        // this.form.resetForm();
     }
 
 }

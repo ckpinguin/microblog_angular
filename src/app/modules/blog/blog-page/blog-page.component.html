@@ -3,7 +3,7 @@
 </div>
 <div class="mainContent">
     <ck-edit-blog-entry-form [entry]="newEntry"></ck-edit-blog-entry-form>
-    <button (click)="createNewEntry()" class="btn">Create New Entry</button>
+    <button *ngIf="!newEntry" (click)="createNewEntry()" class="btn">Create New Entry</button>
 </div>
 <div class="jumbotron">
     <p>Attention item</p>
