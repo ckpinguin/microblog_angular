@@ -2,7 +2,6 @@ import {
     Component,
     EventEmitter,
     OnInit,
-    OnChanges,
     ViewChild,
     Input,
     Inject
@@ -21,7 +20,7 @@ import { LoginService } from '../../auth/login/login.service';
     templateUrl: './edit-blog-entry-form.component.html',
     styleUrls: [ './edit-blog-entry-form.component.styl' ]
 })
-export class EditBlogEntryFormComponent implements OnInit, OnChanges {
+export class EditBlogEntryFormComponent implements OnInit {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
     @Input() inputEntry: BlogEntry;
 
@@ -29,8 +28,10 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
     private currentUserId: string;
     private authorName: string;
 
-    constructor(private blogService: BlogService, private loginService: LoginService) {
-    }
+    constructor(
+        private blogService: BlogService,
+        private loginService: LoginService
+        ) { }
 
     ngOnInit() {
         console.log('form called with entry: ', this.entry);
@@ -40,11 +41,6 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
             this.currentUserId = data.id;
             this.authorName = data.name;
         });
-    }
-
-    ngOnChanges() {
-        console.log('form changed entry: ', this.entry);
-        //this.oldEntry = Object.assign({}, this.entry);
     }
 
     get entry(): BlogEntry {
@@ -72,8 +68,6 @@ export class EditBlogEntryFormComponent implements OnInit, OnChanges {
         this.form.reset();
         // this.entry = this.oldEntry;
         this.blogService.finishEditingEntry(this.entry.id);
-        // this.form.markAsPristine();
-        // this.form.resetForm();
     }
 
 }
