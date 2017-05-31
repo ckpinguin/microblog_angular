@@ -25,6 +25,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     @Input() inputEntry: BlogEntry;
 
     private _entry: BlogEntry;
+    private show = true;
     private currentUserId: string;
     private authorName: string;
 
@@ -66,7 +67,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     // cancelling (still keeping the old values!)
     onCancel() {
         this.form.reset();
-        // this.entry = this.oldEntry;
+        this.show = false;
         this.blogService.finishEditingEntry(this.entry.id);
     }
 

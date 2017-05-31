@@ -28,6 +28,7 @@ export class BlogPageComponent implements OnInit {
     }
 
     createNewEntry() {
+        this.router.navigateByUrl(`blog/new`);
         this.blogService.startEditingEntry(this.newEntry.id);
     }
 

@@ -14,13 +14,11 @@ export const blogRoutes: Routes = [ {
         { path: 'new',
             canActivate: [ LoginGuard ],
             component: EditBlogEntryFormComponent,
-            // outlet: 'blogitemoutlet'
         },
         { path: 'item/:id',
             component: BlogItemComponent,
-            // outlet: 'item-outlet',
             children: [
-                { path: '', component: EditBlogEntryFormComponent }
+                { path: 'edit', canActivate: [ LoginGuard ], component: EditBlogEntryFormComponent }
             ]
         }
     ] }

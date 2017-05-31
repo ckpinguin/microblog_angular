@@ -2,11 +2,11 @@
     <h1 title>{{title}}</h1>
 </div>
 <div class="mainContent">
-    <ck-edit-blog-entry-form *ngIf="newEntry.editing && newEntry.id" [inputEntry]="newEntry"></ck-edit-blog-entry-form>
+    <router-outlet></router-outlet>
+    <!--<ck-edit-blog-entry-form *ngIf="newEntry.editing && newEntry.id" [inputEntry]="newEntry"></ck-edit-blog-entry-form>-->
     <button *ngIf="!newEntry.editing" (click)="createNewEntry()" class="btn">Create New Entry</button>
 </div>
 <div class="jumbotron">
     <p>Attention item</p>
 </div>
 <ck-blog-list></ck-blog-list>
-<router-outlet></router-outlet>

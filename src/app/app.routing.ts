@@ -12,6 +12,7 @@ export const appRoutes: Routes = [
     { path: 'home', redirectTo: '/blog' },
     { path: 'blog', loadChildren: 'app/modules/blog/blog.module#BlogModule' },
     { path: 'login', loadChildren: 'app/modules/auth/auth.module#AuthModule' },
+    // on top-level it must be `canLoad` instead of `canActivate` (which is still used at deeper levels)
     { path: 'admin', canLoad: [ LoginGuard ], loadChildren: 'app/modules/admin/admin.module#AdminModule' }
     // { path : '**', redirectTo: '/blog' }
 ];

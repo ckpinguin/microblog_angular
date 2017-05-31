@@ -13,7 +13,6 @@ import { BlogService } from '../blog.service';
 export class BlogItemComponent implements OnInit, OnDestroy {
     @Input() item: BlogEntry;
     private routeSubscription: Subscription;
-    private editing = false;
 
     constructor(
         private router: Router,
@@ -46,12 +45,10 @@ export class BlogItemComponent implements OnInit, OnDestroy {
         // this.router.navigateByUrl(`/blog/edit/(blogeditoutlet:edit/${id})`);
         // this.router.navigateByUrl(`blog/edit/${id}`);
         const navigationExtras: any = {
-            queryParams: { id: id },
-            outlets: { edit: 'edit' }
+            queryParams: { id: id }
         };
-        this.editing = true;
-        this.blogService.startEditingEntry(id);
-        // this.router.navigate([ `/blog/item/${id}/edit` ], navigationExtras);
+        //this.blogService.startEditingEntry(id);
+        this.router.navigate([ `/blog/item/${id}/edit` ]);
         // this.router.navigateByUrl(`blog/item/${id}/edit`);
     }
 
