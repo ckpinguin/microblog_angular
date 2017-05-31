@@ -9,6 +9,7 @@ import { LoginGuard } from './modules/auth/login/login.guard';
 export const appRoutes: Routes = [
     { path: '', redirectTo: '/blog', pathMatch: 'full', data: { title: 'CK\'s microblog!' } },
     // We lazy-load the modules with a preloading strategy (loads in background)
+    { path: 'home', redirectTo: '/blog' },
     { path: 'blog', loadChildren: 'app/modules/blog/blog.module#BlogModule' },
     { path: 'login', loadChildren: 'app/modules/auth/auth.module#AuthModule' },
     { path: 'admin', canLoad: [ LoginGuard ], loadChildren: 'app/modules/admin/admin.module#AdminModule' }
