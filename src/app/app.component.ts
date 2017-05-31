@@ -13,7 +13,6 @@ import 'rxjs/add/operator/filter';
 export class AppComponent implements OnInit {
     private defaultTitle;
 
-
     constructor(
         private activatedRoute: ActivatedRoute,
         private router: Router,

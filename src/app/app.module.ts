@@ -15,7 +15,7 @@ import { LoginService } from './modules/auth/login/login.service';
 import { BlogService } from './modules/blog/blog.service';
 
 // Routing
-import { appRouting, routingComponents } from './app.routing';
+import { appRouting, routingComponents, routingProviders } from './app.routing';
 
 @NgModule({
     declarations: [
@@ -25,9 +25,10 @@ import { appRouting, routingComponents } from './app.routing';
     imports: [
         BrowserModule,
         appRouting,
-        SharedModule.forRoot()
+        SharedModule.forRoot() // as singleton here
     ],
     providers: [ // Global (i.e. Singleton) services
+        routingProviders,
         LoginService,
         UserService,
         BlogService,

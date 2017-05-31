@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { BlogItemComponent } from './blog-item/blog-item.component';
@@ -11,7 +10,6 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
     imports: [
-        CommonModule,
         SharedModule,
         blogRouting
     ],

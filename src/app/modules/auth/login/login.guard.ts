@@ -1,27 +1,32 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot,
-     RouterStateSnapshot, Router } from '@angular/router';
+import { CanActivate, CanLoad, ActivatedRouteSnapshot,
+     RouterStateSnapshot, Route, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { LoginService } from './login.service';
 
 @Injectable()
-export class LoginGuard implements CanActivate {
+export class LoginGuard implements CanActivate, CanLoad {
     constructor(
         private loginService: LoginService,
         private router: Router) { }
 
-    canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)
-        : boolean | Observable <boolean> | Promise <boolean> {
+    private checkLogin(redirect: string) {
         if (!this.loginService.isLoggedIn()) {
-            console.log('not logged in');
-            const url = encodeURI(state.url);
-            this.router.navigateByUrl('/login', {
-                queryParams: {
-                    redirect: url
-                }
-            });
+            this.router.navigate([ '/login' ], { queryParams: { redirect: redirect } });
+            return false;
         }
         return true;
+    }
+
+    canActivate(routeSnapshot: ActivatedRouteSnapshot,
+        routerSnapshot: RouterStateSnapshot): Observable<boolean> | boolean {
+        const redirect = encodeURI(routerSnapshot.url);
+        return this.checkLogin(redirect);
+    }
+
+    canLoad(route: Route): Observable<boolean> | boolean {
+        const redirect = encodeURI(route.path);
+        return this.checkLogin(redirect);
     }
 }
 
