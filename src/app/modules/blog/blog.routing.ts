@@ -22,14 +22,7 @@ export const blogRoutes: Routes = [ {
         },
         { 
             path: 'item/:id',
-            component: BlogItemComponent,
-            children: [
-                { 
-                    path: 'edit',
-                    canActivate: [ LoginGuard ],
-                    component: EditBlogEntryFormComponent
-                }
-            ]
+            component: BlogItemComponent
         }
     ] }
 ];

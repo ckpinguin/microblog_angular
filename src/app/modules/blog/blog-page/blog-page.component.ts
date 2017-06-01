@@ -19,23 +19,11 @@ export class BlogPageComponent implements OnInit {
         private blogService: BlogService
     ) { }
 
-    ngOnInit() {
-        this.activatedRoute.params
-            .subscribe(params => {
-            const id = (params['id'] || '');
-            console.log('received router param id: ', id);
-            // this.task = this.taskService.getTask(id);
-            });
+    ngOnInit() {     
         this.title = this.activatedRoute.snapshot.data['title'];
-        // this.newEntry = this.blogService.newEntry;
         this.blogService.newEntry.subscribe(data => {
             this.newEntry = data;
         });
-    }
-
-    createNewEntry() {
-        this.router.navigate([ './new', { outlets: {primary: 'new' }} ]);
-        this.blogService.startEditingEntry(this.newEntry.id);
     }
 
 }

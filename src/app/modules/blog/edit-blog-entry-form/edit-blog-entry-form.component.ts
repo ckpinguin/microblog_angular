@@ -15,7 +15,6 @@ import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';
 import { LoginService } from '../../auth/login/login.service';
 
-
 @Component({
     selector: 'ck-edit-blog-entry-form',
     templateUrl: './edit-blog-entry-form.component.html',
@@ -46,15 +45,17 @@ export class EditBlogEntryFormComponent implements OnInit {
             this.currentUserId = data.id;
             this.authorName = data.name;
         });
+
         this.activatedRoute.params
             .subscribe(params => {
             const id = (params['id'] || '');
             console.log('received route param id: ', id);
             this.entry = this.blogService.getEntryById(id);
         });
-        // this.blogService.newEntry.subscribe(data => {
-        //     this.newEntry = data;
-        // });
+
+        // This is simpler than a subscription (one-timer):
+        // const id = this.activatedRoute.snapshot.params['id'];
+        // this.entry = this.blogService.getEntryById(id);
     }
 
     ngOnDestroy() {
@@ -84,8 +85,11 @@ export class EditBlogEntryFormComponent implements OnInit {
     onCancel() {
         this.form.reset();
         this.show = false;
-        this.router.navigate(['..']); // Bug: Goes back to /
+        const relUrl = this.router.url.includes('edit') ? '../..' : '..';
+        this.router.navigate([relUrl], {relativeTo: this.activatedRoute});
+        // this.router.navigate(['..']); // Bug: Goes back to /
         this.blogService.finishEditingEntry(this.entry.id);
+        return false;
     }
 
 }
