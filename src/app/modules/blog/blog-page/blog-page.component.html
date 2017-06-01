@@ -4,7 +4,11 @@
 <div class="mainContent">
     <router-outlet></router-outlet>
     <!--<ck-edit-blog-entry-form *ngIf="newEntry.editing && newEntry.id" [inputEntry]="newEntry"></ck-edit-blog-entry-form>-->
-    <button *ngIf="!newEntry.editing" (click)="createNewEntry()" class="btn">Create New Entry</button>
+    <button [routerLink]="[ './edit', newEntry.id ]"
+        *ngIf="!newEntry.editing"
+        class="btn">
+        Create New Entry
+    </button>
 </div>
 <div class="jumbotron">
     <p>Attention item</p>

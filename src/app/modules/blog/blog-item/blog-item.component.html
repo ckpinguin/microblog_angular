@@ -10,7 +10,8 @@
             <div class="fa fa-trash"
                  (click)="onDelete(item.id)"></div>
             <div class="fa fa-edit"
-                 (click)="onEdit(item.id)"></div>
+                 [routerLink]="[ '/blog/edit', item.id ]"
+            ></div>
         </h2>
         <h3 *ngIf="item.author">Written by: <em>{{item?.author}}</em>
             <div *ngIf="item.date"> on <em>{{item?.date}}</em></div>

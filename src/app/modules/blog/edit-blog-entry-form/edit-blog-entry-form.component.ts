@@ -7,6 +7,7 @@ import {
     Inject
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import _ from 'lodash';
 
@@ -25,13 +26,16 @@ export class EditBlogEntryFormComponent implements OnInit {
     @Input() inputEntry: BlogEntry;
 
     private _entry: BlogEntry;
+    private newEntry: BlogEntry;
     private show = true;
     private currentUserId: string;
     private authorName: string;
 
     constructor(
         private blogService: BlogService,
-        private loginService: LoginService
+        private loginService: LoginService,
+        private activatedRoute: ActivatedRoute,
+        private router: Router,
         ) { }
 
     ngOnInit() {
@@ -42,6 +46,18 @@ export class EditBlogEntryFormComponent implements OnInit {
             this.currentUserId = data.id;
             this.authorName = data.name;
         });
+        this.activatedRoute.params
+            .subscribe(params => {
+            const id = (params['id'] || '');
+            console.log('received route param id: ', id);
+            this.entry = this.blogService.getEntryById(id);
+        });
+        // this.blogService.newEntry.subscribe(data => {
+        //     this.newEntry = data;
+        // });
+    }
+
+    ngOnDestroy() {
     }
 
     get entry(): BlogEntry {
@@ -68,6 +84,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     onCancel() {
         this.form.reset();
         this.show = false;
+        this.router.navigate(['..']); // Bug: Goes back to /
         this.blogService.finishEditingEntry(this.entry.id);
     }
 

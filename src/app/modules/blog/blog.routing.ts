@@ -10,15 +10,25 @@ export const blogRoutes: Routes = [ {
     // path '' is the component holding the chief outlet
     path: '', component: BlogPageComponent, data: { title: 'Blog' },
     children: [
-        // { path: '', component: BlogListComponent },
-        { path: 'new',
-            canActivate: [ LoginGuard ],
+        { 
+            path: 'new',
+            // canActivate: [ LoginGuard ],
             component: EditBlogEntryFormComponent,
         },
-        { path: 'item/:id',
+        { 
+            path: 'edit/:id',
+            // canActivate: [ LoginGuard ],
+            component: EditBlogEntryFormComponent,
+        },
+        { 
+            path: 'item/:id',
             component: BlogItemComponent,
             children: [
-                { path: 'edit', canActivate: [ LoginGuard ], component: EditBlogEntryFormComponent }
+                { 
+                    path: 'edit',
+                    canActivate: [ LoginGuard ],
+                    component: EditBlogEntryFormComponent
+                }
             ]
         }
     ] }

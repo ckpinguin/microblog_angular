@@ -16,21 +16,23 @@ export class BlogItemComponent implements OnInit, OnDestroy {
 
     constructor(
         private router: Router,
-        private route: ActivatedRoute,
+        private activatedRoute: ActivatedRoute,
         private blogService: BlogService) { }
 
     ngOnInit() {
-        this.routeSubscription = this.route.params
-            .subscribe(params => {
-                const id = (params['id'] || '');
-                this.item = ('undefined' === typeof this.item) // if no item was inputted
-                     ? this.item = this.blogService.getEntryById(id) // what is in the db
-                     : this.item; // what we got from input
-            });
+        // this.routeSubscription = this.activatedRoute.params
+        //     .subscribe(params => {
+        //         const id = (params['id'] || '');
+        //         console.log('received route param id: ', id);
+        //     });
+        //         this.item = ('undefined' === typeof this.item) // if no item was inputted
+        //              ? this.item = this.blogService.getEntryById(id) // what is in the db
+        //              : this.item; // what we got from input
+        //     });
     }
 
     ngOnDestroy() {
-        this.routeSubscription.unsubscribe();
+        // this.routeSubscription.unsubscribe();
     }
 
     get imageWithPath() {
@@ -45,10 +47,10 @@ export class BlogItemComponent implements OnInit, OnDestroy {
         // this.router.navigateByUrl(`/blog/edit/(blogeditoutlet:edit/${id})`);
         // this.router.navigateByUrl(`blog/edit/${id}`);
         const navigationExtras: any = {
-            queryParams: { id: id }
+            queryParams: { id }
         };
         //this.blogService.startEditingEntry(id);
-        this.router.navigate([ `/blog/item/${id}/edit` ]);
+        this.router.navigate([ './edit', id ]);
         // this.router.navigateByUrl(`blog/item/${id}/edit`);
     }
 
