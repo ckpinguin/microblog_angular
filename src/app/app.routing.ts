@@ -9,7 +9,7 @@ import { LoginGuard } from './modules/auth/login/login.guard';
 export const appRoutes: Routes = [
     { path: '', redirectTo: '/blog', pathMatch: 'full', data: { title: 'CK\'s microblog!' } },
     // We lazy-load the modules with a preloading strategy (loads in background)
-    { path: 'home', redirectTo: '/blog' },
+    { path: 'home', redirectTo: '/blog', pathMatch: 'full'  },
     { path: 'blog', loadChildren: 'app/modules/blog/blog.module#BlogModule' },
     { path: 'login', loadChildren: 'app/modules/auth/auth.module#AuthModule' },
     // on top-level it must be `canLoad` instead of `canActivate` (which is still used at deeper levels)

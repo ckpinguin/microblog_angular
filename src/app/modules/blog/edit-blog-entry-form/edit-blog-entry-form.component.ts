@@ -78,6 +78,9 @@ export class EditBlogEntryFormComponent implements OnInit {
         if (!this.form.pristine) {
             this.blogService.saveEntry(formValue);
         }
+        this.show = false;
+        this.router.navigate(['..']); // Bug: Goes back to /
+        return false;
     }
 
     // TODO: find a way to mark the form as pristine when
@@ -85,9 +88,9 @@ export class EditBlogEntryFormComponent implements OnInit {
     onCancel() {
         this.form.reset();
         this.show = false;
-        const relUrl = this.router.url.includes('edit') ? '../..' : '..';
-        this.router.navigate([relUrl], {relativeTo: this.activatedRoute});
-        // this.router.navigate(['..']); // Bug: Goes back to /
+        // const relUrl = this.router.url.includes('edit') ? '../..' : '..';
+        // this.router.navigate([relUrl, this.entry.id], {relativeTo: this.activatedRoute});
+        this.router.navigate(['..']); // Bug: Goes back to /
         this.blogService.finishEditingEntry(this.entry.id);
         return false;
     }

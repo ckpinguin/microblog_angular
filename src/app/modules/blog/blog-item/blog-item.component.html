@@ -1,6 +1,7 @@
-<div class="blog-item">
+<div class="blog-item" >
     <hr />
-    <router-outlet></router-outlet>
+    <div class="item-outlet">
+    </div>
     <div class="blog-image">
         <img *ngIf="item.image" [src]="imageWithPath" [alt]="item.title" />
     </div>
@@ -10,7 +11,7 @@
             <div class="fa fa-trash"
                  (click)="onDelete(item.id)"></div>
             <div class="fa fa-edit"
-                 [routerLink]="[ './edit', item.id ]"
+                 [routerLink]="[ './items', item.id, 'edit' ]"
             ></div>
         </h2>
         <h3 *ngIf="item.author">Written by: <em>{{item?.author}}</em>
