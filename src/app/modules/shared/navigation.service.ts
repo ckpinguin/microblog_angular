@@ -17,4 +17,8 @@ export class NavigationService {
         this.router.navigateByUrl(decodeURI(redirect));
     }
 
+    navigateBack(queryParams) {
+        this.router.navigate([ '..' ]); // Bug: Goes back to /
+    }
+
 }

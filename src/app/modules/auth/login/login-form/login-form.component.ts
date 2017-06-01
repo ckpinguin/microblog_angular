@@ -1,6 +1,6 @@
 import { Component, EventEmitter, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { LoginService } from '../login.service';
 
@@ -15,6 +15,7 @@ export class LoginFormComponent {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
     constructor(
         private navigationService: NavigationService,
+        private router: Router,
         private activatedRoute: ActivatedRoute,
         private loginService: LoginService
         ) { }
@@ -31,7 +32,9 @@ export class LoginFormComponent {
     onCancel(cancel: boolean) {
         const queryParams = this.activatedRoute.snapshot.queryParams;
         this.form.reset();
-        this.navigationService.navigateHome(queryParams);
+        this.navigationService.navigateBack(queryParams);
+        // this.router.navigate(['..']); // Bug: Goes back to /
+        // this.navigationService.navigateHome(queryParams);
     }
 
 }

@@ -48,21 +48,18 @@ export class EditBlogEntryFormComponent implements OnInit {
 
         this.activatedRoute.params
             .subscribe(params => {
-            const id = (params['id'] || '');
-            console.log('received route param id: ', id);
-            this.entry = this.blogService.getEntryById(id);
-        });
+                const id = (params['id'] || '');
+                console.log('received route param id: ', id);
+                this.entry = this.blogService.getEntryById(id);
+            });
 
         // This is simpler than a subscription (one-timer):
         // const id = this.activatedRoute.snapshot.params['id'];
         // this.entry = this.blogService.getEntryById(id);
     }
 
-    ngOnDestroy() {
-    }
-
     get entry(): BlogEntry {
-        return { 
+        return {
             ...this._entry,
             user: this.currentUserId,
             author: this.authorName
@@ -79,7 +76,7 @@ export class EditBlogEntryFormComponent implements OnInit {
             this.blogService.saveEntry(formValue);
         }
         this.show = false;
-        this.router.navigate(['..']); // Bug: Goes back to /
+        this.router.navigate([ '..' ]); // Bug: Goes back to /
         return false;
     }
 
@@ -90,7 +87,7 @@ export class EditBlogEntryFormComponent implements OnInit {
         this.show = false;
         // const relUrl = this.router.url.includes('edit') ? '../..' : '..';
         // this.router.navigate([relUrl, this.entry.id], {relativeTo: this.activatedRoute});
-        this.router.navigate(['..']); // Bug: Goes back to /
+        this.router.navigate([ '..' ]); // Bug: Goes back to /
         this.blogService.finishEditingEntry(this.entry.id);
         return false;
     }

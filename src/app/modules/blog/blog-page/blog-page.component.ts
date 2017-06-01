@@ -19,7 +19,7 @@ export class BlogPageComponent implements OnInit {
         private blogService: BlogService
     ) { }
 
-    ngOnInit() {     
+    ngOnInit() {
         this.title = this.activatedRoute.snapshot.data['title'];
         this.blogService.newEntry.subscribe(data => {
             this.newEntry = data;
