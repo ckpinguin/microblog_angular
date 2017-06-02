@@ -12,30 +12,18 @@ export const blogRoutes: Routes = [ {
         { path: '', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is working
         { path: 'items', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is NOT working (see bugs in github)
         {
-            path: ':id', component: BlogItemComponent, // pathMatch: 'full',
-        // outlet: 'list-outlet', // not working, bug: https://github.com/angular/angular/issues/9957
+            path: ':id', // component: BlogItemComponent, // pathMatch: 'full',
+            // outlet: 'list-outlet', // aux outlet not working, bug: https://github.com/angular/angular/issues/9957
             children: [
-                { path: '', component: EditBlogEntryFormComponent, outlet: 'edit-outlet' },
+                { path: '', }, // component: BlogItemComponent, outlet: 'edit-outlet' },
                 { path: 'new', component: EditBlogEntryFormComponent,
-                    canActivate: [ LoginGuard ], data: { title: 'NEW New entry' } },
+                    canActivate: [ LoginGuard ], data: { title: 'New entry' } },
                 { path: 'edit', component: EditBlogEntryFormComponent,
-                    // canActivate: [ LoginGuard ],
-                    data: { title: 'NEW Edit entry' },
-                    // outlet: 'edit-outlet'
+                    canActivate: [ LoginGuard ],
+                    data: { title: 'Edit entry' },
                 },
             ]
         },
-        { path: 'new/:id', component: EditBlogEntryFormComponent,
-            canActivate: [ LoginGuard ], data: { title: 'New entry' } },
-        { path: 'edit/:id', component: EditBlogEntryFormComponent,
-            canActivate: [ LoginGuard ], data: { title: 'Edit entry' } },
-        {
-            path: 'item/:id', // component: BlogItemComponent,
-            children: [
-                { path: 'edit', component: EditBlogEntryFormComponent,
-                    data: { title: 'TEST Edit entry' } }
-            ]
-        }
     ]
 } ];
 
