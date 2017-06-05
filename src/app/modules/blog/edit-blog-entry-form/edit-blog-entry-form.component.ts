@@ -89,7 +89,7 @@ export class EditBlogEntryFormComponent implements OnInit {
         if (!this.form.pristine) {
             this.blogService.saveEntry({
                 ...formValue,
-                date: new Date(),
+                date: new Date().toJSON(),
                 user: this.currentUserId,
             });
         }
