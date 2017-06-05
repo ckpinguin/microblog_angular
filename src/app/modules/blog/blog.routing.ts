@@ -10,17 +10,15 @@ export const blogRoutes: Routes = [ {
     path: '', component: BlogPageComponent, data: { title: 'Blog' },
     children: [
         { path: '', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is working
-        { path: 'items', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is NOT working (see bugs in github)
-        {
-            path: ':id', // component: BlogItemComponent, // pathMatch: 'full',
+        // { path: 'items', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is NOT working (see bugs in github)
+        { path: ':id', // component: BlogItemComponent, // pathMatch: 'full',
             // outlet: 'list-outlet', // aux outlet not working, bug: https://github.com/angular/angular/issues/9957
             children: [
-                { path: '', }, // component: BlogItemComponent, outlet: 'edit-outlet' },
+                // { path: '', component: BlogItemComponent },
                 { path: 'new', component: EditBlogEntryFormComponent,
                     canActivate: [ LoginGuard ], data: { title: 'New entry' } },
                 { path: 'edit', component: EditBlogEntryFormComponent,
-                    canActivate: [ LoginGuard ],
-                    data: { title: 'Edit entry' },
+                    canActivate: [ LoginGuard ], data: { title: 'Edit entry' },
                 },
             ]
         },

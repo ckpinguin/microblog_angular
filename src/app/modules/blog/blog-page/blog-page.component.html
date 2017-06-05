@@ -2,15 +2,16 @@
     <h1 title>{{title}}</h1>
 </div>
 <div class="mainContent">
-    <router-outlet></router-outlet>
     <button [routerLink]="[ newEntry.id, 'new']"
         *ngIf="newEntry"
         class="btn">
         Create New Entry
     </button>
+    <router-outlet></router-outlet>
 </div>
 <div class="jumbotron">
-    <router-outlet name="edit-outlet"></router-outlet>
+    <h2>Attention item</h2>
+    <router-outlet name="attention-outlet"></router-outlet>
 </div>
 <router-outlet name="list-outlet"></router-outlet>
 <!--<ck-blog-list></ck-blog-list>-->

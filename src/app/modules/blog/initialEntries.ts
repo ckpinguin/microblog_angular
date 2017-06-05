@@ -7,8 +7,8 @@ export const initialEntries = [
         text: 'Just a little\n test',
         image: 'cat1.jpg',
         date: null,
-        user: null,
-        author: null,
+        user: 'a8655eb5-ca5c-459a-a094-d0e704e80a69',
+        author: 'The test user himself',
         editing: false,
         tags: []
     },
@@ -20,8 +20,8 @@ export const initialEntries = [
         date: null,
         tags: [],
         editing: false,
-        user: 'a8655eb5-ca5c-459a-a094-d0e704e80a69',
-        author: 'The test user himself'
+        user: 'be7f7340-2c3f-4534-9ec2-cbcc9ddccc2d',
+        author: 'administrator'
     },
     {
         id: '54726e40-3297-11e7-93ae-92361f002671',
@@ -31,7 +31,7 @@ export const initialEntries = [
         date: null,
         editing: false,
         tags: [],
-        user: null,
-        author: null
+        user: 'a8655eb5-ca5c-459a-a094-d0e704e80a69',
+        author: 'Test user\'s alias'
     }
 ];

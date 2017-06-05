@@ -1,5 +1,6 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import * as tokens from './app.tokens';
 
@@ -24,6 +25,7 @@ import { appRouting, routingComponents, routingProviders } from './app.routing';
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         appRouting,
         SharedModule.forRoot() // as singleton here
     ],

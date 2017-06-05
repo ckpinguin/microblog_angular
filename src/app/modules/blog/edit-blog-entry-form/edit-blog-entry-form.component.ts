@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MdSnackBar } from '@angular/material';
 
 import _ from 'lodash';
 
@@ -22,10 +23,9 @@ import { LoginService } from '../../auth/login/login.service';
 })
 export class EditBlogEntryFormComponent implements OnInit {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
-    @Input() inputEntry: BlogEntry;
+    @Input() inputEntry: BlogEntry; // optional, can only work with routing parameters (see ngOnInit)
 
     private _entry: BlogEntry;
-    private newEntry: BlogEntry;
     private show = true;
     private currentUserId: string;
     private authorName: string;
@@ -35,13 +35,16 @@ export class EditBlogEntryFormComponent implements OnInit {
         private loginService: LoginService,
         private activatedRoute: ActivatedRoute,
         private router: Router,
+        private snackBar: MdSnackBar
         ) { }
 
     ngOnInit() {
         console.log('form called with entry: ', this.inputEntry);
         this.entry = Object.assign({}, this.inputEntry);
+        // const title = this.activatedRoute.snapshot.data['title'];
+        const path = this.activatedRoute.snapshot.url[0].path;
+
         this.loginService.currentUser.subscribe(data => {
-            console.log('received currentUser from subscription! ', data);
             this.currentUserId = data.id;
             this.authorName = data.name;
         });
@@ -49,13 +52,25 @@ export class EditBlogEntryFormComponent implements OnInit {
         this.activatedRoute.params
             .subscribe(params => {
                 const id = (params['id'] || '');
-                console.log('received route param id: ', id);
                 this.entry = this.blogService.getEntryById(id);
+                // At this point, user has to be logged in (LoginGuard in route)
+                if (!this.isEntryUser() && !(path === 'new')) {
+                    this.snackBar.open('You can only edit your own entries', 'OK', { duration: 2000 });
+                    this.onCancel();
+                }
             });
 
-        // This is simpler than a subscription (one-timer):
+        // This would be simpler than a subscription (one-timer):
         // const id = this.activatedRoute.snapshot.params['id'];
         // this.entry = this.blogService.getEntryById(id);
+    }
+
+    isEntryUser() {
+        console.log('authoruser / loggedinuser', this._entry.user, this.currentUserId);
+        if (typeof this._entry.user !== 'undefined' && typeof this.currentUserId !== 'undefined') {
+            return this._entry.user === this.currentUserId;
+        }
+        return false;
     }
 
     get entry(): BlogEntry {
@@ -83,7 +98,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     // TODO: find a way to mark the form as pristine when
     // cancelling (still keeping the old values!)
     onCancel() {
-        this.form.reset();
+        // this.form.reset();
         this.show = false;
         // const relUrl = this.router.url.includes('edit') ? '../..' : '..';
         // this.router.navigate([relUrl, this.entry.id], {relativeTo: this.activatedRoute});

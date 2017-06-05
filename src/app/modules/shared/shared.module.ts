@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { MdSnackBarModule } from '@angular/material';
 
 import { NavBarComponent } from './navbar/navbar.component';
 import { ShowErrorComponent } from './show-error/show-error.component';
 
 import { NavigationService } from './navigation.service';
 // Some services from their respective modules need to be availabe
-// for other modules too, so we import them here. This still is 
+// for other modules too, so we import them here. This still is
 // not a clean solution. This has to do with the quite special
 // concept of a "module" in angular: The module in the first place
 // is about handling lazy-loading, not about organizing. Even though
@@ -25,7 +26,8 @@ import { LoginGuard } from '../auth/login/login.guard';
         CommonModule,
         FormsModule,
         HttpModule,
-        RouterModule
+        RouterModule,
+        MdSnackBarModule
     ],
     declarations: [
         ShowErrorComponent,
@@ -36,7 +38,8 @@ import { LoginGuard } from '../auth/login/login.guard';
         NavBarComponent,
         CommonModule,
         HttpModule,
-        FormsModule
+        FormsModule,
+        MdSnackBarModule
     ]
 })
 export class SharedModule {

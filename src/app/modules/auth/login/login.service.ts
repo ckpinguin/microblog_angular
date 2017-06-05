@@ -40,6 +40,10 @@ export class LoginService {
         this._currentUser.next(newCurrentUser);
     }
 
+    getCurrentUser(): string {
+        return this._currentUser.getValue().id;
+    }
+
     // TODO: rewrite this to work with subscribing
     isLoggedIn(): boolean {
         return this.loggedIn;
