@@ -15,9 +15,9 @@
                  [routerLink]="[ item.id, 'edit' ]"
             ></div>
         </h2>
-        <h3 *ngIf="item.author">Written by: <em>{{item?.author}}</em>
-            <div *ngIf="item.date"> on <em>{{item?.date | date: 'dd. MMMM yyyy'}}</em></div>
-        </h3>
+        <div *ngIf="item.author"><h3><small>Written by: <em>{{item?.author}}</em></small></h3>
+            <div *ngIf="item.date"><h3><small> on <em>{{item?.date | date: 'dd. MMMM yyyy'}}</em></small></h3></div>
+        </div>
         <p>{{item?.text}}</p>
     </div>
 </div>
