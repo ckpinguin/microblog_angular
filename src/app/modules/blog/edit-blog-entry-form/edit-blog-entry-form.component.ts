@@ -76,7 +76,6 @@ export class EditBlogEntryFormComponent implements OnInit {
     get entry(): BlogEntry {
         return {
             ...this._entry,
-            user: this.currentUserId,
             author: this.authorName
         };
     }
@@ -88,7 +87,11 @@ export class EditBlogEntryFormComponent implements OnInit {
 
     onSubmit(formValue: any) {
         if (!this.form.pristine) {
-            this.blogService.saveEntry(formValue);
+            this.blogService.saveEntry({
+                ...formValue,
+                date: new Date(),
+                user: this.currentUserId,
+            });
         }
         this.show = false;
         this.router.navigate([ '..' ]); // Bug: Goes back to /
