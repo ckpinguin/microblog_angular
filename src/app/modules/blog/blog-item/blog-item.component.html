@@ -16,7 +16,7 @@
             ></div>
         </h2>
         <div *ngIf="item.author"><h3><small>Written by: <em>{{item?.author}}</em></small></h3>
-            <div *ngIf="item.date"><h3><small> on <em>{{item?.date | date: 'dd. MMMM yyyy'}}</em></small></h3></div>
+            <div *ngIf="item.date"><h3><small> on <em>{{item?.date | dateFormatPipe }}</em></small></h3></div>
         </div>
         <p>{{item?.text}}</p>
     </div>

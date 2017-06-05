@@ -7,6 +7,7 @@ import { MdSnackBarModule } from '@angular/material';
 
 import { NavBarComponent } from './navbar/navbar.component';
 import { ShowErrorComponent } from './show-error/show-error.component';
+import { DateFormatPipe } from './dateFormat.pipe';
 
 import { NavigationService } from './navigation.service';
 // Some services from their respective modules need to be availabe
@@ -31,7 +32,8 @@ import { LoginGuard } from '../auth/login/login.guard';
     ],
     declarations: [
         ShowErrorComponent,
-        NavBarComponent
+        NavBarComponent,
+        DateFormatPipe
     ],
     exports: [
         ShowErrorComponent,
@@ -39,7 +41,8 @@ import { LoginGuard } from '../auth/login/login.guard';
         CommonModule,
         HttpModule,
         FormsModule,
-        MdSnackBarModule
+        MdSnackBarModule,
+        DateFormatPipe
     ]
 })
 export class SharedModule {
