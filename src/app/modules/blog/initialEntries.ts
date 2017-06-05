@@ -9,7 +9,6 @@ export const initialEntries = [
         date: "2017-06-05T14:46:23.977Z",
         user: 'a8655eb5-ca5c-459a-a094-d0e704e80a69',
         author: 'The test user himself',
-        editing: false,
         tags: []
     },
     {
@@ -19,7 +18,6 @@ export const initialEntries = [
         image: 'cat2.gif',
         date: "2017-05-05T12:04:01.000Z",
         tags: [],
-        editing: false,
         user: 'be7f7340-2c3f-4534-9ec2-cbcc9ddccc2d',
         author: 'administrator'
     },
@@ -29,7 +27,6 @@ export const initialEntries = [
         text: 'Told ya, everybody loves cats',
         image: null,
         date: "2016-12-31T11:10:11.000Z",
-        editing: false,
         tags: [],
         user: 'a8655eb5-ca5c-459a-a094-d0e704e80a69',
         author: 'Test user\'s alias'

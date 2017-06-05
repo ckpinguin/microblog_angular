@@ -3,7 +3,7 @@
 </div>
 <div class="mainContent">
     <button [routerLink]="[ newEntry.id, 'new']"
-        *ngIf="newEntry"
+        *ngIf="!pathNew"
         class="btn">
         Create New Entry
     </button>

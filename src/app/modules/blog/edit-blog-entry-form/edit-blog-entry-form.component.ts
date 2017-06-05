@@ -25,6 +25,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
     @Input() inputEntry: BlogEntry; // optional, can only work with routing parameters (see ngOnInit)
 
+    private callPath: string;
     private _entry: BlogEntry;
     private show = true;
     private currentUserId: string;
@@ -41,8 +42,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     ngOnInit() {
         console.log('form called with entry: ', this.inputEntry);
         this.entry = Object.assign({}, this.inputEntry);
-        // const title = this.activatedRoute.snapshot.data['title'];
-        const path = this.activatedRoute.snapshot.url[0].path;
+        this.callPath = this.activatedRoute.snapshot.url[0].path;
 
         this.loginService.currentUser.subscribe(data => {
             this.currentUserId = data.id;
@@ -54,7 +54,7 @@ export class EditBlogEntryFormComponent implements OnInit {
                 const id = (params['id'] || '');
                 this.entry = this.blogService.getEntryById(id);
                 // At this point, user has to be logged in (LoginGuard in route)
-                if (!this.isEntryUser() && !(path === 'new')) {
+                if (!this.isEntryUser() && !(this.callPath === 'new')) {
                     this.snackBar.open('You can only edit your own entries', 'OK', { duration: 2000 });
                     this.onCancel();
                 }
@@ -66,7 +66,6 @@ export class EditBlogEntryFormComponent implements OnInit {
     }
 
     isEntryUser() {
-        console.log('authoruser / loggedinuser', this._entry.user, this.currentUserId);
         if (typeof this._entry.user !== 'undefined' && typeof this.currentUserId !== 'undefined') {
             return this._entry.user === this.currentUserId;
         }
@@ -106,7 +105,6 @@ export class EditBlogEntryFormComponent implements OnInit {
         // const relUrl = this.router.url.includes('edit') ? '../..' : '..';
         // this.router.navigate([relUrl, this.entry.id], {relativeTo: this.activatedRoute});
         this.router.navigate([ '..' ]); // Bug: Goes back to /
-        this.blogService.finishEditingEntry(this.entry.id);
         return false;
     }
 

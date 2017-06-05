@@ -42,28 +42,15 @@ export class BlogService {
         if (this._entries.getValue().findIndex(e => e.id === entry.id) >= 0) {
             console.log('service found existing entry: ', entry);
             this.updateEntry(entry);
-            this.finishEditingEntry(entry.id);
         } else {
             console.log('service will save (concat) a new entry');
             this.setEntries(this._entries.getValue().concat([ entry ]));
-            this.finishEditingEntry(entry.id);
             // Now create a new entry for the new entry form
             this.setNewEntry(this.createFreshEntry());
         }
         console.log('service saved entry: ', entry);
     }
 
-    public startEditingEntry(id: string): void {
-        const entry: BlogEntry = this.getEntryById(id);
-        this.updateEntry({ ...entry, editing: true });
-        // close other forms (only one edit at a time)
-        this.stopEditingOthersThan(entry);
-    }
-
-    public finishEditingEntry(id: string): void {
-        const entry: BlogEntry = this.getEntryById(id);
-        this.updateEntry({ ...entry, editing: false });
-    }
 
     public deleteEntry(id: string): void {
         this.setEntries(this._entries.getValue().filter(e => e.id !== id));
@@ -71,7 +58,6 @@ export class BlogService {
 
     public getEntryById(id: string): BlogEntry {
         if (this._newEntry.getValue().id === id) {
-            // console.log('getEntryById found newEntry: ', this._newEntry.getValue());
             return this._newEntry.getValue();
         }
         return this._entries.getValue().find(e => e.id === id);
@@ -91,7 +77,6 @@ export class BlogService {
     private createFreshEntry(): BlogEntry {
         return {
             id: BlogService.guid(),
-            editing: false
         };
     }
 
@@ -112,15 +97,4 @@ export class BlogService {
         }));
     }
 
-    private stopEditingOthersThan(entry: BlogEntry) {
-        this.setEntries(this._entries.getValue().map(e => {
-            if (e.id === entry.id) {
-                return e;
-            }
-            return {
-                ...e,
-                editing: false
-            };
-        }));
-    }
 }

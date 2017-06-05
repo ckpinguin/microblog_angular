@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 import { BlogService } from '../blog.service';
 import { BlogEntry } from '../model-interfaces';
@@ -10,8 +10,10 @@ import { BlogEntry } from '../model-interfaces';
     styleUrls: [ './blog-page.component.styl' ]
 })
 export class BlogPageComponent implements OnInit {
-    private title: String;
+    private title: string;
     private newEntry: BlogEntry;
+    private callPath: string;
+    private pathNew = false;
 
     constructor(
         private activatedRoute: ActivatedRoute,
@@ -20,8 +22,18 @@ export class BlogPageComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.title = this.activatedRoute.snapshot.data['title'];
+        this.pathNew = false;
+        this.router.events
+            .filter(event => event instanceof NavigationEnd)
+            .subscribe(event => {
+                if (event['url'].split('/').pop() === 'new') {
+                    this.pathNew = true;
+                } else {
+                    this.pathNew = false;
+                }
+            });
         this.blogService.newEntry.subscribe(data => {
+            console.log('setting new entry: ', data);
             this.newEntry = data;
         });
     }
