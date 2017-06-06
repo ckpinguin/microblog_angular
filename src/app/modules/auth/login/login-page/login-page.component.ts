@@ -13,6 +13,7 @@ import { User } from '../../user/model-interfaces';
 export class LoginPageComponent implements OnInit {
     private title: string;
     private showForm = true;
+    private currentUser: string;
 
     constructor(
         private loginService: LoginService,
@@ -27,11 +28,13 @@ export class LoginPageComponent implements OnInit {
             this.loginService.currentUser.subscribe(data => {
                 console.log('User', data.name, 'is logged in!');
                 if (data.name !== undefined) {
+                    this.currentUser = data.name;
                     this.showForm = false;
                 }
             });
         } else {
             // A user is already logged in
+            this.currentUser = this.loginService.getCurrentUserName();
             this.showForm = false;
         }
     }

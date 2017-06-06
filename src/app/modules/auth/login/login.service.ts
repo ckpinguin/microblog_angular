@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-
 import { Observable } from 'rxjs/Observable';
 
 import { User } from '../user/model-interfaces';
@@ -42,6 +41,10 @@ export class LoginService {
 
     getCurrentUser(): string {
         return this._currentUser.getValue().id;
+    }
+
+    getCurrentUserName(): string {
+        return this._currentUser.getValue().name;
     }
 
     // TODO: rewrite this to work with subscribing
