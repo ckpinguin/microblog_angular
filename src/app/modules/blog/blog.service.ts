@@ -1,15 +1,21 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/find';
+import 'rxjs/add/operator/do';
+import 'rxjs/add/operator/map';
 
 import { BlogEntry } from './model-interfaces';
 
 import { initialEntries } from './initialEntries';
 
+import { LOAD, ADD, EDIT, REMOVE, BlogStore } from './blog.store';
+
 @Injectable()
 export class BlogService {
-    private _entries: BehaviorSubject<Array<BlogEntry>> = new BehaviorSubject<Array<BlogEntry>>(initialEntries);
-    public readonly entries: Observable<Array<BlogEntry>> = this._entries.asObservable();
+    // private _entries: BehaviorSubject<Array<BlogEntry>> = new BehaviorSubject<Array<BlogEntry>>(initialEntries);
+    // public readonly entries: Observable<Array<BlogEntry>> = this._entries.asObservable();
+    public entries$: Observable<Array<BlogEntry>>;
 
     private _newEntry: BehaviorSubject<BlogEntry> = new BehaviorSubject<BlogEntry>(
         this.createFreshEntry()
@@ -26,47 +32,38 @@ export class BlogService {
         s4() + '-' + s4() + s4() + s4();
     }
 
-    constructor() {
-        this.entries.subscribe(data => {
-            console.log('entries changed: ', data);
-        });
+    constructor(private blogStore: BlogStore) {
+        // this.entries.subscribe(data => {
+        //     console.log('entries changed: ', data);
+        // });
         this.newEntry.subscribe(data => {
             console.log('new entry changed: ', data);
         });
+        this.entries$ = blogStore.entries$;
+        this.findEntries(); // first call loads initialEntries (mock data)
     }
 
     // This is the public API:
-
     public saveEntry(entry: BlogEntry): void {
-        // update or create?
-        if (this._entries.getValue().findIndex(e => e.id === entry.id) >= 0) {
-            console.log('service found existing entry: ', entry);
-            this.updateEntry(entry);
-        } else {
-            console.log('service will save (concat) a new entry');
-            this.setEntries(this._entries.getValue().concat([ entry ]));
-            // Now create a new entry for the new entry form
-            this.setNewEntry(this.createFreshEntry());
-        }
-        console.log('service saved entry: ', entry);
+        const actionType = entry.id ? EDIT : ADD;
+        this.blogStore.dispatch({ type: actionType, data: entry });
     }
-
 
     public deleteEntry(id: string): void {
-        this.setEntries(this._entries.getValue().filter(e => e.id !== id));
+        this.blogStore.dispatch({ type: REMOVE, data: id });
     }
 
-    public getEntryById(id: string): BlogEntry {
-        if (this._newEntry.getValue().id === id) {
-            return this._newEntry.getValue();
-        }
-        return this._entries.getValue().find(e => e.id === id);
+    // TODO: use search params to filter data, at the moment this just return all data
+    public findEntries(): Array<BlogEntry> {
+        const entries = initialEntries; // load mock data
+        this.blogStore.dispatch({ type: LOAD, data: entries });
+        return this.blogStore.entries$.getValue();
     }
-    // End of public API
 
-
-    private setEntries(entries: Array<BlogEntry>): void {
-        this._entries.next(entries);
+    public getEntry(id: number | string): Observable<BlogEntry> {
+        return this.entries$.map(list => list
+            .find(entry => entry.id === id)
+        );
     }
 
     private setNewEntry(entry: BlogEntry): void {
@@ -78,23 +75,6 @@ export class BlogService {
         return {
             id: BlogService.guid(),
         };
-    }
-
-    private updateEntry(updatedEntry: BlogEntry): void {
-        // first check, if we update the `newEntry`:
-        if (updatedEntry.id === this._newEntry.getValue().id) {
-            this.setNewEntry(updatedEntry);
-            return;
-        }
-        this.setEntries(this._entries.getValue().map(e => {
-            if (e.id !== updatedEntry.id) {
-                return e;
-            }
-            return {
-                ...e,
-                ...updatedEntry // update the changed or new fields
-            };
-        }));
     }
 
 }

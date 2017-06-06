@@ -8,6 +8,9 @@ import {
 } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs/Subscription';
+import 'rxjs/add/operator/mergeMap';
+
 import { MdSnackBar } from '@angular/material';
 
 import _ from 'lodash';
@@ -28,8 +31,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     private callPath: string;
     private _entry: BlogEntry;
     private show = true;
-    private currentUserId: string;
-    private authorName: string;
+    private subscription: Subscription;
 
     constructor(
         private blogService: BlogService,
@@ -40,34 +42,27 @@ export class EditBlogEntryFormComponent implements OnInit {
         ) { }
 
     ngOnInit() {
-        console.log('form called with entry: ', this.inputEntry);
+        console.log('form called with input parameter entry: ', this.inputEntry);
         this.entry = Object.assign({}, this.inputEntry);
-        this.callPath = this.activatedRoute.snapshot.url[0].path;
 
-        this.loginService.currentUser.subscribe(data => {
-            this.currentUserId = data.id;
-            this.authorName = data.name;
-        });
-
-        this.activatedRoute.params
-            .subscribe(params => {
-                const id = (params['id'] || '');
-                this.entry = this.blogService.getEntryById(id);
-                // At this point, user has to be logged in (LoginGuard in route)
+        this.subscription = this.activatedRoute.params
+            .map(params => params['id'])
+            .filter(id => id !== undefined)
+            .mergeMap(id => this.blogService.getEntry(id))
+            .subscribe(entry => {
+                this.entry = entry;
+                console.log('setting entry: ', this.entry);
                 if (!this.isEntryUser() && !(this.callPath === 'new')) {
                     this.snackBar.open('You can only edit your own entries', 'OK', { duration: 2000 });
                     this.onCancel();
                 }
             });
-
-        // This would be simpler than a subscription (one-timer):
-        // const id = this.activatedRoute.snapshot.params['id'];
-        // this.entry = this.blogService.getEntryById(id);
+        this.callPath = this.activatedRoute.snapshot.url[0].path;
     }
 
     isEntryUser() {
-        if (typeof this._entry.user !== 'undefined' && typeof this.currentUserId !== 'undefined') {
-            return this._entry.user === this.currentUserId;
+        if (typeof this._entry.user !== 'undefined') {
+            return this._entry.user === this.loginService.getCurrentUser();
         }
         return false;
     }
@@ -75,7 +70,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     get entry(): BlogEntry {
         return {
             ...this._entry,
-            author: this.authorName
+            author: (this._entry.author ? this._entry.author : this.loginService.getCurrentUserName())
         };
     }
 
@@ -89,7 +84,7 @@ export class EditBlogEntryFormComponent implements OnInit {
             this.blogService.saveEntry({
                 ...formValue,
                 date: new Date().toJSON(),
-                user: this.currentUserId,
+                user: this.loginService.getCurrentUser(),
             });
         }
         this.show = false;

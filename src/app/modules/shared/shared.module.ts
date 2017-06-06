@@ -18,6 +18,7 @@ import { NavigationService } from './navigation.service';
 // it makes sense to have everything located in the corresponding
 // module, even services that ought to be available shared/global.
 import { BlogService } from '../blog/blog.service';
+import { BlogStore } from '../blog/blog.store';
 import { LoginService } from '../auth/login/login.service';
 import { UserService } from '../auth/user/user.service';
 import { LoginGuard } from '../auth/login/login.guard';
@@ -57,6 +58,7 @@ export class SharedModule {
             providers: [
                 NavigationService,
                 BlogService,
+                BlogStore,
                 LoginService,
                 UserService,
                 LoginGuard

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 
+import { Observable } from 'rxjs/Observable';
+
 import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';
 
@@ -9,15 +11,13 @@ import { BlogService } from '../blog.service';
 })
 export class BlogListComponent implements OnInit {
 
-    private entries: Array<BlogEntry>;
+    private entries$: Observable<Array<BlogEntry>>;
 
     constructor(
-        private blogService: BlogService
+        private blogService: BlogService,
     ) { }
 
     ngOnInit() {
-        this.blogService.entries.subscribe(data => {
-            this.entries = data;
-        });
+        this.entries$ = this.blogService.entries$;
     }
 }
