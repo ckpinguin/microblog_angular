@@ -11,6 +11,16 @@ export class BlogStore {
     private entries: Array<BlogEntry>;
     entries$: BehaviorSubject<Array<BlogEntry>> = new BehaviorSubject<Array<BlogEntry>>([]);
 
+    static guid = () => {
+        const s4 = () => {
+            return Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
+        };
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
+    }
+
     dispatch(action) {
         this.entries = this.reduce(this.entries, action); // only place where the store is mutated
         this.entries$.next(this.entries); // propagate the new state to all listeners
@@ -22,9 +32,17 @@ export class BlogStore {
         case LOAD:
             return [ ...action.data ];
         case ADD:
+            console.log('new state: ',[
+                ...entries,
+                { ...action.data,
+                    id: BlogStore.guid()
+                }
+            ]);
             return [
                 ...entries,
-                action.data
+                { ...action.data,
+                    id: BlogStore.guid()
+                }
             ];
         case EDIT:
             const editedEntry = action.data;

@@ -28,14 +28,19 @@ export class BlogPageComponent implements OnInit {
             .subscribe(event => {
                 if (event['url'].split('/').pop() === 'new') {
                     this.pathNew = true;
+                    this.blogService.createNewEntry();
                 } else {
                     this.pathNew = false;
                 }
             });
-        this.blogService.newEntry.subscribe(data => {
-            console.log('setting new entry: ', data);
-            this.newEntry = data;
-        });
+        this.blogService.getLastEntry().subscribe(entry => {
+            this.newEntry = entry;
+            console.log('last entry: ', this.newEntry);
+        })
+        // this.blogService.newEntry.subscribe(data => {
+        //     console.log('setting new entry: ', data);
+        //     this.newEntry = data;
+        // });
     }
 
 }

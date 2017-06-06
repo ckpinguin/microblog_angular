@@ -13,14 +13,7 @@ import { LOAD, ADD, EDIT, REMOVE, BlogStore } from './blog.store';
 
 @Injectable()
 export class BlogService {
-    // private _entries: BehaviorSubject<Array<BlogEntry>> = new BehaviorSubject<Array<BlogEntry>>(initialEntries);
-    // public readonly entries: Observable<Array<BlogEntry>> = this._entries.asObservable();
     public entries$: Observable<Array<BlogEntry>>;
-
-    private _newEntry: BehaviorSubject<BlogEntry> = new BehaviorSubject<BlogEntry>(
-        this.createFreshEntry()
-    );
-    public readonly newEntry: Observable<BlogEntry> = this._newEntry.asObservable();
 
     static guid = () => {
         const s4 = () => {
@@ -33,13 +26,7 @@ export class BlogService {
     }
 
     constructor(private blogStore: BlogStore) {
-        // this.entries.subscribe(data => {
-        //     console.log('entries changed: ', data);
-        // });
-        this.newEntry.subscribe(data => {
-            console.log('new entry changed: ', data);
-        });
-        this.entries$ = blogStore.entries$;
+        this.entries$ = blogStore.entries$; // pass-through as Observable
         this.findEntries(); // first call loads initialEntries (mock data)
     }
 
@@ -66,15 +53,13 @@ export class BlogService {
         );
     }
 
-    private setNewEntry(entry: BlogEntry): void {
-        console.log('setting newEntry from: ', this._newEntry.getValue(), ' to: ', entry);
-        this._newEntry.next(entry);
+    public getLastEntry(): Observable<BlogEntry> {
+        return this.entries$.map(list => list[list.length - 1]);
     }
 
-    private createFreshEntry(): BlogEntry {
-        return {
-            id: BlogService.guid(),
-        };
+    public createNewEntry(): void {
+        console.log('creating new empty entry: ');
+        this.saveEntry({});
     }
 
 }
