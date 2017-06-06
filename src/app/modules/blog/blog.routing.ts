@@ -11,8 +11,7 @@ export const blogRoutes: Routes = [ {
     children: [
         { path: '', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is working
         // { path: 'items', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is NOT working (see bugs in github)
-        { path: 'new', component: EditBlogEntryFormComponent,
-            canActivate: [ LoginGuard ], data: { title: 'New entry' } },
+        { path: 'new', component: EditBlogEntryFormComponent, canActivate: [ LoginGuard ], data: { title: 'New entry' } },
         { path: ':id', // component: BlogItemComponent, // pathMatch: 'full',
             // outlet: 'list-outlet', // aux outlet not working, bug: https://github.com/angular/angular/issues/9957
             children: [
