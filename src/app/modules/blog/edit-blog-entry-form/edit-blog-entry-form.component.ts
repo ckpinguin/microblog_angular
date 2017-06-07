@@ -88,7 +88,7 @@ export class EditBlogEntryFormComponent implements OnInit {
             });
         }
         this.show = false;
-        this.router.navigate([ '..' ]); // Bug: Goes back to /
+        this.router.navigate([ '..' ]); // Bug?: Goes back to /
         return false;
     }
 
