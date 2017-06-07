@@ -22,6 +22,7 @@ export class BlogPageComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+        this.title = this.activatedRoute.snapshot.data['title'];
         this.pathNew = false;
         this.router.events
             .filter(event => event instanceof NavigationEnd)
@@ -36,11 +37,7 @@ export class BlogPageComponent implements OnInit {
         this.blogService.getLastEntry().subscribe(entry => {
             this.newEntry = entry;
             console.log('last entry: ', this.newEntry);
-        })
-        // this.blogService.newEntry.subscribe(data => {
-        //     console.log('setting new entry: ', data);
-        //     this.newEntry = data;
-        // });
+        });
     }
 
 }
