@@ -5,6 +5,8 @@ import { Observable } from 'rxjs/Observable';
 import { User } from './model-interfaces';
 import { initialUsers } from './initialUsers';
 
+import { LOAD, ADD, EDIT, REMOVE, UserStore } from './user.store';
+
 @Injectable()
 export class UserService {
     private _users: BehaviorSubject<Array<User>> = new BehaviorSubject<Array<User>>(initialUsers);
