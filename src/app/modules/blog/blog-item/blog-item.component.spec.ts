@@ -14,13 +14,13 @@ describe('BlogItemComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             declarations: [ BlogItemComponent ],
+            providers: [
+                { provide: BlogService, useClass: MockBlogService },
+            ],
             imports: [
                 RouterTestingModule.withRoutes([]),
                 SharedModule
             ],
-            providers: [
-                { provide: BlogService, useClass: MockBlogService },
-            ]
         })
     .compileComponents();
     }));

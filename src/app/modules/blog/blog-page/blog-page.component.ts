@@ -22,6 +22,7 @@ export class BlogPageComponent implements OnInit {
     ) { }
 
     ngOnInit() {
+        console.log('activatedRoute: ', this.activatedRoute);
         this.title = this.activatedRoute.snapshot.data['title'];
         this.pathNew = false;
         this.router.events

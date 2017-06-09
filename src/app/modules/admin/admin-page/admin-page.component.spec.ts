@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
 import { AdminPageComponent } from './admin-page.component';
 
@@ -8,7 +10,10 @@ describe('AdminPageComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations: [ AdminPageComponent ]
+            declarations: [ AdminPageComponent ],
+            imports: [
+                RouterTestingModule.withRoutes([])
+            ]
         })
     .compileComponents();
     }));
