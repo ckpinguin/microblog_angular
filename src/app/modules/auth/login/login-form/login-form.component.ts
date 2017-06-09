@@ -3,8 +3,9 @@ import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { LoginService } from '../login.service';
-
 import { NavigationService } from '../../../shared/navigation.service';
+
+import { MdSnackBar } from '@angular/material';
 
 @Component({
     selector: 'ck-login-form',
@@ -13,18 +14,27 @@ import { NavigationService } from '../../../shared/navigation.service';
 })
 export class LoginFormComponent {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
+    
     constructor(
         private navigationService: NavigationService,
         private router: Router,
         private activatedRoute: ActivatedRoute,
-        private loginService: LoginService
+        private loginService: LoginService,
+        private snackBar: MdSnackBar
         ) { }
 
     onSubmit(formValue: any) {
         const queryParams = this.activatedRoute.snapshot.queryParams;
-        const result = this.loginService.login(formValue.name, formValue.password);
-        if (result) {
+        const success = this.loginService.login(formValue.name, formValue.password);
+        if (success) {
             this.navigationService.navigateHome(queryParams);
+            this.snackBar.open(`Welcome, ${formValue.name}. You have logged in successfully.`,
+                'OK',
+                {
+                    duration: 5000
+                });
+        } else {
+            this.snackBar.open('Login failed.', 'OK', { duration: 5000 });
         }
         this.form.reset();
     }
@@ -33,8 +43,6 @@ export class LoginFormComponent {
         const queryParams = this.activatedRoute.snapshot.queryParams;
         this.form.reset();
         this.navigationService.navigateBack(queryParams);
-        // this.router.navigate(['..']); // Bug: Goes back to /
-        // this.navigationService.navigateHome(queryParams);
     }
 
 }

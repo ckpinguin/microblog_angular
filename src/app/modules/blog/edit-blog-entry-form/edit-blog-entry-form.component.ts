@@ -53,7 +53,7 @@ export class EditBlogEntryFormComponent implements OnInit {
                 this.entry = entry;
                 console.log('setting entry: ', this.entry);
                 if (!this.isEntryUser() && !(this.callPath === 'new')) {
-                    this.snackBar.open('You can only edit your own entries', 'OK', { duration: 2000 });
+                    this.snackBar.open('You can only edit your own entries', 'OK', { duration: 5000 });
                     this.onCancel();
                 }
             });
@@ -95,10 +95,7 @@ export class EditBlogEntryFormComponent implements OnInit {
     // TODO: find a way to mark the form as pristine when
     // cancelling (still keeping the old values!)
     onCancel() {
-        // this.form.reset();
         this.show = false;
-        // const relUrl = this.router.url.includes('edit') ? '../..' : '..';
-        // this.router.navigate([relUrl, this.entry.id], {relativeTo: this.activatedRoute});
         this.router.navigate([ '..' ]); // Bug: Goes back to /
         return false;
     }
