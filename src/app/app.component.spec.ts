@@ -11,6 +11,7 @@ import { BlogListComponent } from './modules/blog/blog-list/blog-list.component'
 import { BlogItemComponent } from './modules/blog/blog-item/blog-item.component';
 import { EditBlogEntryFormComponent } from './modules/blog/edit-blog-entry-form/edit-blog-entry-form.component';
 import { ShowErrorComponent } from './modules/shared/show-error/show-error.component';
+import { SharedModule } from './modules/shared/shared.module';
 
 describe('AppComponent', () => {
     beforeEach(async(() => {
@@ -20,7 +21,11 @@ describe('AppComponent', () => {
                 ActivatedRoute,
                 Title
             ],
-            imports: [ FormsModule, RouterTestingModule.withRoutes([]) ],
+            imports: [
+                FormsModule,
+                SharedModule,
+                RouterTestingModule.withRoutes([])
+            ],
             declarations: [
                 AppComponent,
                 NavBarComponent,

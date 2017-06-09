@@ -48,7 +48,7 @@ export class BlogItemComponent implements OnInit, OnDestroy {
         const navigationExtras: any = {
             queryParams: { id }
         };
-        //this.blogService.startEditingEntry(id);
+        // this.blogService.startEditingEntry(id);
         this.router.navigate([ './edit', id ]);
         // this.router.navigateByUrl(`blog/item/${id}/edit`);
     }

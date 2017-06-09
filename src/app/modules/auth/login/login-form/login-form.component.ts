@@ -14,7 +14,7 @@ import { MdSnackBar } from '@angular/material';
 })
 export class LoginFormComponent {
     @ViewChild(NgForm) form: NgForm; // Needed for unit tests
-    
+
     constructor(
         private navigationService: NavigationService,
         private router: Router,

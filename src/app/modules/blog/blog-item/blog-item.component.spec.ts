@@ -1,25 +1,37 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
+import { SharedModule } from '../../shared/shared.module';
 
 import { BlogItemComponent } from './blog-item.component';
+import { MockBlogService } from '../blog.service.mock';
+import { BlogService } from '../blog.service';
 
 describe('BlogItemComponent', () => {
-  let component: BlogItemComponent;
-  let fixture: ComponentFixture<BlogItemComponent>;
+    let component: BlogItemComponent;
+    let fixture: ComponentFixture<BlogItemComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ BlogItemComponent ]
-    })
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [ BlogItemComponent ],
+            imports: [
+                RouterTestingModule.withRoutes([]),
+                SharedModule
+            ],
+            providers: [
+                { provide: BlogService, useClass: MockBlogService },
+            ]
+        })
     .compileComponents();
-  }));
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(BlogItemComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(BlogItemComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });
