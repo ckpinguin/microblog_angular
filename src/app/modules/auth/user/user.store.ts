@@ -8,8 +8,8 @@ export const EDIT = 'EDIT';
 export const REMOVE = 'REMOVE';
 
 export class UserStore {
-    private entries: Array<User>;
-    entries$: BehaviorSubject<Array<User>> = new BehaviorSubject<Array<User>>([]);
+    private users: Array<User>;
+    public users$: BehaviorSubject<Array<User>> = new BehaviorSubject<Array<User>>([]);
 
     static guid = () => {
         const s4 = () => {
@@ -22,42 +22,42 @@ export class UserStore {
     }
 
     dispatch(action) {
-        this.entries = this.reduce(this.entries, action); // only place where the store is mutated
-        this.entries$.next(this.entries); // propagate the new state to all listeners
+        this.users = this.reduce(this.users, action); // only place where the store is mutated
+        this.users$.next(this.users); // propagate the new state to all listeners
     }
 
-    reduce(entries: Array<User>, action) {
+    reduce(users: Array<User>, action) {
         console.log('received action: ', action.type, action.data);
         switch (action.type) {
         case LOAD:
             return [ ...action.data ];
         case ADD:
             console.log('new state: ',[
-                ...entries,
+                ...users,
                 { ...action.data,
                     id: UserStore.guid()
                 }
             ]);
             return [
-                ...entries,
+                ...users,
                 { ...action.data,
                     id: UserStore.guid()
                 }
             ];
         case EDIT:
             const editedEntry = action.data;
-            return entries.map(entry => {
+            return users.map(entry => {
                 if (entry.id !== editedEntry.id) {
                     return entry;
                 }
                 return editedEntry;
             });
         case REMOVE:
-            return entries.filter(entry => {
+            return users.filter(entry => {
                 return entry.id !== action.data
             });
         default:
-            return entries;
+            return users;
         }
     }
 }

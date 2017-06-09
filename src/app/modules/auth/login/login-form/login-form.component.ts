@@ -26,6 +26,7 @@ export class LoginFormComponent {
     onSubmit(formValue: any) {
         const queryParams = this.activatedRoute.snapshot.queryParams;
         const success = this.loginService.login(formValue.name, formValue.password);
+        console.log(success);
         if (success) {
             this.navigationService.navigateHome(queryParams);
             this.snackBar.open(`Welcome, ${formValue.name}. You have logged in successfully.`,

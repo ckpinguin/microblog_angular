@@ -17,17 +17,21 @@ export class LoginService {
     constructor(private userService: UserService) { }
 
     login(name: string, password: string): boolean {
-        const user = this.userService.getUserByName(name);
-        if (user) {
+        let result = false;
+        this.userService.getUserByName(name).subscribe(user => {
             if (md5(password) === user.password) {
                 console.log('password correct, logging in');
                 this.setCurrentUser(user.id);
                 this.loggedIn = true;
-                return true;
+                result = true; // this is ignored?
+            } else {
+                console.log('password wrong!');
+                result = false;
             }
-            console.log('password wrong!');
-        }
-        return false;
+        },
+            (err) => { result = false; }
+        );
+        return result;
     }
 
     logout(): void {
@@ -35,8 +39,9 @@ export class LoginService {
     }
 
     setCurrentUser(id: string): void {
-        const newCurrentUser = this.userService.getUserById(id);
-        this._currentUser.next(newCurrentUser);
+        this.userService.getUser(id).subscribe(user => {
+            this._currentUser.next(user);
+        });
     }
 
     getCurrentUser(): string {

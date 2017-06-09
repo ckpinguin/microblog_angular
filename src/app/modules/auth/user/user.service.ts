@@ -9,67 +9,51 @@ import { LOAD, ADD, EDIT, REMOVE, UserStore } from './user.store';
 
 @Injectable()
 export class UserService {
-    private _users: BehaviorSubject<Array<User>> = new BehaviorSubject<Array<User>>(initialUsers);
-    public readonly users: Observable<Array<User>> = this._users.asObservable();
+    public users$: Observable<Array<User>>;
+    // private _users: BehaviorSubject<Array<User>> = new BehaviorSubject<Array<User>>(initialUsers);
+    // public readonly users: Observable<Array<User>> = this._users.asObservable();
 
-    static guid = () => {
-        const s4 = () => {
-            return Math.floor((1 + Math.random()) * 0x10000)
-            .toString(16)
-            .substring(1);
-        };
-        return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-        s4() + '-' + s4() + s4() + s4();
+    constructor(private userStore: UserStore) {
+        this.users$ = userStore.users$; // pass-through as Observable
+        this.findUsers(); // first call loads initialUsers (mock data)
     }
 
-    constructor() { }
-
-    get initialState(): Array<User> {
-        return initialUsers;
+    // This is the public API:
+    public saveUser(user: User): void {
+        const actionType = user.id ? EDIT : ADD;
+        this.userStore.dispatch({ type: actionType, data: user });
     }
 
-    setUsers(users: Array<User>) {
-        this._users.next(users);
+    public deleteUser(id: string): void {
+        this.userStore.dispatch({ type: REMOVE, data: id });
     }
 
-    getUserByName(name: String): User {
-        return this._users.getValue().find(e =>
-            e.name === name
+    // TODO: use search params to filter data, at the moment this just return all data
+    private findUsers(): Array<User> {
+        const users = initialUsers; // load mock data
+        this.userStore.dispatch({ type: LOAD, data: users });
+        return this.userStore.users$.getValue();
+    }
+
+    public getUser(id: number | string): Observable<User> {
+        return this.users$.map(list => list
+            .find(user => user.id === id)
         );
     }
 
-    getUserById(id: String): User {
-        return this._users.getValue().find(e => e.id === id);
+    public getUserByName(name: string): Observable<User> {
+        return this.users$.map(list => list
+            .find(user => user.name === name)
+        );
     }
 
-    saveUser(user: User): void {
-        // update or create?
-        if (this._users.getValue().findIndex(e => e.id === user.id) >= 0) {
-            console.log('service found existing user: ', user);
-            this.updateUser(user);
-        } else {
-            console.log('service will save (concat) a new user');
-            user.id = UserService.guid();
-            this.setUsers(this._users.getValue().concat([ user ]));
-        }
-        console.log('service saved user: ', user);
-        console.log('service users now: ', this.users);
+    public getLastUser(): Observable<User> {
+        return this.users$.map(list => list[list.length - 1]);
     }
 
-    updateUser(updatedUser: User): void {
-        this.setUsers(this._users.getValue().map(e => {
-            if (e.id !== updatedUser.id) {
-                return e;
-            }
-            return {
-                ...e,
-                ...updatedUser // update the changed or new fields
-            };
-        }));
-    }
-
-    deleteUser(id: string): void {
-        this.setUsers(this._users.getValue().filter(e => e.id !== id));
+    public createNewUser(): void {
+        console.log('creating new empty user: ');
+        this.saveUser({});
     }
 
 }

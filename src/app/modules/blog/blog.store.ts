@@ -9,7 +9,7 @@ export const REMOVE = 'REMOVE';
 
 export class BlogStore {
     private entries: Array<BlogEntry>;
-    entries$: BehaviorSubject<Array<BlogEntry>> = new BehaviorSubject<Array<BlogEntry>>([]);
+    public entries$: BehaviorSubject<Array<BlogEntry>> = new BehaviorSubject<Array<BlogEntry>>([]);
 
     static guid = () => {
         const s4 = () => {

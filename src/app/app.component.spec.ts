@@ -1,5 +1,9 @@
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './modules/shared/navbar/navbar.component';
@@ -11,14 +15,20 @@ import { ShowErrorComponent } from './modules/shared/show-error/show-error.compo
 describe('AppComponent', () => {
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [ FormsModule ],
+            providers: [
+                Router,
+                ActivatedRoute,
+                Title
+            ],
+            imports: [ FormsModule, RouterTestingModule.withRoutes([]) ],
             declarations: [
                 AppComponent,
                 NavBarComponent,
                 BlogListComponent,
                 BlogItemComponent,
                 EditBlogEntryFormComponent,
-                ShowErrorComponent
+                ShowErrorComponent,
+                RouterTestingModule
             ]
         }).compileComponents();
     }));

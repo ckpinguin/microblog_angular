@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 
 import { LoginFormComponent } from './login/login-form/login-form.component';
+import { UserStore } from './user/user.store';
 
 import { authRouting, authRoutingComponents } from './auth.routing';
 
