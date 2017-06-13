@@ -6,6 +6,8 @@ import { LoginService } from '../login.service';
 
 import { User } from '../../user/model-interfaces';
 
+import debug from '../../../../../debug';
+
 @Component({
     selector: 'ck-login-page',
     templateUrl: './login-page.component.html'
@@ -23,10 +25,10 @@ export class LoginPageComponent implements OnInit {
     ngOnInit() {
         this.title = this.activatedRoute.snapshot.data['title'];
         if (!this.loginService.isLoggedIn()) {
-            console.log('nobody logged in yet');
+            if (debug) console.log('nobody logged in yet');
             this.showForm = true;
             this.loginService.currentUser.subscribe(data => {
-                console.log('User', data.name, 'is logged in!');
+                if (debug) console.log('User', data.name, 'is logged in!');
                 if (data.name !== undefined) {
                     this.currentUser = data.name;
                     this.showForm = false;

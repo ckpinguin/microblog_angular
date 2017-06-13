@@ -7,6 +7,8 @@ import { UserService } from '../user/user.service';
 
 import md5 from 'md5';
 
+import debug from '../../../../debug';
+
 @Injectable()
 export class LoginService {
     private _currentUser: BehaviorSubject<User> = new BehaviorSubject<User>({});
@@ -20,12 +22,12 @@ export class LoginService {
         let result = false;
         this.userService.getUserByName(name).subscribe(user => {
             if (md5(password) === user.password) {
-                console.log('password correct, logging in');
+                if (debug) console.log('password correct, logging in');
                 this.setCurrentUser(user.id);
                 this.loggedIn = true;
                 result = true; // this is ignored?
             } else {
-                console.log('password wrong!');
+                if (debug) console.log('password wrong!');
                 result = false;
             }
         },

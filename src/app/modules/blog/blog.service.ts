@@ -5,6 +5,8 @@ import 'rxjs/add/operator/find';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/map';
 
+import debug from '../../../debug';
+
 import { BlogEntry } from './model-interfaces';
 
 import { initialEntries } from './initialEntries';
@@ -58,7 +60,7 @@ export class BlogService {
     }
 
     public createNewEntry(): void {
-        console.log('creating new empty entry: ');
+        if (debug) console.log('creating new empty entry: ');
         this.saveEntry({});
     }
 

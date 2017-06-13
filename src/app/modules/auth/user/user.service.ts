@@ -7,12 +7,12 @@ import { initialUsers } from './initialUsers';
 
 import { LOAD, ADD, EDIT, REMOVE, UserStore } from './user.store';
 
+import debug from '../../../../debug';
+
 @Injectable()
 export class UserService {
     public users$: Observable<Array<User>>;
-    // private _users: BehaviorSubject<Array<User>> = new BehaviorSubject<Array<User>>(initialUsers);
-    // public readonly users: Observable<Array<User>> = this._users.asObservable();
-
+ 
     constructor(private userStore: UserStore) {
         this.users$ = userStore.users$; // pass-through as Observable
         this.findUsers(); // first call loads initialUsers (mock data)
@@ -52,7 +52,7 @@ export class UserService {
     }
 
     public createNewUser(): void {
-        console.log('creating new empty user: ');
+        if (debug) console.log('creating new empty user: ');
         this.saveUser({});
     }
 

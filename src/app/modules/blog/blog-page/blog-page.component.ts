@@ -4,6 +4,8 @@ import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { BlogService } from '../blog.service';
 import { BlogEntry } from '../model-interfaces';
 
+import debug from '../../../../debug';
+
 @Component({
     selector: 'ck-blog-page',
     templateUrl: './blog-page.component.html',
@@ -23,7 +25,7 @@ export class BlogPageComponent implements OnInit {
     ) { }
 
     ngOnInit() {
-        console.log('activatedRoute: ', this.activatedRoute);
+        if (debug) console.log('activatedRoute: ', this.activatedRoute);
         this.title = this.activatedRoute.snapshot.data['title'];
         this.pathNew = false;
         this.router.events
@@ -38,7 +40,7 @@ export class BlogPageComponent implements OnInit {
             });
         this.blogService.getLastEntry().subscribe(entry => {
             this.newEntry = entry;
-            console.log('last entry: ', this.newEntry);
+            if (debug) console.log('last entry: ', this.newEntry);
         });
     }
 

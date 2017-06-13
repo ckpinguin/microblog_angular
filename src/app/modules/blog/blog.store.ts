@@ -1,5 +1,7 @@
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
+import debug from '../../../debug';
+
 import { BlogEntry } from './model-interfaces';
 
 export const LOAD = 'LOAD';
@@ -27,12 +29,12 @@ export class BlogStore {
     }
 
     reduce(entries: Array<BlogEntry>, action) {
-        console.log('received action: ', action.type, action.data);
+        if (debug) console.log('received action: ', action.type, action.data);
         switch (action.type) {
         case LOAD:
             return [ ...action.data ];
         case ADD:
-            console.log('new state: ',[
+            if (debug) console.log('new state: ',[
                 ...entries,
                 { ...action.data,
                     id: BlogStore.guid()

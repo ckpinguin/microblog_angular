@@ -5,6 +5,8 @@ import { Subscription } from 'rxjs/Subscription';
 import { BlogEntry } from '../model-interfaces';
 import { BlogService } from '../blog.service';
 
+import debug from '../../../../debug';
+
 @Component({
     selector: 'ck-blog-item',
     templateUrl: './blog-item.component.html',
@@ -23,7 +25,7 @@ export class BlogItemComponent implements OnInit, OnDestroy {
         this.routeSubscription = this.activatedRoute.params
             .subscribe(params => {
                 const id = (params['id'] || '');
-                console.log('received route param id: ', id);
+                if (debug) console.log('received route param id: ', id);
                 this.item = ('undefined' === typeof this.item) // if no item was inputted
                      ? this.item = this.blogService.getEntry(id) // what is in the db
                      : this.item; // what we got from input
@@ -39,7 +41,6 @@ export class BlogItemComponent implements OnInit, OnDestroy {
     }
 
     onEdit(id: string) {
-        // console.log('trying to navigate to: ', `/edit/${id}`);
         // this.router.navigate([ '/blog',
         //     { outlets: { 'blogeditoutlet':  [ 'blog', 'edit', id ] } } ]
         // );

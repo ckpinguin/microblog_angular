@@ -11,6 +11,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import 'rxjs/add/operator/mergeMap';
 
+import debug from '../../../../debug';
+
 import { MdSnackBar } from '@angular/material';
 
 import _ from 'lodash';
@@ -42,7 +44,7 @@ export class EditBlogEntryFormComponent implements OnInit {
         ) { }
 
     ngOnInit() {
-        console.log('form called with input parameter entry: ', this.inputEntry);
+        if (debug) console.log('form called with input parameter entry: ', this.inputEntry);
         this.entry = Object.assign({}, this.inputEntry);
 
         this.subscription = this.activatedRoute.params
@@ -51,7 +53,7 @@ export class EditBlogEntryFormComponent implements OnInit {
             .mergeMap(id => this.blogService.getEntry(id))
             .subscribe(entry => {
                 this.entry = entry;
-                console.log('setting entry: ', this.entry);
+                if (debug) console.log('setting entry: ', this.entry);
                 if (!this.isEntryUser() && !(this.callPath === 'new')) {
                     this.snackBar.open('You can only edit your own entries', 'OK', { duration: 5000 });
                     this.onCancel();
