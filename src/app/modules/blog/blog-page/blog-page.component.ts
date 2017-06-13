@@ -10,10 +10,11 @@ import { BlogEntry } from '../model-interfaces';
     styleUrls: [ './blog-page.component.styl' ]
 })
 export class BlogPageComponent implements OnInit {
-    private title: string;
-    private newEntry: BlogEntry;
     private callPath: string;
-    private pathNew = false;
+    private newEntry: BlogEntry;
+    // When using AOT, all members used in the template must not be private:
+    title: string;
+    pathNew = false;
 
     constructor(
         private activatedRoute: ActivatedRoute,

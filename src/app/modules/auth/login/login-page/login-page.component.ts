@@ -11,9 +11,9 @@ import { User } from '../../user/model-interfaces';
     templateUrl: './login-page.component.html'
 })
 export class LoginPageComponent implements OnInit {
-    private title: string;
-    private showForm = true;
     private currentUser: string;
+    title: string;
+    showForm = true;
 
     constructor(
         private loginService: LoginService,

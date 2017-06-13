@@ -30,8 +30,8 @@ export class EditBlogEntryFormComponent implements OnInit {
 
     private callPath: string;
     private _entry: BlogEntry;
-    private show = true;
     private subscription: Subscription;
+    show = true;
 
     constructor(
         private blogService: BlogService,

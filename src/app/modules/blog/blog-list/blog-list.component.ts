@@ -11,7 +11,7 @@ import { BlogService } from '../blog.service';
 })
 export class BlogListComponent implements OnInit {
 
-    private entries$: Observable<Array<BlogEntry>>;
+    entries$: Observable<Array<BlogEntry>>;
 
     constructor(
         private blogService: BlogService,
