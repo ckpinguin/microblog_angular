@@ -5,8 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "start:prod": "ng serve --environment=prod --target=production --aot",
-    "build": "ng build",
+    "build": "ng build --environment=prod",
     "build:prod": "ng build --environment=prod --target=production --aot",
     "serve:prod": "yarn build:prod && cd dist && lite-server",
     "test": "ng test",
