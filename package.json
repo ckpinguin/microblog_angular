@@ -39,6 +39,8 @@
     "@types/jasmine": "2.5.47",
     "@types/node": "~7.0.12",
     "codelyzer": "~3.1.1",
+    "escomplex": "^2.0.0-alpha",
+    "esprima": "^4.0.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~4.0.0",
     "karma": "~1.6.0",
