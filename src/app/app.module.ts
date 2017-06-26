@@ -29,7 +29,7 @@ import { appRouting, routingComponents, routingProviders } from './app.routing';
         appRouting,
         SharedModule.forRoot() // as singleton here
     ],
-    providers: [ // Global (i.e. Singleton) services
+    providers: [ // Global i.e. Singleton services
         routingProviders,
         LoginService,
         UserService,
