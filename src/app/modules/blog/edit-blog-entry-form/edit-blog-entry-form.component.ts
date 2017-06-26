@@ -54,7 +54,8 @@ export class EditBlogEntryFormComponent implements OnInit {
             .subscribe(entry => {
                 this.entry = entry;
                 if (debug) console.log('setting entry: ', this.entry);
-                if (!this.isEntryUser() && !(this.callPath === 'new')) {
+                const isEntryUser = this.isEntryUser();
+                if (!isEntryUser && !(this.callPath === 'new')) {
                     this.snackBar.open('You can only edit your own entries', 'OK', { duration: 5000 });
                     this.onCancel();
                 }

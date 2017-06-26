@@ -20,7 +20,8 @@ export class ShowErrorComponent {
             return null;
         }
         for (const code in control.errors) {
-            if (control.errors.hasOwnProperty(code)) {
+            const hasCode = control.errors.hasOwnProperty(code);
+            if (hasCode) {
                 const error = control.errors[code];
                 let message = '';
                 switch (code) {
