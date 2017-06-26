@@ -46,7 +46,6 @@ src/app/modules/blog/blog.service.ts
 src/app/modules/blog/blog.store.ts
 src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html
 src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts
-src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.styl
 src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts
 src/app/modules/blog/initialEntries.ts
 src/app/modules/blog/model-interfaces.ts
@@ -65,6 +64,5 @@ src/environments/environment.ts
 src/index.html
 src/main.ts
 src/polyfills.ts
-src/styles.styl
 src/test.ts
 src/typings.d.ts
