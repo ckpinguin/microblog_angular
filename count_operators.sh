@@ -3,7 +3,7 @@
 # Optimized for angular/typescript!
 SCSPEC='static'
 TYPE_QUAL='const|let|private|protected|public'
-RESERVED='if |else|import |break|case|continue|default|do|for |new\(|return|sizeof|switch |while |this|try|catch|throw|throws|finally|instanceof|interface |extends |implements |abstract |true|false'
+RESERVED='if |else|import |break|case|class |continue|default|do|for |new\(|return|sizeof|switch |while |this|try|catch|throw|throws|finally|instanceof|interface |extends |implements |abstract |true|false'
 OPERATOR="\!|\!=|%|%=|&|&&|&=|\|\||\(|\[|\*|;|{|\[|\*|\*=|\+|\+\+|\+=|,| -|--|-=|=>|[^']\.+|[^'].+/|/=|:|<|<=|=|==|>|>=|\?|\||=&"
 COMMENTS='^ *//|^ */\*\*|^ *\*|^ *<\!--'
 FUNCS='function |[a-z]+\(.+\) \{'
