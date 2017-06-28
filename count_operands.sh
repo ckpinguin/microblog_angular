@@ -2,11 +2,11 @@
 
 # Optimized for angular/typescript!
 IDENTIFIER="\w{1,}(?=\s)|\w{1,}(?=,)|\w{1,}(?=;)|\w{1,}(?=:)"
-TYPENAME="bool |int |float |char |double |long |void "
+TYPENAME="bool |any |string |number |void "
 # CONSTANT="'\w+'|(\s|=)\[0-9]+|\[0-9]+\.\[0-9]*"
-CONSTANT="(\d+(\.\d+)?)"
+CONSTANT="'[\w ]*'|(?=!!')(\d+(\.\d+)?)"
 
-RESERVED='(^@[A-Z]\w+$)|^static$|^const$|^from$|let$|private$|protected$|public$|export$|var$|if$|import$|^else$|^break$|^case$|^class$|^continue$|^default$|^do$|^for$|^new$|^return$|^switch$|^while$|^this$|^try$|^catch$|^throw$|^throws$|^finally$|^instanceof$|^interface$|^extends$|^implements$|^abstract$|true|false'
+RESERVED='(^@[A-Z]\w+$)|^static$|^const$|^from$|^let$|^private$|^protected$|^public$|^export$|^var$|^if$|^import$|^else$|^break$|^case$|^class$|^continue$|^default$|^do$|^for$|^new$|^return$|^switch$|^while$|^this$|^try$|^catch$|^throw$|^throws$|^finally$|^instanceof$|^interface$|^extends$|^implements$|^abstract$|true|false'
 
 PATTERN="$IDENTIFIER|$TYPENAME|$CONSTANT"
 
