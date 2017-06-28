@@ -59,7 +59,10 @@ echo
 echo "3rd run / count import and it's commas: "
 egrep '^import' $1 | egrep -o "$IMPORT_SPECIAL" | sort -n | uniq -c
 importCorrN1=`egrep '^import' $1 | egrep -o "$IMPORT_SPECIAL" | sort -n | uniq -c | awk '{print $1}' | paste -sd+ | bc`
-importCorrn1=`egrep '^import' $1 | egrep -o "$IMPORT_SPECIAL" | sort -n | uniq -c | wc -l`
+#importCorrn1=`egrep '^import' $1 | egrep -o "$IMPORT_SPECIAL" | sort -n | uniq -c | wc -l`
+# n1 for import is always 1 (`;` and `,` are counted above already)
+importCorrn1=1
+let importCorrN1=$importCorrN1+0
 echo -n "Import stuff to count: "
 echo "$importCorrN1 of $importCorrn1 import stuff"
 echo

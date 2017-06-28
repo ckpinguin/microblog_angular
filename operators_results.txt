@@ -11,7 +11,10 @@ Total operators (first run): 34 of 4 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/app.component.html: 4 : 34
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/app.component.html: 5 : 34
 
 
 File: src/app/app.component.spec.ts
@@ -19,8 +22,8 @@ File: src/app/app.component.spec.ts
 with filtering:
 ===============
      26 (
-     16 ,
-     29 ;
+     12 ,
+     19 ;
       1 <
       5 =
       6 =>
@@ -28,18 +31,23 @@ with filtering:
       3 [
       1 class 
       2 const
-     10 import 
       3 let
-      4 try
-     17 {
-Total operators (first run): 125 of 14 unique operators
+      1 try
+      7 {
+Total operators (first run): 88 of 13 unique operators
 
 2nd run / corrections: 
-     19 .
+     14 .
       5 :
-Total corrections to count: 24 of 2 unique operators
+Total corrections to count: 19 of 2 unique operators
 
-n1 and N1 for src/app/app.component.spec.ts: 16 : 149
+3rd run / count import and it's commas: 
+      4 ,
+     10 ;
+     10 import 
+Import stuff to count: 24 of 1 import stuff
+
+n1 and N1 for src/app/app.component.spec.ts: 16 : 131
 
 
 File: src/app/app.component.ts
@@ -48,8 +56,8 @@ with filtering:
 ===============
       1  if 
      10 (
-      8 ,
-     15 ;
+      4 ,
+     11 ;
       6 =
       2 =>
       1 @Component
@@ -57,22 +65,27 @@ with filtering:
       1 class 
       2 const
       1 implements 
-      4 import 
       1 instanceof
       2 let
       4 private
       9 this
       1 while 
-      9 {
+      6 {
       1 ||
-Total operators (first run): 81 of 19 unique operators
+Total operators (first run): 66 of 18 unique operators
 
 2nd run / corrections: 
      25 .
       6 :
 Total corrections to count: 31 of 2 unique operators
 
-n1 and N1 for src/app/app.component.ts: 21 : 112
+3rd run / count import and it's commas: 
+      4 ,
+      4 ;
+      4 import 
+Import stuff to count: 12 of 1 import stuff
+
+n1 and N1 for src/app/app.component.ts: 21 : 109
 
 
 File: src/app/app.module.ts
@@ -80,23 +93,27 @@ File: src/app/app.module.ts
 with filtering:
 ===============
       2 (
-     16 ,
-     10 ;
+     13 ,
       1 @NgModule
       4 [
       1 class 
-     10 import 
       2 let
       1 true
-     12 {
-Total operators (first run): 59 of 10 unique operators
+      3 {
+Total operators (first run): 27 of 8 unique operators
 
 2nd run / corrections: 
-     10 .
+      3 .
       6 :
-Total corrections to count: 16 of 2 unique operators
+Total corrections to count: 9 of 2 unique operators
 
-n1 and N1 for src/app/app.module.ts: 12 : 75
+3rd run / count import and it's commas: 
+      3 ,
+     10 ;
+     10 import 
+Import stuff to count: 23 of 1 import stuff
+
+n1 and N1 for src/app/app.module.ts: 11 : 59
 
 
 File: src/app/app.routing.ts
@@ -105,21 +122,26 @@ with filtering:
 ===============
       1 !
       1 (
-     16 ,
-      9 ;
+     14 ,
+      4 ;
       4 =
       4 [
       4 const
-      5 import 
-     12 {
-Total operators (first run): 56 of 9 unique operators
+      7 {
+Total operators (first run): 39 of 8 unique operators
 
 2nd run / corrections: 
-      8 .
+      4 .
      17 :
-Total corrections to count: 25 of 2 unique operators
+Total corrections to count: 21 of 2 unique operators
 
-n1 and N1 for src/app/app.routing.ts: 11 : 81
+3rd run / count import and it's commas: 
+      2 ,
+      5 ;
+      5 import 
+Import stuff to count: 12 of 1 import stuff
+
+n1 and N1 for src/app/app.routing.ts: 11 : 72
 
 
 File: src/app/app.tokens.ts
@@ -127,17 +149,20 @@ File: src/app/app.tokens.ts
 with filtering:
 ===============
       1 (
-      2 ;
+      1 ;
       1 =
       1 const
-      1 import 
-      1 {
-Total operators (first run): 7 of 6 unique operators
+Total operators (first run): 4 of 4 unique operators
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/app.tokens.ts: 6 : 7
+3rd run / count import and it's commas: 
+      1 ;
+      1 import 
+Import stuff to count: 2 of 1 import stuff
+
+n1 and N1 for src/app/app.tokens.ts: 5 : 6
 
 
 File: src/app/modules/admin/admin-page/admin-page.component.html
@@ -151,7 +176,10 @@ Total operators (first run): 4 of 2 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.html: 2 : 4
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.html: 3 : 4
 
 
 File: src/app/modules/admin/admin-page/admin-page.component.spec.ts
@@ -159,24 +187,29 @@ File: src/app/modules/admin/admin-page/admin-page.component.spec.ts
 with filtering:
 ===============
      16 (
-      7 ,
-     15 ;
+      3 ,
+     11 ;
       1 <
       2 =
       4 =>
       1 >
       3 [
-      4 import 
       2 let
-      9 {
-Total operators (first run): 64 of 11 unique operators
+      5 {
+Total operators (first run): 48 of 10 unique operators
 
 2nd run / corrections: 
-      8 .
+      7 .
       4 :
-Total corrections to count: 12 of 2 unique operators
+Total corrections to count: 11 of 2 unique operators
 
-n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.spec.ts: 13 : 76
+3rd run / count import and it's commas: 
+      4 ,
+      4 ;
+      4 import 
+Import stuff to count: 12 of 1 import stuff
+
+n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.spec.ts: 13 : 71
 
 
 File: src/app/modules/admin/admin-page/admin-page.component.ts
@@ -184,23 +217,28 @@ File: src/app/modules/admin/admin-page/admin-page.component.ts
 with filtering:
 ===============
       2 (
-      2 ,
-      4 ;
+      1 ,
+      1 ;
       1 @Component
       1 class 
       1 const
       1 implements 
-      3 import 
       2 private
-      6 {
-Total operators (first run): 23 of 10 unique operators
+      3 {
+Total operators (first run): 13 of 9 unique operators
 
 2nd run / corrections: 
       2 .
       4 :
 Total corrections to count: 6 of 2 unique operators
 
-n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.ts: 12 : 29
+3rd run / count import and it's commas: 
+      1 ,
+      3 ;
+      3 import 
+Import stuff to count: 7 of 1 import stuff
+
+n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.ts: 12 : 26
 
 
 File: src/app/modules/admin/admin.module.ts
@@ -208,22 +246,26 @@ File: src/app/modules/admin/admin.module.ts
 with filtering:
 ===============
       1 (
-      4 ,
+      3 ,
       1 ...
-      4 ;
       1 @NgModule
       2 [
       1 class 
-      4 import 
-      6 {
-Total operators (first run): 24 of 9 unique operators
+      2 {
+Total operators (first run): 11 of 7 unique operators
 
 2nd run / corrections: 
-      4 .
+      1 .
       2 :
-Total corrections to count: 6 of 2 unique operators
+Total corrections to count: 3 of 2 unique operators
 
-n1 and N1 for src/app/modules/admin/admin.module.ts: 11 : 30
+3rd run / count import and it's commas: 
+      1 ,
+      4 ;
+      4 import 
+Import stuff to count: 9 of 1 import stuff
+
+n1 and N1 for src/app/modules/admin/admin.module.ts: 10 : 23
 
 
 File: src/app/modules/admin/admin.routing.ts
@@ -231,21 +273,26 @@ File: src/app/modules/admin/admin.routing.ts
 with filtering:
 ===============
       1 (
-      3 ,
-      6 ;
+      2 ,
+      4 ;
       4 =
       3 [
       4 const
-      2 import 
-      4 {
-Total operators (first run): 27 of 8 unique operators
+      2 {
+Total operators (first run): 20 of 7 unique operators
 
 2nd run / corrections: 
-      2 .
+      1 .
       5 :
-Total corrections to count: 7 of 2 unique operators
+Total corrections to count: 6 of 2 unique operators
 
-n1 and N1 for src/app/modules/admin/admin.routing.ts: 10 : 34
+3rd run / count import and it's commas: 
+      1 ,
+      2 ;
+      2 import 
+Import stuff to count: 5 of 1 import stuff
+
+n1 and N1 for src/app/modules/admin/admin.routing.ts: 10 : 31
 
 
 File: src/app/modules/auth/auth-component/auth.component.spec.ts
@@ -253,24 +300,29 @@ File: src/app/modules/auth/auth-component/auth.component.spec.ts
 with filtering:
 ===============
      16 (
-      5 ,
-     14 ;
+      3 ,
+     11 ;
       1 <
       2 =
       4 =>
       1 >
       3 [
-      3 import 
       2 let
-      8 {
-Total operators (first run): 59 of 11 unique operators
+      5 {
+Total operators (first run): 48 of 10 unique operators
 
 2nd run / corrections: 
-      8 .
+      7 .
       4 :
-Total corrections to count: 12 of 2 unique operators
+Total corrections to count: 11 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/auth-component/auth.component.spec.ts: 13 : 71
+3rd run / count import and it's commas: 
+      2 ,
+      3 ;
+      3 import 
+Import stuff to count: 8 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/auth-component/auth.component.spec.ts: 13 : 67
 
 
 File: src/app/modules/auth/auth-component/auth.component.ts
@@ -279,21 +331,24 @@ with filtering:
 ===============
       1 (
       1 ,
-      1 ;
       2 <
       2 >
       1 @Component
       1 class 
-      1 import 
       2 let
-      3 {
-Total operators (first run): 15 of 10 unique operators
+      2 {
+Total operators (first run): 12 of 8 unique operators
 
 2nd run / corrections: 
       2 :
 Total corrections to count: 2 of 1 unique operators
 
-n1 and N1 for src/app/modules/auth/auth-component/auth.component.ts: 11 : 17
+3rd run / count import and it's commas: 
+      1 ;
+      1 import 
+Import stuff to count: 2 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/auth-component/auth.component.ts: 10 : 16
 
 
 File: src/app/modules/auth/auth.module.ts
@@ -301,22 +356,26 @@ File: src/app/modules/auth/auth.module.ts
 with filtering:
 ===============
       1 (
-      4 ,
+      3 ,
       1 ...
-      5 ;
       1 @NgModule
       2 [
       1 class 
-      5 import 
-      7 {
-Total operators (first run): 27 of 9 unique operators
+      2 {
+Total operators (first run): 11 of 7 unique operators
 
 2nd run / corrections: 
-      5 .
+      1 .
       2 :
-Total corrections to count: 7 of 2 unique operators
+Total corrections to count: 3 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/auth.module.ts: 11 : 34
+3rd run / count import and it's commas: 
+      1 ,
+      5 ;
+      5 import 
+Import stuff to count: 11 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/auth.module.ts: 10 : 25
 
 
 File: src/app/modules/auth/auth.routing.ts
@@ -324,21 +383,26 @@ File: src/app/modules/auth/auth.routing.ts
 with filtering:
 ===============
       1 (
-      6 ,
-      7 ;
+      5 ,
+      4 ;
       4 =
       4 [
       4 const
-      3 import 
-      6 {
-Total operators (first run): 35 of 8 unique operators
+      3 {
+Total operators (first run): 25 of 7 unique operators
 
 2nd run / corrections: 
-      3 .
+      1 .
       8 :
-Total corrections to count: 11 of 2 unique operators
+Total corrections to count: 9 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/auth.routing.ts: 10 : 46
+3rd run / count import and it's commas: 
+      1 ,
+      3 ;
+      3 import 
+Import stuff to count: 7 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/auth.routing.ts: 10 : 41
 
 
 File: src/app/modules/auth/login/login-form/login-form.component.html
@@ -360,7 +424,10 @@ Total operators (first run): 80 of 9 unique operators
       4 .
 Total corrections to count: 4 of 1 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.html: 10 : 84
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.html: 11 : 84
 
 
 File: src/app/modules/auth/login/login-form/login-form.component.spec.ts
@@ -368,24 +435,29 @@ File: src/app/modules/auth/login/login-form/login-form.component.spec.ts
 with filtering:
 ===============
      16 (
-     14 ,
-     19 ;
+     11 ,
+     11 ;
       1 <
       2 =
       4 =>
       1 >
       4 [
-      8 import 
       2 let
-     16 {
-Total operators (first run): 87 of 11 unique operators
+      8 {
+Total operators (first run): 60 of 10 unique operators
 
 2nd run / corrections: 
-     14 .
+      7 .
      11 :
-Total corrections to count: 25 of 2 unique operators
+Total corrections to count: 18 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.spec.ts: 13 : 112
+3rd run / count import and it's commas: 
+      3 ,
+      8 ;
+      8 import 
+Import stuff to count: 19 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.spec.ts: 13 : 97
 
 
 File: src/app/modules/auth/login/login-form/login-form.component.ts
@@ -394,8 +466,8 @@ with filtering:
 ===============
       1  if 
      11 (
-     16 ,
-     16 ;
+     13 ,
+     10 ;
       3 =
       1 @Component
       1 @ViewChild
@@ -404,18 +476,23 @@ with filtering:
       4 const
       1 else
       1 for 
-      6 import 
       5 private
       9 this
-     14 {
-Total operators (first run): 91 of 16 unique operators
+      8 {
+Total operators (first run): 70 of 15 unique operators
 
 2nd run / corrections: 
-     29 .
+     27 .
      11 :
-Total corrections to count: 40 of 2 unique operators
+Total corrections to count: 38 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.ts: 18 : 131
+3rd run / count import and it's commas: 
+      3 ,
+      6 ;
+      6 import 
+Import stuff to count: 15 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.ts: 18 : 123
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.html
@@ -433,7 +510,10 @@ Total operators (first run): 40 of 6 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.html: 6 : 40
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.html: 7 : 40
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.spec.ts
@@ -441,24 +521,29 @@ File: src/app/modules/auth/login/login-page/login-page.component.spec.ts
 with filtering:
 ===============
      16 (
-     14 ,
-     20 ;
+     12 ,
+     11 ;
       1 <
       2 =
       4 =>
       1 >
       4 [
-      9 import 
       2 let
-     17 {
-Total operators (first run): 90 of 11 unique operators
+      8 {
+Total operators (first run): 61 of 10 unique operators
 
 2nd run / corrections: 
-     15 .
+      7 .
      11 :
-Total corrections to count: 26 of 2 unique operators
+Total corrections to count: 18 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.spec.ts: 13 : 116
+3rd run / count import and it's commas: 
+      2 ,
+      9 ;
+      9 import 
+Import stuff to count: 20 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.spec.ts: 13 : 99
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.ts
@@ -469,8 +554,8 @@ with filtering:
       1 !
       1 !==
       9 (
-      5 ,
-     18 ;
+      4 ,
+     12 ;
       7 =
       1 =>
       1 @Component
@@ -480,19 +565,24 @@ with filtering:
       1 else
       2 false
       1 implements 
-      6 import 
       3 private
       9 this
       2 true
-     11 {
-Total operators (first run): 84 of 20 unique operators
+      6 {
+Total operators (first run): 66 of 19 unique operators
 
 2nd run / corrections: 
-     22 .
+     21 .
       6 :
-Total corrections to count: 28 of 2 unique operators
+Total corrections to count: 27 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.ts: 22 : 112
+3rd run / count import and it's commas: 
+      1 ,
+      6 ;
+      6 import 
+Import stuff to count: 13 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.ts: 22 : 106
 
 
 File: src/app/modules/auth/login/login.guard.ts
@@ -500,8 +590,8 @@ File: src/app/modules/auth/login/login.guard.ts
 with filtering:
 ===============
       9 (
-      9 ,
-     11 ;
+      6 ,
+      8 ;
       2 <
       2 =
       2 >
@@ -511,21 +601,26 @@ with filtering:
       3 const
       1 false
       1 implements 
-      4 import 
       2 private
       4 return
       3 this
       1 true
-     10 {
+      6 {
       2 |
-Total operators (first run): 69 of 19 unique operators
+Total operators (first run): 55 of 18 unique operators
 
 2nd run / corrections: 
-      7 .
+      6 .
       7 :
-Total corrections to count: 14 of 2 unique operators
+Total corrections to count: 13 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login.guard.ts: 21 : 83
+3rd run / count import and it's commas: 
+      3 ,
+      3 ;
+      4 import 
+Import stuff to count: 10 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login.guard.ts: 21 : 78
 
 
 File: src/app/modules/auth/login/login.service.mock.ts
@@ -536,7 +631,7 @@ with filtering:
       1 !
      22 (
       3 ,
-     25 ;
+     19 ;
       3 <
       9 =
       1 ===
@@ -547,7 +642,6 @@ with filtering:
       1 do
       1 else
       5 false
-      6 import 
       1 let
       2 private
       1 public
@@ -555,15 +649,20 @@ with filtering:
      11 this
       2 true
       2 void
-     18 {
-Total operators (first run): 127 of 24 unique operators
+     13 {
+Total operators (first run): 110 of 23 unique operators
 
 2nd run / corrections: 
-     25 .
+     24 .
       5 :
-Total corrections to count: 30 of 2 unique operators
+Total corrections to count: 29 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login.service.mock.ts: 26 : 157
+3rd run / count import and it's commas: 
+      6 ;
+      6 import 
+Import stuff to count: 12 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login.service.mock.ts: 26 : 151
 
 
 File: src/app/modules/auth/login/login.service.spec.ts
@@ -571,20 +670,25 @@ File: src/app/modules/auth/login/login.service.spec.ts
 with filtering:
 ===============
      10 (
-      7 ,
-      9 ;
+      6 ,
+      5 ;
       3 =>
       2 [
-      4 import 
-      9 {
-Total operators (first run): 44 of 7 unique operators
+      5 {
+Total operators (first run): 31 of 6 unique operators
 
 2nd run / corrections: 
-      6 .
+      2 .
       4 :
-Total corrections to count: 10 of 2 unique operators
+Total corrections to count: 6 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login.service.spec.ts: 9 : 54
+3rd run / count import and it's commas: 
+      1 ,
+      4 ;
+      4 import 
+Import stuff to count: 9 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login.service.spec.ts: 9 : 46
 
 
 File: src/app/modules/auth/login/login.service.ts
@@ -595,7 +699,7 @@ with filtering:
       1 !
      24 (
       3 ,
-     26 ;
+     19 ;
       3 <
       9 =
       1 ===
@@ -606,7 +710,6 @@ with filtering:
       1 do
       1 else
       5 false
-      7 import 
       1 let
       2 private
       1 public
@@ -614,15 +717,20 @@ with filtering:
      11 this
       2 true
       2 void
-     18 {
-Total operators (first run): 133 of 24 unique operators
+     13 {
+Total operators (first run): 114 of 23 unique operators
 
 2nd run / corrections: 
-     25 .
+     24 .
       5 :
-Total corrections to count: 30 of 2 unique operators
+Total corrections to count: 29 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login.service.ts: 26 : 163
+3rd run / count import and it's commas: 
+      7 ;
+      7 import 
+Import stuff to count: 14 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/login/login.service.ts: 26 : 157
 
 
 File: src/app/modules/auth/user/initialUsers.ts
@@ -630,20 +738,24 @@ File: src/app/modules/auth/user/initialUsers.ts
 with filtering:
 ===============
       8 ,
-      2 ;
+      1 ;
       1 =
       1 [
       1 const
-      1 import 
-      3 {
-Total operators (first run): 17 of 7 unique operators
+      2 {
+Total operators (first run): 14 of 6 unique operators
 
 2nd run / corrections: 
       4 .
       8 :
 Total corrections to count: 12 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/initialUsers.ts: 9 : 29
+3rd run / count import and it's commas: 
+      1 ;
+      1 import 
+Import stuff to count: 2 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/user/initialUsers.ts: 9 : 28
 
 
 File: src/app/modules/auth/user/model-interfaces.ts
@@ -658,7 +770,10 @@ Total operators (first run): 6 of 3 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/auth/user/model-interfaces.ts: 3 : 6
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/user/model-interfaces.ts: 4 : 6
 
 
 File: src/app/modules/auth/user/user.service.mock.ts
@@ -667,7 +782,7 @@ with filtering:
 ===============
       1  - 
      12 (
-     10 ;
+      5 ;
       7 <
       1 =
       2 ===
@@ -676,21 +791,25 @@ with filtering:
       1 @Injectable
       2 [
       1 class 
-      5 import 
       5 public
       3 return
       3 this
       1 void
-     10 {
+      5 {
       1 |
-Total operators (first run): 77 of 18 unique operators
+Total operators (first run): 62 of 17 unique operators
 
 2nd run / corrections: 
      12 .
       3 :
 Total corrections to count: 15 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/user.service.mock.ts: 20 : 92
+3rd run / count import and it's commas: 
+      5 ;
+      5 import 
+Import stuff to count: 10 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/user/user.service.mock.ts: 20 : 87
 
 
 File: src/app/modules/auth/user/user.service.spec.ts
@@ -698,20 +817,25 @@ File: src/app/modules/auth/user/user.service.spec.ts
 with filtering:
 ===============
      10 (
-      5 ,
-      8 ;
+      4 ,
+      5 ;
       3 =>
       2 [
-      3 import 
-      7 {
-Total operators (first run): 38 of 7 unique operators
+      4 {
+Total operators (first run): 28 of 6 unique operators
 
 2nd run / corrections: 
-      4 .
+      2 .
       2 :
-Total corrections to count: 6 of 2 unique operators
+Total corrections to count: 4 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/user.service.spec.ts: 9 : 44
+3rd run / count import and it's commas: 
+      1 ,
+      3 ;
+      3 import 
+Import stuff to count: 7 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/user/user.service.spec.ts: 9 : 39
 
 
 File: src/app/modules/auth/user/user.service.ts
@@ -722,8 +846,8 @@ with filtering:
       1  ? EDIT :
       1  if 
      22 (
-      7 ,
-     21 ;
+      3 ,
+     14 ;
       6 <
       3 =
       2 ===
@@ -734,22 +858,27 @@ with filtering:
       1 class 
       2 const
       1 delete
-      7 import 
       1 private
       7 public
       4 return
      10 this
       3 void
-     18 {
+     12 {
       1 |
-Total operators (first run): 132 of 24 unique operators
+Total operators (first run): 108 of 23 unique operators
 
 2nd run / corrections: 
-     27 .
+     26 .
      11 :
-Total corrections to count: 38 of 2 unique operators
+Total corrections to count: 37 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/user.service.ts: 26 : 170
+3rd run / count import and it's commas: 
+      4 ,
+      7 ;
+      7 import 
+Import stuff to count: 18 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/user/user.service.ts: 26 : 163
 
 
 File: src/app/modules/auth/user/user.store.ts
@@ -763,7 +892,7 @@ with filtering:
      28 (
       8 ,
       5 ...
-     24 ;
+     21 ;
       5 <
       9 =
       4 =>
@@ -774,7 +903,6 @@ with filtering:
       6 const
       1 default:
       1 do
-      3 import 
       1 private
       1 public
      10 return
@@ -782,15 +910,20 @@ with filtering:
       1 switch 
       5 this
       8 try
-     11 {
-Total operators (first run): 163 of 27 unique operators
+      9 {
+Total operators (first run): 155 of 26 unique operators
 
 2nd run / corrections: 
      32 .
      10 :
 Total corrections to count: 42 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/user.store.ts: 29 : 205
+3rd run / count import and it's commas: 
+      3 ;
+      3 import 
+Import stuff to count: 6 of 1 import stuff
+
+n1 and N1 for src/app/modules/auth/user/user.store.ts: 29 : 203
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.html
@@ -813,7 +946,10 @@ Total operators (first run): 107 of 9 unique operators
       1 :
 Total corrections to count: 11 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.html: 11 : 118
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.html: 12 : 118
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.spec.ts
@@ -821,24 +957,29 @@ File: src/app/modules/blog/blog-item/blog-item.component.spec.ts
 with filtering:
 ===============
      16 (
-     10 ,
-     17 ;
+      8 ,
+     11 ;
       1 <
       2 =
       4 =>
       1 >
       4 [
-      6 import 
       2 let
-     12 {
-Total operators (first run): 75 of 11 unique operators
+      6 {
+Total operators (first run): 55 of 10 unique operators
 
 2nd run / corrections: 
-     12 .
+      7 .
       7 :
-Total corrections to count: 19 of 2 unique operators
+Total corrections to count: 14 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.spec.ts: 13 : 94
+3rd run / count import and it's commas: 
+      2 ,
+      6 ;
+      6 import 
+Import stuff to count: 14 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.spec.ts: 13 : 83
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.ts
@@ -848,8 +989,8 @@ with filtering:
       1  + 
       2  if 
      12 (
-     11 ,
-     17 ;
+      7 ,
+     11 ;
       5 =
       1 ===
       1 =>
@@ -860,22 +1001,27 @@ with filtering:
       3 const
       1 delete
       1 implements 
-      6 import 
       4 private
       1 return
      11 this
-      4 try
+      3 try
       1 typeof
-     11 {
+      6 {
       1 ||
-Total operators (first run): 100 of 23 unique operators
+Total operators (first run): 78 of 22 unique operators
 
 2nd run / corrections: 
-     24 .
+     23 .
      11 :
-Total corrections to count: 35 of 2 unique operators
+Total corrections to count: 34 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.ts: 25 : 135
+3rd run / count import and it's commas: 
+      4 ,
+      6 ;
+      6 import 
+Import stuff to count: 16 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.ts: 25 : 128
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.html
@@ -894,7 +1040,10 @@ Total operators (first run): 26 of 7 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.html: 7 : 26
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.html: 8 : 26
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.spec.ts
@@ -902,24 +1051,29 @@ File: src/app/modules/blog/blog-list/blog-list.component.spec.ts
 with filtering:
 ===============
      16 (
-     15 ,
-     20 ;
+     10 ,
+     11 ;
       1 <
       2 =
       4 =>
       1 >
       4 [
-      9 import 
       2 let
-     15 {
-Total operators (first run): 89 of 11 unique operators
+      6 {
+Total operators (first run): 57 of 10 unique operators
 
 2nd run / corrections: 
-     13 .
+      7 .
       7 :
-Total corrections to count: 20 of 2 unique operators
+Total corrections to count: 14 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.spec.ts: 13 : 109
+3rd run / count import and it's commas: 
+      5 ,
+      9 ;
+      9 import 
+Import stuff to count: 23 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.spec.ts: 13 : 94
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.ts
@@ -927,8 +1081,8 @@ File: src/app/modules/blog/blog-list/blog-list.component.ts
 with filtering:
 ===============
       2 (
-      5 ,
-      6 ;
+      2 ,
+      2 ;
       2 <
       1 =
       2 >
@@ -936,19 +1090,24 @@ with filtering:
       1 class 
       1 const
       1 implements 
-      4 import 
       1 private
       2 this
-      2 try
-      7 {
-Total operators (first run): 38 of 15 unique operators
+      1 try
+      3 {
+Total operators (first run): 22 of 14 unique operators
 
 2nd run / corrections: 
-      6 .
+      5 .
       3 :
-Total corrections to count: 9 of 2 unique operators
+Total corrections to count: 8 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.ts: 17 : 47
+3rd run / count import and it's commas: 
+      3 ,
+      4 ;
+      4 import 
+Import stuff to count: 11 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.ts: 17 : 41
 
 
 File: src/app/modules/blog/blog-page/blog-page.component.html
@@ -967,7 +1126,10 @@ Total operators (first run): 56 of 7 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.html: 7 : 56
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.html: 8 : 56
 
 
 File: src/app/modules/blog/blog-page/blog-page.component.spec.ts
@@ -975,25 +1137,30 @@ File: src/app/modules/blog/blog-page/blog-page.component.spec.ts
 with filtering:
 ===============
      23 (
-     18 ,
-     25 ;
+     14 ,
+     17 ;
       1 <
       4 =
       5 =>
       2 >
       4 [
       1 const
-      8 import 
       3 let
-     22 {
-Total operators (first run): 116 of 12 unique operators
+     14 {
+Total operators (first run): 88 of 11 unique operators
 
 2nd run / corrections: 
-     19 .
+     14 .
      20 :
-Total corrections to count: 39 of 2 unique operators
+Total corrections to count: 34 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.spec.ts: 14 : 155
+3rd run / count import and it's commas: 
+      4 ,
+      8 ;
+      8 import 
+Import stuff to count: 20 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.spec.ts: 14 : 142
 
 
 File: src/app/modules/blog/blog-page/blog-page.component.ts
@@ -1002,8 +1169,8 @@ with filtering:
 ===============
       2  if 
      11 (
-      9 ,
-     19 ;
+      6 ,
+     14 ;
       6 =
       3 =>
       1 @Component
@@ -1013,21 +1180,26 @@ with filtering:
       1 else
       3 false
       1 implements 
-      5 import 
       1 instanceof
       5 private
      11 this
       1 true
-     10 try
-     10 {
-Total operators (first run): 103 of 20 unique operators
+      9 try
+      6 {
+Total operators (first run): 85 of 19 unique operators
 
 2nd run / corrections: 
-     26 .
+     25 .
      11 :
-Total corrections to count: 37 of 2 unique operators
+Total corrections to count: 36 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.ts: 22 : 140
+3rd run / count import and it's commas: 
+      3 ,
+      5 ;
+      5 import 
+Import stuff to count: 13 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.ts: 22 : 134
 
 
 File: src/app/modules/blog/blog.module.ts
@@ -1035,21 +1207,24 @@ File: src/app/modules/blog/blog.module.ts
 with filtering:
 ===============
       1 (
-      6 ,
-      5 ;
+      5 ,
       1 @NgModule
       2 [
       1 class 
-      5 import 
-      7 {
-Total operators (first run): 28 of 8 unique operators
+      2 {
+Total operators (first run): 12 of 6 unique operators
 
 2nd run / corrections: 
-      4 .
       2 :
-Total corrections to count: 6 of 2 unique operators
+Total corrections to count: 2 of 1 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.module.ts: 10 : 34
+3rd run / count import and it's commas: 
+      1 ,
+      5 ;
+      5 import 
+Import stuff to count: 11 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog.module.ts: 8 : 25
 
 
 File: src/app/modules/blog/blog.routing.ts
@@ -1057,23 +1232,28 @@ File: src/app/modules/blog/blog.routing.ts
 with filtering:
 ===============
       1 (
-     22 ,
-     10 ;
+     21 ,
+      4 ;
       4 =
       7 [
       4 const
-      6 import 
       3 let
-      8 try
-     14 {
-Total operators (first run): 79 of 10 unique operators
+      5 try
+      8 {
+Total operators (first run): 57 of 9 unique operators
 
 2nd run / corrections: 
-      6 .
+      1 .
      23 :
-Total corrections to count: 29 of 2 unique operators
+Total corrections to count: 24 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.routing.ts: 12 : 108
+3rd run / count import and it's commas: 
+      1 ,
+      6 ;
+      6 import 
+Import stuff to count: 13 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog.routing.ts: 12 : 94
 
 
 File: src/app/modules/blog/blog.service.mock.ts
@@ -1084,7 +1264,7 @@ with filtering:
      11  + 
       1  - 
      24 (
-     15 ;
+      7 ;
       6 <
       3 =
       1 ===
@@ -1094,24 +1274,28 @@ with filtering:
       1 [
       1 class 
       1 const
-      2 do
-      8 import 
+      1 do
       4 public
       4 return
       1 static
       2 this
-     11 try
+     10 try
       1 void
-     11 {
+      6 {
       1 |
-Total operators (first run): 122 of 24 unique operators
+Total operators (first run): 99 of 23 unique operators
 
 2nd run / corrections: 
      12 .
       2 :
 Total corrections to count: 14 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.service.mock.ts: 26 : 136
+3rd run / count import and it's commas: 
+      8 ;
+      8 import 
+Import stuff to count: 16 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog.service.mock.ts: 26 : 129
 
 
 File: src/app/modules/blog/blog.service.spec.ts
@@ -1119,20 +1303,25 @@ File: src/app/modules/blog/blog.service.spec.ts
 with filtering:
 ===============
      10 (
-      5 ,
-      8 ;
+      4 ,
+      5 ;
       3 =>
       2 [
-      3 import 
-      7 {
-Total operators (first run): 38 of 7 unique operators
+      4 {
+Total operators (first run): 28 of 6 unique operators
 
 2nd run / corrections: 
-      4 .
+      2 .
       2 :
-Total corrections to count: 6 of 2 unique operators
+Total corrections to count: 4 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.service.spec.ts: 9 : 44
+3rd run / count import and it's commas: 
+      1 ,
+      3 ;
+      3 import 
+Import stuff to count: 7 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog.service.spec.ts: 9 : 39
 
 
 File: src/app/modules/blog/blog.service.ts
@@ -1145,8 +1334,8 @@ with filtering:
       1  ? EDIT :
       1  if 
      34 (
-      7 ,
-     26 ;
+      3 ,
+     16 ;
       5 <
       5 =
       1 ===
@@ -1157,24 +1346,29 @@ with filtering:
       1 class 
       3 const
       1 delete
-      2 do
-     10 import 
+      1 do
       7 public
       5 return
       1 static
       9 this
-     18 try
+     17 try
       3 void
-     19 {
+     13 {
       1 |
-Total operators (first run): 185 of 28 unique operators
+Total operators (first run): 153 of 27 unique operators
 
 2nd run / corrections: 
-     27 .
+     26 .
      10 :
-Total corrections to count: 37 of 2 unique operators
+Total corrections to count: 36 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.service.ts: 30 : 222
+3rd run / count import and it's commas: 
+      4 ,
+     10 ;
+     10 import 
+Import stuff to count: 24 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog.service.ts: 30 : 213
 
 
 File: src/app/modules/blog/blog.store.ts
@@ -1188,7 +1382,7 @@ with filtering:
      28 (
       8 ,
       5 ...
-     24 ;
+     21 ;
       5 <
       9 =
       4 =>
@@ -1199,23 +1393,27 @@ with filtering:
       6 const
       1 default:
       1 do
-      3 import 
       1 private
       1 public
      10 return
       1 static
       1 switch 
       5 this
-     12 try
-     11 {
-Total operators (first run): 167 of 27 unique operators
+     11 try
+      9 {
+Total operators (first run): 158 of 26 unique operators
 
 2nd run / corrections: 
      32 .
      10 :
 Total corrections to count: 42 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.store.ts: 29 : 209
+3rd run / count import and it's commas: 
+      3 ;
+      3 import 
+Import stuff to count: 6 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/blog.store.ts: 29 : 206
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html
@@ -1237,7 +1435,10 @@ Total operators (first run): 139 of 9 unique operators
       9 .
 Total corrections to count: 9 of 1 unique operators
 
-n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html: 10 : 148
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html: 11 : 148
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts
@@ -1245,8 +1446,8 @@ File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.s
 with filtering:
 ===============
      31 (
-     24 ,
-     36 ;
+     19 ,
+     21 ;
       1 <
       5 =
       7 =>
@@ -1254,19 +1455,24 @@ with filtering:
       1 @ViewChild
       9 [
       2 const
-     15 import 
       3 let
       1 true
-      7 try
-     31 {
-Total operators (first run): 174 of 15 unique operators
+      5 try
+     16 {
+Total operators (first run): 122 of 14 unique operators
 
 2nd run / corrections: 
-     29 .
+     18 .
      18 :
-Total corrections to count: 47 of 2 unique operators
+Total corrections to count: 36 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts: 17 : 221
+3rd run / count import and it's commas: 
+      5 ,
+     15 ;
+     15 import 
+Import stuff to count: 35 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts: 17 : 193
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts
@@ -1279,9 +1485,9 @@ with filtering:
       2 !==
       1 &&
      32 (
-     22 ,
+     16 ,
       2 ...
-     37 ;
+     26 ;
       9 =
       2 ===
       4 =>
@@ -1294,22 +1500,27 @@ with filtering:
       5 false
       1 for 
       1 implements 
-     11 import 
       8 private
       5 return
      28 this
       1 true
-     31 try
+     30 try
       1 typeof
-     20 {
-Total operators (first run): 243 of 29 unique operators
+     12 {
+Total operators (first run): 206 of 28 unique operators
 
 2nd run / corrections: 
-     62 .
+     60 .
      20 :
-Total corrections to count: 82 of 2 unique operators
+Total corrections to count: 80 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 31 : 325
+3rd run / count import and it's commas: 
+      6 ,
+     11 ;
+     11 import 
+Import stuff to count: 28 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 31 : 314
 
 
 File: src/app/modules/blog/initialEntries.ts
@@ -1317,21 +1528,25 @@ File: src/app/modules/blog/initialEntries.ts
 with filtering:
 ===============
      24 ,
-      2 ;
+      1 ;
       1 =
       4 [
       1 const
-      1 import 
-      2 try
-      4 {
-Total operators (first run): 39 of 8 unique operators
+      1 try
+      3 {
+Total operators (first run): 35 of 7 unique operators
 
 2nd run / corrections: 
       5 .
      30 :
 Total corrections to count: 35 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/initialEntries.ts: 10 : 74
+3rd run / count import and it's commas: 
+      1 ;
+      1 import 
+Import stuff to count: 2 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/initialEntries.ts: 10 : 72
 
 
 File: src/app/modules/blog/model-interfaces.ts
@@ -1349,7 +1564,10 @@ Total operators (first run): 16 of 6 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/blog/model-interfaces.ts: 6 : 16
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/blog/model-interfaces.ts: 7 : 16
 
 
 File: src/app/modules/shared/dateFormat.pipe.ts
@@ -1357,25 +1575,30 @@ File: src/app/modules/shared/dateFormat.pipe.ts
 with filtering:
 ===============
       3 (
-      5 ,
-      7 ;
+      2 ,
+      5 ;
       3 =
       1 @Pipe
       1 class 
       1 const
       1 implements 
-      2 import 
       1 return
       2 this
-      4 {
-Total operators (first run): 31 of 12 unique operators
+      2 {
+Total operators (first run): 22 of 11 unique operators
 
 2nd run / corrections: 
       3 .
       2 :
 Total corrections to count: 5 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/dateFormat.pipe.ts: 14 : 36
+3rd run / count import and it's commas: 
+      3 ,
+      2 ;
+      2 import 
+Import stuff to count: 7 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/dateFormat.pipe.ts: 14 : 34
 
 
 File: src/app/modules/shared/navbar/navbar.component.html
@@ -1390,7 +1613,10 @@ Total operators (first run): 60 of 3 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/shared/navbar/navbar.component.html: 3 : 60
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/navbar/navbar.component.html: 4 : 60
 
 
 File: src/app/modules/shared/navbar/navbar.component.spec.ts
@@ -1398,24 +1624,29 @@ File: src/app/modules/shared/navbar/navbar.component.spec.ts
 with filtering:
 ===============
      15 (
-      4 ,
-     13 ;
+      2 ,
+     11 ;
       1 <
       2 =
       4 =>
       1 >
       1 [
-      2 import 
       2 let
-      7 {
-Total operators (first run): 52 of 11 unique operators
+      5 {
+Total operators (first run): 44 of 10 unique operators
 
 2nd run / corrections: 
-      7 .
+      6 .
       3 :
-Total corrections to count: 10 of 2 unique operators
+Total corrections to count: 9 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/navbar/navbar.component.spec.ts: 13 : 62
+3rd run / count import and it's commas: 
+      2 ,
+      2 ;
+      2 import 
+Import stuff to count: 6 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/navbar/navbar.component.spec.ts: 13 : 59
 
 
 File: src/app/modules/shared/navbar/navbar.component.ts
@@ -1424,20 +1655,23 @@ with filtering:
 ===============
       1 (
       3 ,
-      1 ;
       1 @Component
       1 [
       1 class 
-      1 import 
-      3 {
-Total operators (first run): 12 of 8 unique operators
+      2 {
+Total operators (first run): 9 of 6 unique operators
 
 2nd run / corrections: 
       4 .
       3 :
 Total corrections to count: 7 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/navbar/navbar.component.ts: 10 : 19
+3rd run / count import and it's commas: 
+      1 ;
+      1 import 
+Import stuff to count: 2 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/navbar/navbar.component.ts: 9 : 18
 
 
 File: src/app/modules/shared/navigation.service.ts
@@ -1445,26 +1679,31 @@ File: src/app/modules/shared/navigation.service.ts
 with filtering:
 ===============
       5 (
-      2 ,
-      5 ;
+      1 ,
+      3 ;
       1 =
       1 @Injectable
       2 [
       1 class 
       2 const
-      2 import 
       2 private
       2 this
-      4 {
+      2 {
       1 ||
-Total operators (first run): 30 of 13 unique operators
+Total operators (first run): 23 of 12 unique operators
 
 2nd run / corrections: 
       4 .
       3 :
 Total corrections to count: 7 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/navigation.service.ts: 15 : 37
+3rd run / count import and it's commas: 
+      1 ,
+      2 ;
+      2 import 
+Import stuff to count: 5 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/navigation.service.ts: 15 : 35
 
 
 File: src/app/modules/shared/shared.module.ts
@@ -1472,23 +1711,27 @@ File: src/app/modules/shared/shared.module.ts
 with filtering:
 ===============
       2 (
-     22 ,
-     17 ;
+     21 ,
+      1 ;
       1 @NgModule
       4 [
       1 class 
-     16 import 
       1 return
       1 static
-     20 {
-Total operators (first run): 85 of 10 unique operators
+      4 {
+Total operators (first run): 36 of 9 unique operators
 
 2nd run / corrections: 
-     10 .
       5 :
-Total corrections to count: 15 of 2 unique operators
+Total corrections to count: 5 of 1 unique operators
 
-n1 and N1 for src/app/modules/shared/shared.module.ts: 12 : 100
+3rd run / count import and it's commas: 
+      1 ,
+     16 ;
+     16 import 
+Import stuff to count: 33 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/shared.module.ts: 11 : 74
 
 
 File: src/app/modules/shared/show-error/show-error.component.html
@@ -1505,7 +1748,10 @@ Total operators (first run): 14 of 5 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/shared/show-error/show-error.component.html: 5 : 14
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/show-error/show-error.component.html: 6 : 14
 
 
 File: src/app/modules/shared/show-error/show-error.component.spec.ts
@@ -1513,24 +1759,29 @@ File: src/app/modules/shared/show-error/show-error.component.spec.ts
 with filtering:
 ===============
      15 (
-      5 ,
-     14 ;
+      3 ,
+     11 ;
       1 <
       2 =
       4 =>
       1 >
       2 [
-      3 import 
       2 let
-      8 {
-Total operators (first run): 57 of 11 unique operators
+      5 {
+Total operators (first run): 46 of 10 unique operators
 
 2nd run / corrections: 
-      7 .
+      6 .
       4 :
-Total corrections to count: 11 of 2 unique operators
+Total corrections to count: 10 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/show-error/show-error.component.spec.ts: 13 : 68
+3rd run / count import and it's commas: 
+      2 ,
+      3 ;
+      3 import 
+Import stuff to count: 8 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/show-error/show-error.component.spec.ts: 13 : 64
 
 
 File: src/app/modules/shared/show-error/show-error.component.ts
@@ -1540,8 +1791,8 @@ with filtering:
       2  if 
       3 !
      13 (
-      4 ,
-     18 ;
+      2 ,
+     16 ;
      10 =
       1 @Component
       2 @Input
@@ -1552,21 +1803,26 @@ with filtering:
       6 const
       1 default:
       1 for 
-      2 import 
       1 let
       2 return
       1 switch 
       4 this
-     13 {
+     11 {
       2 ||
-Total operators (first run): 95 of 22 unique operators
+Total operators (first run): 87 of 21 unique operators
 
 2nd run / corrections: 
      18 .
       5 :
 Total corrections to count: 23 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/show-error/show-error.component.ts: 24 : 118
+3rd run / count import and it's commas: 
+      2 ,
+      2 ;
+      2 import 
+Import stuff to count: 6 of 1 import stuff
+
+n1 and N1 for src/app/modules/shared/show-error/show-error.component.ts: 24 : 116
 
 
 File: src/debug.ts
@@ -1582,7 +1838,10 @@ Total operators (first run): 5 of 4 unique operators
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/debug.ts: 4 : 5
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/debug.ts: 5 : 5
 
 
 File: src/environments/environment.prod.ts
@@ -1600,7 +1859,10 @@ Total operators (first run): 5 of 5 unique operators
       1 :
 Total corrections to count: 1 of 1 unique operators
 
-n1 and N1 for src/environments/environment.prod.ts: 6 : 6
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/environments/environment.prod.ts: 7 : 6
 
 
 File: src/environments/environment.ts
@@ -1618,7 +1880,10 @@ Total operators (first run): 5 of 5 unique operators
       1 :
 Total corrections to count: 1 of 1 unique operators
 
-n1 and N1 for src/environments/environment.ts: 6 : 6
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/environments/environment.ts: 7 : 6
 
 
 File: src/index.html
@@ -1638,7 +1903,10 @@ Total operators (first run): 43 of 7 unique operators
       1 .
 Total corrections to count: 1 of 1 unique operators
 
-n1 and N1 for src/index.html: 8 : 44
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/index.html: 9 : 44
 
 
 File: src/main.ts
@@ -1646,31 +1914,37 @@ File: src/main.ts
 with filtering:
 ===============
       4 (
-      6 ;
-      4 import 
-      5 {
-Total operators (first run): 19 of 4 unique operators
+      2 ;
+      1 {
+Total operators (first run): 7 of 3 unique operators
 
 2nd run / corrections: 
-      3 .
-Total corrections to count: 3 of 1 unique operators
+      2 .
+Total corrections to count: 2 of 1 unique operators
 
-n1 and N1 for src/main.ts: 5 : 22
+3rd run / count import and it's commas: 
+      4 ;
+      4 import 
+Import stuff to count: 8 of 1 import stuff
+
+n1 and N1 for src/main.ts: 5 : 17
 
 
 File: src/polyfills.ts
 -----------------------------
 with filtering:
 ===============
-      3 ;
-      3 import 
-Total operators (first run): 6 of 2 unique operators
+Total operators (first run):  of 0 unique operators
 
 2nd run / corrections: 
-      1 .
-Total corrections to count: 1 of 1 unique operators
+Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/polyfills.ts: 3 : 7
+3rd run / count import and it's commas: 
+      3 ;
+      3 import 
+Import stuff to count: 6 of 1 import stuff
+
+n1 and N1 for src/polyfills.ts: 1 : 6
 
 
 File: src/test.ts
@@ -1679,20 +1953,23 @@ with filtering:
 ===============
       7 (
       4 ,
-     14 ;
+      7 ;
       1 =
       1 const
-      8 import 
       1 true
-      2 {
-Total operators (first run): 38 of 8 unique operators
+Total operators (first run): 21 of 6 unique operators
 
 2nd run / corrections: 
-     14 .
+      7 .
       2 :
-Total corrections to count: 16 of 2 unique operators
+Total corrections to count: 9 of 2 unique operators
 
-n1 and N1 for src/test.ts: 10 : 54
+3rd run / count import and it's commas: 
+      7 ;
+      8 import 
+Import stuff to count: 15 of 1 import stuff
+
+n1 and N1 for src/test.ts: 9 : 45
 
 
 File: src/typings.d.ts
@@ -1708,6 +1985,9 @@ Total operators (first run): 4 of 3 unique operators
       2 :
 Total corrections to count: 2 of 1 unique operators
 
-n1 and N1 for src/typings.d.ts: 4 : 6
+3rd run / count import and it's commas: 
+Import stuff to count: 0 of 1 import stuff
+
+n1 and N1 for src/typings.d.ts: 5 : 6
 
 
