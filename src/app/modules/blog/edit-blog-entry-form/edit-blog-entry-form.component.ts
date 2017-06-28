@@ -1,11 +1,4 @@
-import {
-    Component,
-    EventEmitter,
-    OnInit,
-    ViewChild,
-    Input,
-    Inject
-} from '@angular/core';
+import { Component, EventEmitter, OnInit, ViewChild, Input, Inject } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';

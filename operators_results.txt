@@ -36,9 +36,10 @@ Total operators (first run): 125 of 14 unique operators
 
 2nd run / corrections: 
      19 .
-Total corrections to count: 19 of 1 unique operators
+      5 :
+Total corrections to count: 24 of 2 unique operators
 
-n1 and N1 for src/app/app.component.spec.ts: 15 : 144
+n1 and N1 for src/app/app.component.spec.ts: 16 : 149
 
 
 File: src/app/app.component.ts
@@ -46,7 +47,7 @@ File: src/app/app.component.ts
 with filtering:
 ===============
       1  if 
-     12 (
+     10 (
       8 ,
      15 ;
       6 =
@@ -55,7 +56,6 @@ with filtering:
       3 [
       1 class 
       2 const
-      3 default
       1 implements 
       4 import 
       1 instanceof
@@ -63,22 +63,22 @@ with filtering:
       4 private
       9 this
       1 while 
-     11 {
+      9 {
       1 ||
-Total operators (first run): 88 of 20 unique operators
+Total operators (first run): 81 of 19 unique operators
 
 2nd run / corrections: 
      25 .
-Total corrections to count: 25 of 1 unique operators
+      6 :
+Total corrections to count: 31 of 2 unique operators
 
-n1 and N1 for src/app/app.component.ts: 21 : 113
+n1 and N1 for src/app/app.component.ts: 21 : 112
 
 
 File: src/app/app.module.ts
 -----------------------------
 with filtering:
 ===============
-      1  / 
       2 (
      16 ,
      10 ;
@@ -89,13 +89,14 @@ with filtering:
       2 let
       1 true
      12 {
-Total operators (first run): 60 of 11 unique operators
+Total operators (first run): 59 of 10 unique operators
 
 2nd run / corrections: 
-     11 .
-Total corrections to count: 11 of 1 unique operators
+     10 .
+      6 :
+Total corrections to count: 16 of 2 unique operators
 
-n1 and N1 for src/app/app.module.ts: 12 : 71
+n1 and N1 for src/app/app.module.ts: 12 : 75
 
 
 File: src/app/app.routing.ts
@@ -115,9 +116,10 @@ Total operators (first run): 56 of 9 unique operators
 
 2nd run / corrections: 
       8 .
-Total corrections to count: 8 of 1 unique operators
+     17 :
+Total corrections to count: 25 of 2 unique operators
 
-n1 and N1 for src/app/app.routing.ts: 10 : 64
+n1 and N1 for src/app/app.routing.ts: 11 : 81
 
 
 File: src/app/app.tokens.ts
@@ -171,16 +173,17 @@ Total operators (first run): 64 of 11 unique operators
 
 2nd run / corrections: 
       8 .
-Total corrections to count: 8 of 1 unique operators
+      4 :
+Total corrections to count: 12 of 2 unique operators
 
-n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.spec.ts: 12 : 72
+n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.spec.ts: 13 : 76
 
 
 File: src/app/modules/admin/admin-page/admin-page.component.ts
 -----------------------------
 with filtering:
 ===============
-      3 (
+      2 (
       2 ,
       4 ;
       1 @Component
@@ -189,14 +192,15 @@ with filtering:
       1 implements 
       3 import 
       2 private
-      7 {
-Total operators (first run): 25 of 10 unique operators
+      6 {
+Total operators (first run): 23 of 10 unique operators
 
 2nd run / corrections: 
       2 .
-Total corrections to count: 2 of 1 unique operators
+      4 :
+Total corrections to count: 6 of 2 unique operators
 
-n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.ts: 11 : 27
+n1 and N1 for src/app/modules/admin/admin-page/admin-page.component.ts: 12 : 29
 
 
 File: src/app/modules/admin/admin.module.ts
@@ -205,20 +209,21 @@ with filtering:
 ===============
       1 (
       4 ,
+      1 ...
       4 ;
       1 @NgModule
       2 [
       1 class 
       4 import 
       6 {
-Total operators (first run): 23 of 8 unique operators
+Total operators (first run): 24 of 9 unique operators
 
 2nd run / corrections: 
       4 .
-      1 ...
-Total corrections to count: 5 of 2 unique operators
+      2 :
+Total corrections to count: 6 of 2 unique operators
 
-n1 and N1 for src/app/modules/admin/admin.module.ts: 10 : 28
+n1 and N1 for src/app/modules/admin/admin.module.ts: 11 : 30
 
 
 File: src/app/modules/admin/admin.routing.ts
@@ -237,9 +242,10 @@ Total operators (first run): 27 of 8 unique operators
 
 2nd run / corrections: 
       2 .
-Total corrections to count: 2 of 1 unique operators
+      5 :
+Total corrections to count: 7 of 2 unique operators
 
-n1 and N1 for src/app/modules/admin/admin.routing.ts: 9 : 29
+n1 and N1 for src/app/modules/admin/admin.routing.ts: 10 : 34
 
 
 File: src/app/modules/auth/auth-component/auth.component.spec.ts
@@ -261,9 +267,10 @@ Total operators (first run): 59 of 11 unique operators
 
 2nd run / corrections: 
       8 .
-Total corrections to count: 8 of 1 unique operators
+      4 :
+Total corrections to count: 12 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/auth-component/auth.component.spec.ts: 12 : 67
+n1 and N1 for src/app/modules/auth/auth-component/auth.component.spec.ts: 13 : 71
 
 
 File: src/app/modules/auth/auth-component/auth.component.ts
@@ -283,9 +290,10 @@ with filtering:
 Total operators (first run): 15 of 10 unique operators
 
 2nd run / corrections: 
-Total corrections to count: 0 of 0 unique operators
+      2 :
+Total corrections to count: 2 of 1 unique operators
 
-n1 and N1 for src/app/modules/auth/auth-component/auth.component.ts: 10 : 15
+n1 and N1 for src/app/modules/auth/auth-component/auth.component.ts: 11 : 17
 
 
 File: src/app/modules/auth/auth.module.ts
@@ -294,20 +302,21 @@ with filtering:
 ===============
       1 (
       4 ,
+      1 ...
       5 ;
       1 @NgModule
       2 [
       1 class 
       5 import 
       7 {
-Total operators (first run): 26 of 8 unique operators
+Total operators (first run): 27 of 9 unique operators
 
 2nd run / corrections: 
       5 .
-      1 ...
-Total corrections to count: 6 of 2 unique operators
+      2 :
+Total corrections to count: 7 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/auth.module.ts: 10 : 32
+n1 and N1 for src/app/modules/auth/auth.module.ts: 11 : 34
 
 
 File: src/app/modules/auth/auth.routing.ts
@@ -326,9 +335,10 @@ Total operators (first run): 35 of 8 unique operators
 
 2nd run / corrections: 
       3 .
-Total corrections to count: 3 of 1 unique operators
+      8 :
+Total corrections to count: 11 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/auth.routing.ts: 9 : 38
+n1 and N1 for src/app/modules/auth/auth.routing.ts: 10 : 46
 
 
 File: src/app/modules/auth/login/login-form/login-form.component.html
@@ -337,21 +347,20 @@ with filtering:
 ===============
       1 !
       7 (
+      2 ...
       1 ;
      20 <
      27 =
      20 >
       1 [
-      2 default
       1 true
 Total operators (first run): 80 of 9 unique operators
 
 2nd run / corrections: 
       4 .
-      2 ...
-Total corrections to count: 6 of 2 unique operators
+Total corrections to count: 4 of 1 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.html: 11 : 86
+n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.html: 10 : 84
 
 
 File: src/app/modules/auth/login/login-form/login-form.component.spec.ts
@@ -372,8 +381,8 @@ with filtering:
 Total operators (first run): 87 of 11 unique operators
 
 2nd run / corrections: 
-     19 .
-      6 ..
+     14 .
+     11 :
 Total corrections to count: 25 of 2 unique operators
 
 n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.spec.ts: 13 : 112
@@ -384,7 +393,6 @@ File: src/app/modules/auth/login/login-form/login-form.component.ts
 with filtering:
 ===============
       1  if 
-      1  in 
      11 (
      16 ,
      16 ;
@@ -400,33 +408,32 @@ with filtering:
       5 private
       9 this
      14 {
-Total operators (first run): 92 of 17 unique operators
+Total operators (first run): 91 of 16 unique operators
 
 2nd run / corrections: 
-     34 .
-      2 ..
-Total corrections to count: 36 of 2 unique operators
+     29 .
+     11 :
+Total corrections to count: 40 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.ts: 19 : 128
+n1 and N1 for src/app/modules/auth/login/login-form/login-form.component.ts: 18 : 131
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.html
 -----------------------------
 with filtering:
 ===============
-      1  in 
       1 !
       4 (
      12 <
       7 =
      12 >
       4 {
-Total operators (first run): 41 of 7 unique operators
+Total operators (first run): 40 of 6 unique operators
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.html: 7 : 41
+n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.html: 6 : 40
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.spec.ts
@@ -447,11 +454,11 @@ with filtering:
 Total operators (first run): 90 of 11 unique operators
 
 2nd run / corrections: 
-     21 .
-      6 ..
-Total corrections to count: 27 of 2 unique operators
+     15 .
+     11 :
+Total corrections to count: 26 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.spec.ts: 13 : 117
+n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.spec.ts: 13 : 116
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.ts
@@ -459,10 +466,9 @@ File: src/app/modules/auth/login/login-page/login-page.component.ts
 with filtering:
 ===============
       3  if 
-      1  in 
       1 !
       1 !==
-     10 (
+      9 (
       5 ,
      18 ;
       7 =
@@ -478,15 +484,15 @@ with filtering:
       3 private
       9 this
       2 true
-     12 {
-Total operators (first run): 87 of 21 unique operators
+     11 {
+Total operators (first run): 84 of 20 unique operators
 
 2nd run / corrections: 
-     25 .
-      5 ..
-Total corrections to count: 30 of 2 unique operators
+     22 .
+      6 :
+Total corrections to count: 28 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.ts: 23 : 117
+n1 and N1 for src/app/modules/auth/login/login-page/login-page.component.ts: 22 : 112
 
 
 File: src/app/modules/auth/login/login.guard.ts
@@ -516,9 +522,10 @@ Total operators (first run): 69 of 19 unique operators
 
 2nd run / corrections: 
       7 .
-Total corrections to count: 7 of 1 unique operators
+      7 :
+Total corrections to count: 14 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login.guard.ts: 20 : 76
+n1 and N1 for src/app/modules/auth/login/login.guard.ts: 21 : 83
 
 
 File: src/app/modules/auth/login/login.service.mock.ts
@@ -552,10 +559,11 @@ with filtering:
 Total operators (first run): 127 of 24 unique operators
 
 2nd run / corrections: 
-     27 .
-Total corrections to count: 27 of 1 unique operators
+     25 .
+      5 :
+Total corrections to count: 30 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login.service.mock.ts: 25 : 154
+n1 and N1 for src/app/modules/auth/login/login.service.mock.ts: 26 : 157
 
 
 File: src/app/modules/auth/login/login.service.spec.ts
@@ -572,10 +580,11 @@ with filtering:
 Total operators (first run): 44 of 7 unique operators
 
 2nd run / corrections: 
-      8 .
-Total corrections to count: 8 of 1 unique operators
+      6 .
+      4 :
+Total corrections to count: 10 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login.service.spec.ts: 8 : 52
+n1 and N1 for src/app/modules/auth/login/login.service.spec.ts: 9 : 54
 
 
 File: src/app/modules/auth/login/login.service.ts
@@ -609,11 +618,11 @@ with filtering:
 Total operators (first run): 133 of 24 unique operators
 
 2nd run / corrections: 
-     28 .
-      3 ..
-Total corrections to count: 31 of 2 unique operators
+     25 .
+      5 :
+Total corrections to count: 30 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/login/login.service.ts: 26 : 164
+n1 and N1 for src/app/modules/auth/login/login.service.ts: 26 : 163
 
 
 File: src/app/modules/auth/user/initialUsers.ts
@@ -631,9 +640,10 @@ Total operators (first run): 17 of 7 unique operators
 
 2nd run / corrections: 
       4 .
-Total corrections to count: 4 of 1 unique operators
+      8 :
+Total corrections to count: 12 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/initialUsers.ts: 8 : 21
+n1 and N1 for src/app/modules/auth/user/initialUsers.ts: 9 : 29
 
 
 File: src/app/modules/auth/user/model-interfaces.ts
@@ -656,32 +666,31 @@ File: src/app/modules/auth/user/user.service.mock.ts
 with filtering:
 ===============
       1  - 
-     13 (
+     12 (
      10 ;
       7 <
       1 =
       2 ===
       5 =>
-      3 >
-      2 >>
+      7 >
       1 @Injectable
       2 [
       1 class 
-      1 const
       5 import 
       5 public
       3 return
       3 this
       1 void
-     11 {
+     10 {
       1 |
-Total operators (first run): 78 of 20 unique operators
+Total operators (first run): 77 of 18 unique operators
 
 2nd run / corrections: 
      12 .
-Total corrections to count: 12 of 1 unique operators
+      3 :
+Total corrections to count: 15 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/user.service.mock.ts: 21 : 90
+n1 and N1 for src/app/modules/auth/user/user.service.mock.ts: 20 : 92
 
 
 File: src/app/modules/auth/user/user.service.spec.ts
@@ -699,9 +708,10 @@ Total operators (first run): 38 of 7 unique operators
 
 2nd run / corrections: 
       4 .
-Total corrections to count: 4 of 1 unique operators
+      2 :
+Total corrections to count: 6 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/user.service.spec.ts: 8 : 42
+n1 and N1 for src/app/modules/auth/user/user.service.spec.ts: 9 : 44
 
 
 File: src/app/modules/auth/user/user.service.ts
@@ -718,8 +728,7 @@ with filtering:
       3 =
       2 ===
       5 =>
-      4 >
-      1 >>
+      6 >
       1 @Injectable
       1 [
       1 class 
@@ -733,14 +742,14 @@ with filtering:
       3 void
      18 {
       1 |
-Total operators (first run): 131 of 25 unique operators
+Total operators (first run): 132 of 24 unique operators
 
 2nd run / corrections: 
-     28 .
-      3 ..
-Total corrections to count: 31 of 2 unique operators
+     27 .
+     11 :
+Total corrections to count: 38 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/user.service.ts: 27 : 162
+n1 and N1 for src/app/modules/auth/user/user.service.ts: 26 : 170
 
 
 File: src/app/modules/auth/user/user.store.ts
@@ -753,17 +762,17 @@ with filtering:
       2 !==
      28 (
       8 ,
+      5 ...
      24 ;
       5 <
       9 =
       4 =>
-      1 >
-      2 >>
+      5 >
       4 [
       4 case
       1 class 
       6 const
-      1 default
+      1 default:
       1 do
       3 import 
       1 private
@@ -774,15 +783,14 @@ with filtering:
       5 this
       8 try
      11 {
-Total operators (first run): 156 of 27 unique operators
+Total operators (first run): 163 of 27 unique operators
 
 2nd run / corrections: 
-     28 .
-      3 ..
-      5 ...
-Total corrections to count: 36 of 3 unique operators
+     32 .
+     10 :
+Total corrections to count: 42 of 2 unique operators
 
-n1 and N1 for src/app/modules/auth/user/user.store.ts: 30 : 192
+n1 and N1 for src/app/modules/auth/user/user.store.ts: 29 : 205
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.html
@@ -802,9 +810,10 @@ Total operators (first run): 107 of 9 unique operators
 
 2nd run / corrections: 
      10 .
-Total corrections to count: 10 of 1 unique operators
+      1 :
+Total corrections to count: 11 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.html: 10 : 117
+n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.html: 11 : 118
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.spec.ts
@@ -825,11 +834,11 @@ with filtering:
 Total operators (first run): 75 of 11 unique operators
 
 2nd run / corrections: 
-     15 .
-      1 ..
-Total corrections to count: 16 of 2 unique operators
+     12 .
+      7 :
+Total corrections to count: 19 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.spec.ts: 13 : 91
+n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.spec.ts: 13 : 94
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.ts
@@ -838,8 +847,7 @@ with filtering:
 ===============
       1  + 
       2  if 
-      1  in 
-     15 (
+     12 (
      11 ,
      17 ;
       5 =
@@ -858,16 +866,16 @@ with filtering:
      11 this
       4 try
       1 typeof
-     14 {
+     11 {
       1 ||
-Total operators (first run): 107 of 24 unique operators
+Total operators (first run): 100 of 23 unique operators
 
 2nd run / corrections: 
-     27 .
-      3 ..
-Total corrections to count: 30 of 2 unique operators
+     24 .
+     11 :
+Total corrections to count: 35 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.ts: 26 : 137
+n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.ts: 25 : 135
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.html
@@ -907,23 +915,23 @@ with filtering:
 Total operators (first run): 89 of 11 unique operators
 
 2nd run / corrections: 
-     17 .
-      1 ..
-Total corrections to count: 18 of 2 unique operators
+     13 .
+      7 :
+Total corrections to count: 20 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.spec.ts: 13 : 107
+n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.spec.ts: 13 : 109
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.ts
 -----------------------------
 with filtering:
 ===============
-      3 (
+      2 (
       5 ,
       6 ;
       2 <
       1 =
-      1 >>
+      2 >
       1 @Component
       1 class 
       1 const
@@ -932,14 +940,15 @@ with filtering:
       1 private
       2 this
       2 try
-      8 {
-Total operators (first run): 39 of 15 unique operators
+      7 {
+Total operators (first run): 38 of 15 unique operators
 
 2nd run / corrections: 
-      8 .
-Total corrections to count: 8 of 1 unique operators
+      6 .
+      3 :
+Total corrections to count: 9 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.ts: 16 : 47
+n1 and N1 for src/app/modules/blog/blog-list/blog-list.component.ts: 17 : 47
 
 
 File: src/app/modules/blog/blog-page/blog-page.component.html
@@ -965,7 +974,6 @@ File: src/app/modules/blog/blog-page/blog-page.component.spec.ts
 -----------------------------
 with filtering:
 ===============
-      1  in 
      23 (
      18 ,
      25 ;
@@ -978,14 +986,14 @@ with filtering:
       8 import 
       3 let
      22 {
-Total operators (first run): 117 of 13 unique operators
+Total operators (first run): 116 of 12 unique operators
 
 2nd run / corrections: 
-     22 .
-      1 ..
-Total corrections to count: 23 of 2 unique operators
+     19 .
+     20 :
+Total corrections to count: 39 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.spec.ts: 15 : 140
+n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.spec.ts: 14 : 155
 
 
 File: src/app/modules/blog/blog-page/blog-page.component.ts
@@ -993,7 +1001,7 @@ File: src/app/modules/blog/blog-page/blog-page.component.ts
 with filtering:
 ===============
       2  if 
-     12 (
+     11 (
       9 ,
      19 ;
       6 =
@@ -1011,15 +1019,15 @@ with filtering:
      11 this
       1 true
      10 try
-     11 {
-Total operators (first run): 105 of 20 unique operators
+     10 {
+Total operators (first run): 103 of 20 unique operators
 
 2nd run / corrections: 
-     29 .
-      3 ..
-Total corrections to count: 32 of 2 unique operators
+     26 .
+     11 :
+Total corrections to count: 37 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.ts: 22 : 137
+n1 and N1 for src/app/modules/blog/blog-page/blog-page.component.ts: 22 : 140
 
 
 File: src/app/modules/blog/blog.module.ts
@@ -1037,10 +1045,11 @@ with filtering:
 Total operators (first run): 28 of 8 unique operators
 
 2nd run / corrections: 
-      5 .
-Total corrections to count: 5 of 1 unique operators
+      4 .
+      2 :
+Total corrections to count: 6 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.module.ts: 9 : 33
+n1 and N1 for src/app/modules/blog/blog.module.ts: 10 : 34
 
 
 File: src/app/modules/blog/blog.routing.ts
@@ -1060,10 +1069,11 @@ with filtering:
 Total operators (first run): 79 of 10 unique operators
 
 2nd run / corrections: 
-      7 .
-Total corrections to count: 7 of 1 unique operators
+      6 .
+     23 :
+Total corrections to count: 29 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.routing.ts: 11 : 86
+n1 and N1 for src/app/modules/blog/blog.routing.ts: 12 : 108
 
 
 File: src/app/modules/blog/blog.service.mock.ts
@@ -1073,18 +1083,17 @@ with filtering:
       1  * 
      11  + 
       1  - 
-     25 (
+     24 (
      15 ;
       6 <
       3 =
       1 ===
       5 =>
-      2 >
-      2 >>
+      6 >
       1 @Injectable
       1 [
       1 class 
-      2 const
+      1 const
       2 do
       8 import 
       4 public
@@ -1093,15 +1102,16 @@ with filtering:
       2 this
      11 try
       1 void
-     12 {
+     11 {
       1 |
-Total operators (first run): 123 of 25 unique operators
+Total operators (first run): 122 of 24 unique operators
 
 2nd run / corrections: 
      12 .
-Total corrections to count: 12 of 1 unique operators
+      2 :
+Total corrections to count: 14 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.service.mock.ts: 26 : 135
+n1 and N1 for src/app/modules/blog/blog.service.mock.ts: 26 : 136
 
 
 File: src/app/modules/blog/blog.service.spec.ts
@@ -1119,9 +1129,10 @@ Total operators (first run): 38 of 7 unique operators
 
 2nd run / corrections: 
       4 .
-Total corrections to count: 4 of 1 unique operators
+      2 :
+Total corrections to count: 6 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.service.spec.ts: 8 : 42
+n1 and N1 for src/app/modules/blog/blog.service.spec.ts: 9 : 44
 
 
 File: src/app/modules/blog/blog.service.ts
@@ -1140,8 +1151,7 @@ with filtering:
       5 =
       1 ===
       5 =>
-      3 >
-      1 >>
+      5 >
       1 @Injectable
       1 [
       1 class 
@@ -1157,14 +1167,14 @@ with filtering:
       3 void
      19 {
       1 |
-Total operators (first run): 184 of 29 unique operators
+Total operators (first run): 185 of 28 unique operators
 
 2nd run / corrections: 
-     28 .
-      2 ..
-Total corrections to count: 30 of 2 unique operators
+     27 .
+     10 :
+Total corrections to count: 37 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.service.ts: 31 : 214
+n1 and N1 for src/app/modules/blog/blog.service.ts: 30 : 222
 
 
 File: src/app/modules/blog/blog.store.ts
@@ -1177,17 +1187,17 @@ with filtering:
       2 !==
      28 (
       8 ,
+      5 ...
      24 ;
       5 <
       9 =
       4 =>
-      1 >
-      2 >>
+      5 >
       4 [
       4 case
       1 class 
       6 const
-      1 default
+      1 default:
       1 do
       3 import 
       1 private
@@ -1198,15 +1208,14 @@ with filtering:
       5 this
      12 try
      11 {
-Total operators (first run): 160 of 27 unique operators
+Total operators (first run): 167 of 27 unique operators
 
 2nd run / corrections: 
-     28 .
-      2 ..
-      5 ...
-Total corrections to count: 35 of 3 unique operators
+     32 .
+     10 :
+Total corrections to count: 42 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/blog.store.ts: 30 : 195
+n1 and N1 for src/app/modules/blog/blog.store.ts: 29 : 209
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html
@@ -1215,21 +1224,20 @@ with filtering:
 ===============
       1 !
       9 (
+      3 ...
      30 <
      53 =
      30 >
       7 [
-      2 default
       5 try
       1 ||
-Total operators (first run): 138 of 9 unique operators
+Total operators (first run): 139 of 9 unique operators
 
 2nd run / corrections: 
       9 .
-      3 ...
-Total corrections to count: 12 of 2 unique operators
+Total corrections to count: 9 of 1 unique operators
 
-n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html: 11 : 150
+n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html: 10 : 148
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts
@@ -1254,11 +1262,11 @@ with filtering:
 Total operators (first run): 174 of 15 unique operators
 
 2nd run / corrections: 
-     37 .
-      5 ..
-Total corrections to count: 42 of 2 unique operators
+     29 .
+     18 :
+Total corrections to count: 47 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts: 17 : 216
+n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts: 17 : 221
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts
@@ -1270,8 +1278,9 @@ with filtering:
       3 !
       2 !==
       1 &&
-     35 (
+     32 (
      22 ,
+      2 ...
      37 ;
       9 =
       2 ===
@@ -1290,18 +1299,17 @@ with filtering:
       5 return
      28 this
       1 true
-     32 try
+     31 try
       1 typeof
-     23 {
-Total operators (first run): 248 of 28 unique operators
+     20 {
+Total operators (first run): 243 of 29 unique operators
 
 2nd run / corrections: 
-     66 .
-      4 ..
-      2 ...
-Total corrections to count: 72 of 3 unique operators
+     62 .
+     20 :
+Total corrections to count: 82 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 31 : 320
+n1 and N1 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 31 : 325
 
 
 File: src/app/modules/blog/initialEntries.ts
@@ -1320,28 +1328,28 @@ Total operators (first run): 39 of 8 unique operators
 
 2nd run / corrections: 
       5 .
-Total corrections to count: 5 of 1 unique operators
+     30 :
+Total corrections to count: 35 of 2 unique operators
 
-n1 and N1 for src/app/modules/blog/initialEntries.ts: 9 : 44
+n1 and N1 for src/app/modules/blog/initialEntries.ts: 10 : 74
 
 
 File: src/app/modules/blog/model-interfaces.ts
 -----------------------------
 with filtering:
 ===============
-      1  in 
       1 (
       9 ;
       1 [
       2 interface 
       1 try
       2 {
-Total operators (first run): 17 of 7 unique operators
+Total operators (first run): 16 of 6 unique operators
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/blog/model-interfaces.ts: 7 : 17
+n1 and N1 for src/app/modules/blog/model-interfaces.ts: 6 : 16
 
 
 File: src/app/modules/shared/dateFormat.pipe.ts
@@ -1363,10 +1371,11 @@ with filtering:
 Total operators (first run): 31 of 12 unique operators
 
 2nd run / corrections: 
-      5 .
-Total corrections to count: 5 of 1 unique operators
+      3 .
+      2 :
+Total corrections to count: 5 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/dateFormat.pipe.ts: 13 : 36
+n1 and N1 for src/app/modules/shared/dateFormat.pipe.ts: 14 : 36
 
 
 File: src/app/modules/shared/navbar/navbar.component.html
@@ -1376,13 +1385,12 @@ with filtering:
      22 <
      16 =
      22 >
-      1 default
-Total operators (first run): 61 of 4 unique operators
+Total operators (first run): 60 of 3 unique operators
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/app/modules/shared/navbar/navbar.component.html: 4 : 61
+n1 and N1 for src/app/modules/shared/navbar/navbar.component.html: 3 : 60
 
 
 File: src/app/modules/shared/navbar/navbar.component.spec.ts
@@ -1404,9 +1412,10 @@ Total operators (first run): 52 of 11 unique operators
 
 2nd run / corrections: 
       7 .
-Total corrections to count: 7 of 1 unique operators
+      3 :
+Total corrections to count: 10 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/navbar/navbar.component.spec.ts: 12 : 59
+n1 and N1 for src/app/modules/shared/navbar/navbar.component.spec.ts: 13 : 62
 
 
 File: src/app/modules/shared/navbar/navbar.component.ts
@@ -1425,9 +1434,10 @@ Total operators (first run): 12 of 8 unique operators
 
 2nd run / corrections: 
       4 .
-Total corrections to count: 4 of 1 unique operators
+      3 :
+Total corrections to count: 7 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/navbar/navbar.component.ts: 9 : 16
+n1 and N1 for src/app/modules/shared/navbar/navbar.component.ts: 10 : 19
 
 
 File: src/app/modules/shared/navigation.service.ts
@@ -1450,10 +1460,11 @@ with filtering:
 Total operators (first run): 30 of 13 unique operators
 
 2nd run / corrections: 
-      5 .
-Total corrections to count: 5 of 1 unique operators
+      4 .
+      3 :
+Total corrections to count: 7 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/navigation.service.ts: 14 : 35
+n1 and N1 for src/app/modules/shared/navigation.service.ts: 15 : 37
 
 
 File: src/app/modules/shared/shared.module.ts
@@ -1473,10 +1484,11 @@ with filtering:
 Total operators (first run): 85 of 10 unique operators
 
 2nd run / corrections: 
-     16 .
-Total corrections to count: 16 of 1 unique operators
+     10 .
+      5 :
+Total corrections to count: 15 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/shared.module.ts: 11 : 101
+n1 and N1 for src/app/modules/shared/shared.module.ts: 12 : 100
 
 
 File: src/app/modules/shared/show-error/show-error.component.html
@@ -1515,9 +1527,10 @@ Total operators (first run): 57 of 11 unique operators
 
 2nd run / corrections: 
       7 .
-Total corrections to count: 7 of 1 unique operators
+      4 :
+Total corrections to count: 11 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/show-error/show-error.component.spec.ts: 12 : 64
+n1 and N1 for src/app/modules/shared/show-error/show-error.component.spec.ts: 13 : 68
 
 
 File: src/app/modules/shared/show-error/show-error.component.ts
@@ -1525,7 +1538,6 @@ File: src/app/modules/shared/show-error/show-error.component.ts
 with filtering:
 ===============
       2  if 
-      1  in 
       3 !
      13 (
       4 ,
@@ -1538,7 +1550,7 @@ with filtering:
       2 case
       1 class 
       6 const
-      1 default
+      1 default:
       1 for 
       2 import 
       1 let
@@ -1547,13 +1559,14 @@ with filtering:
       4 this
      13 {
       2 ||
-Total operators (first run): 96 of 23 unique operators
+Total operators (first run): 95 of 22 unique operators
 
 2nd run / corrections: 
      18 .
-Total corrections to count: 18 of 1 unique operators
+      5 :
+Total corrections to count: 23 of 2 unique operators
 
-n1 and N1 for src/app/modules/shared/show-error/show-error.component.ts: 24 : 114
+n1 and N1 for src/app/modules/shared/show-error/show-error.component.ts: 24 : 118
 
 
 File: src/debug.ts
@@ -1563,14 +1576,13 @@ with filtering:
       2 ;
       1 =
       1 const
-      1 default
       1 false
-Total operators (first run): 6 of 5 unique operators
+Total operators (first run): 5 of 4 unique operators
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n1 and N1 for src/debug.ts: 5 : 6
+n1 and N1 for src/debug.ts: 4 : 5
 
 
 File: src/environments/environment.prod.ts
@@ -1585,9 +1597,10 @@ with filtering:
 Total operators (first run): 5 of 5 unique operators
 
 2nd run / corrections: 
-Total corrections to count: 0 of 0 unique operators
+      1 :
+Total corrections to count: 1 of 1 unique operators
 
-n1 and N1 for src/environments/environment.prod.ts: 5 : 5
+n1 and N1 for src/environments/environment.prod.ts: 6 : 6
 
 
 File: src/environments/environment.ts
@@ -1602,9 +1615,10 @@ with filtering:
 Total operators (first run): 5 of 5 unique operators
 
 2nd run / corrections: 
-Total corrections to count: 0 of 0 unique operators
+      1 :
+Total corrections to count: 1 of 1 unique operators
 
-n1 and N1 for src/environments/environment.ts: 5 : 5
+n1 and N1 for src/environments/environment.ts: 6 : 6
 
 
 File: src/index.html
@@ -1613,16 +1627,16 @@ with filtering:
 ===============
       1 !
       1 ,
+      1 ...
      15 <
       9 =
      15 >
       1 do
-Total operators (first run): 42 of 6 unique operators
+Total operators (first run): 43 of 7 unique operators
 
 2nd run / corrections: 
       1 .
-      1 ...
-Total corrections to count: 2 of 2 unique operators
+Total corrections to count: 1 of 1 unique operators
 
 n1 and N1 for src/index.html: 8 : 44
 
@@ -1653,10 +1667,10 @@ with filtering:
 Total operators (first run): 6 of 2 unique operators
 
 2nd run / corrections: 
-      2 .
-Total corrections to count: 2 of 1 unique operators
+      1 .
+Total corrections to count: 1 of 1 unique operators
 
-n1 and N1 for src/polyfills.ts: 3 : 8
+n1 and N1 for src/polyfills.ts: 3 : 7
 
 
 File: src/test.ts
@@ -1675,9 +1689,10 @@ Total operators (first run): 38 of 8 unique operators
 
 2nd run / corrections: 
      14 .
-Total corrections to count: 14 of 1 unique operators
+      2 :
+Total corrections to count: 16 of 2 unique operators
 
-n1 and N1 for src/test.ts: 9 : 52
+n1 and N1 for src/test.ts: 10 : 54
 
 
 File: src/typings.d.ts
@@ -1690,8 +1705,9 @@ with filtering:
 Total operators (first run): 4 of 3 unique operators
 
 2nd run / corrections: 
-Total corrections to count: 0 of 0 unique operators
+      2 :
+Total corrections to count: 2 of 1 unique operators
 
-n1 and N1 for src/typings.d.ts: 3 : 4
+n1 and N1 for src/typings.d.ts: 4 : 6
 
 
