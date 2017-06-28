@@ -67,8 +67,8 @@ echo -n "Import stuff to count: "
 echo "$importCorrN1 of $importCorrn1 import stuff"
 echo
 echo -n "n1 and N1 for $1: "
-let totalN1=$resN1+$corrN1+importCorrN1
-let totaln1=$resn1+$corrn1+importCorrn1
+let totalN1=$resN1+$corrN1+$importCorrN1
+let totaln1=$resn1+$corrn1+$importCorrn1
 echo "$totaln1 : $totalN1"
 echo
 echo
