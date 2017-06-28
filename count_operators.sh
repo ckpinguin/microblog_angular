@@ -12,7 +12,8 @@ SPECIALS='import'
 PATTERN="$SCSPEC|$TYPE_QUAL|$RESERVED|$OPERATOR"
 EXCEPTIONS="$COMMENTS|$FUNCS"
 
-echo "File $1"
+echo "File: $1"
+echo "-----------------------------"
 #cho "using ack:"
 #echo "=========="
 #ack "$PATTERN" $1
