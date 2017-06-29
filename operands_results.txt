@@ -81,6 +81,7 @@ with filtering:
       2 data
       3 defaultTitle
       3 event
+      1 events
       2 firstChild
       1 Inject
       2 NavigationEnd
@@ -97,12 +98,12 @@ with filtering:
       2 'title'
       2 Title
       4 titleService
-Total operands (first run): 58 of 29 unique operands
+Total operands (first run): 59 of 30 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/app.component.ts: 29 : 58
+n2 and N2 for src/app/app.component.ts: 30 : 59
 
 
 File: src/app/app.module.ts
@@ -950,7 +951,7 @@ with filtering:
       1 all
       1 BehaviorSubject
       2 console
-      5 data
+      6 data
       3 debug
       1 '../../../../debug'
       2 EDIT
@@ -984,12 +985,12 @@ with filtering:
       1 where
       2 1
       1 16
-Total operands (first run): 91 of 42 unique operands
+Total operands (first run): 92 of 42 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/auth/user/user.store.ts: 42 : 91
+n2 and N2 for src/app/modules/auth/user/user.store.ts: 42 : 92
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.html
@@ -1091,7 +1092,7 @@ with filtering:
       1 navigationExtras
       2 OnDestroy
       2 OnInit
-      2 params
+      3 params
       1 queryParams
       1 'received route param id: '
       2 router
@@ -1105,12 +1106,12 @@ with filtering:
       1 templateUrl
       1 typeof
       1 'undefined'
-Total operands (first run): 72 of 44 unique operands
+Total operands (first run): 73 of 44 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/blog-item/blog-item.component.ts: 44 : 72
+n2 and N2 for src/app/modules/blog/blog-item/blog-item.component.ts: 44 : 73
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.html
@@ -1309,6 +1310,7 @@ with filtering:
       1 '../../../../debug'
       2 entry
       4 event
+      1 events
       1 'last entry: '
       1 '../model-interfaces'
       2 NavigationEnd
@@ -1326,12 +1328,12 @@ with filtering:
       2 title
       1 'title'
       1 'url'
-Total operands (first run): 63 of 39 unique operands
+Total operands (first run): 64 of 40 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/blog-page/blog-page.component.ts: 39 : 63
+n2 and N2 for src/app/modules/blog/blog-page/blog-page.component.ts: 40 : 64
 
 
 File: src/app/modules/blog/blog.module.ts
@@ -1541,7 +1543,7 @@ with filtering:
       1 BlogEntry
       3 BlogStore
       2 console
-      5 data
+      6 data
       3 debug
       1 '../../../debug'
       2 EDIT
@@ -1564,12 +1566,12 @@ with filtering:
       2 type
       2 1
       1 16
-Total operands (first run): 80 of 32 unique operands
+Total operands (first run): 81 of 32 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/blog.store.ts: 32 : 80
+n2 and N2 for src/app/modules/blog/blog.store.ts: 32 : 81
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html
@@ -1743,7 +1745,7 @@ with filtering:
       1 only
       1 optional
       1 parameters
-      2 params
+      3 params
       1 path
       1 pristine
       3 router
@@ -1775,12 +1777,12 @@ with filtering:
       1 work
       1 'You can only edit your own entries'
       1 5000
-Total operands (first run): 150 of 91 unique operands
+Total operands (first run): 151 of 91 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 91 : 150
+n2 and N2 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 91 : 151
 
 
 File: src/app/modules/blog/model-interfaces.ts

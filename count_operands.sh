@@ -2,7 +2,7 @@
 
 # This should work generically for angular & react
 #IDENTIFIER="\w{1,}(?=\s)|\w{1,}(?=,)|\w{1,}(?=;)|\w{1,}(?=:)|\w{1,}(?=\.)|(?<=\()\w+(?=\))|\w+(?=\))|\w+(?=\[)|(?<=\.)\w+(?=\})"
-IDENTIFIER="\w+(?=\s)|\w+(?=,)|\w+(?=;)|\w+(?=:)|\w+(?=\.)|(?<=\()\w+(?=\))|\w+(?=\))|\w+(?=\[)|(?<=\.)\w+(?=\})"
+IDENTIFIER="\w+(?=\s)|(?<=\.)\w+$|\w+(?=,)|\w+(?=;)|\w+(?=:)|\w+(?=\.)|(?<=\()\w+(?=\))|\w+(?=\))|\w+(?=\[)|(?<=\.)\w+(?=\})"
 TYPENAME="bool |any |string |number |void "
 # CONSTANT="'\w+'|(\s|=)\[0-9]+|\[0-9]+\.\[0-9]*"
 # TODO: How to ignore numbers at beginning of a string constant, like '55 comments'?
@@ -52,19 +52,19 @@ if [ "$2" == "v" ]; then
     echo "============"
     ack "$PATTERN" $1
 
-    echo "grep IDENTIFIER:"
+    echo "ack IDENTIFIER:"
     echo "=============="
     ack "$IDENTIFIER" $1
 
-    echo "grep TYPENAME:"
+    echo "ack TYPENAME:"
     echo "=============="
     ack "$TYPENAME" $1
 
-    echo "grep CONSTANT:"
+    echo "ack CONSTANT:"
     echo "=============="
     ack "$CONSTANT" $1
 
-    echo "grep EXCEPTIONS:"
+    echo "ack EXCEPTIONS:"
     echo "================"
     ack "$EXCEPTIONS" $1
     echo
