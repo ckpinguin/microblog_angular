@@ -3,7 +3,7 @@
 # Optimized for angular/typescript!
 SCSPEC='static'
 TYPE_QUAL='const|let|private|protected|public'
-RESERVED='(@[A-Z]\w+)| if |import |else|break|case|class |continue|default:|do|for |new\(|return|switch |while |this|try|catch|throw|throws|finally|instanceof|interface |extends |implements |abstract |true|false'
+RESERVED='(@[A-Z]\w+)| if |import |else|break|case|class |continue|default:|do |for |new\(|return|switch |while |this|try|catch|throw|throws|finally|instanceof |interface |extends |implements |abstract |true|false'
 
 # Most arithmetic operators should have consequently whitespace before and after to be found consistently!
 OPERATOR_ARITH="\s\+\s|\+\+|\s-\s|--|\s\*\s|\s/\s|%"
@@ -13,7 +13,7 @@ OPERATOR_TERN="\s\?\s.+:"
 OPERATOR_LOGIC="&&|\|\||\!"
 OPERATOR_BITWISE="&|\|||~|^|\s<<\s|\s>>\s"
 # We don't use the `in` operator
-OPERATOR_DIV="\.\.\.|\(|;|\{|\[|=>|,|typeof|delete|instanceof|void"
+OPERATOR_DIV="\.\.\.|\(|;|\{|\[|=>|,|typeof |delete |instanceof |void "
 OPERATORS="$OPERATOR_ARITH|$OPERATOR_ASSIGN|$OPERATOR_COMP|$OPERATOR_TERN|$OPERATOR_LOGIC|$OPERATOR_BITWISE|$OPERATOR_DIV"
 
 # stuff, that falls down with above regex (a pro surely could do all of this better)
