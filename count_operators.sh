@@ -55,6 +55,11 @@ corrn1=`egrep -v "$EXCEPTIONS" $1 | grep -Po "$CORRECTIONS" | sort -n | uniq -c 
 let corrN1=$corrN1+0
 echo -n "Total corrections to count: "
 echo "$corrN1 of $corrn1 unique operators"
+# introducing an error factor of 10% to count the fact, that . operator
+# is not counted correctly (. inside 'abc.xyz' are counted)
+### let corrN1=$corrN1-$corrN1*10/100
+### echo -n "Total corrections with corrected factor to count: "
+### echo "$corrN1 of $corrn1 unique operators"
 echo
 echo "3rd run / count import and it's commas: "
 egrep '^import' $1 | egrep -o "$IMPORT_SPECIAL" | sort -n | uniq -c
