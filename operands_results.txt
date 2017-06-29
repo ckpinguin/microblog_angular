@@ -124,9 +124,6 @@ with filtering:
       2 BrowserAnimationsModule
       2 BrowserModule
       1 declarations
-      1 e
-      1 Global
-      1 i
       1 imports
       2 LoginService
       1 './modules/auth/login/login.service'
@@ -139,18 +136,16 @@ with filtering:
       1 routingComponents
       2 routingProviders
       2 SharedModule
-      1 singleton
-      1 Singleton
       2 Title
       2 tokens
       2 UserService
       1 useValue
-Total operands (first run): 48 of 36 unique operands
+Total operands (first run): 43 of 31 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/app.module.ts: 36 : 48
+n2 and N2 for src/app/app.module.ts: 31 : 43
 
 
 File: src/app/app.routing.ts
@@ -541,7 +536,6 @@ with filtering:
       1 name
       3 navigationService
       2 NavigationService
-      1 Needed
       3 NgForm
       2 'OK'
       1 password
@@ -555,16 +549,15 @@ with filtering:
       1 styleUrls
       2 success
       1 templateUrl
-      1 unit
       1 ViewChild
       1 `Welcome, ${formValue.name}. You have logged in successfully.`
       2 5000
-Total operands (first run): 71 of 44 unique operands
+Total operands (first run): 69 of 42 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/auth/login/login-form/login-form.component.ts: 44 : 71
+n2 and N2 for src/app/modules/auth/login/login-form/login-form.component.ts: 42 : 69
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.html
@@ -727,7 +720,6 @@ with filtering:
       1 err
       4 id
       1 Injectable
-      1 is
       4 loggedIn
       1 md5
       1 'md5'
@@ -749,12 +741,12 @@ with filtering:
       2 UserService
       1 '../user/user.service'
       2 void
-Total operands (first run): 63 of 31 unique operands
+Total operands (first run): 62 of 30 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/auth/login/login.service.mock.ts: 31 : 63
+n2 and N2 for src/app/modules/auth/login/login.service.mock.ts: 30 : 62
 
 
 File: src/app/modules/auth/login/login.service.spec.ts
@@ -799,7 +791,6 @@ with filtering:
       1 err
       4 id
       1 Injectable
-      1 is
       4 loggedIn
       1 LoginService
       1 md5
@@ -821,39 +812,12 @@ with filtering:
       2 UserService
       1 '../user/user.service'
       2 void
-Total operands (first run): 67 of 33 unique operands
+Total operands (first run): 66 of 32 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/auth/login/login.service.ts: 33 : 67
-
-
-File: src/app/modules/auth/user/initialUsers.ts
------------------------------
-with filtering:
-===============
-      1 'a8655eb5-ca5c-459a-a094-d0e704e80a69'
-      1 'admin'
-      1 'admin@admin.example.com'
-      1 'be7f7340-2c3f-4534-9ec2-cbcc9ddccc2d'
-      2 email
-      2 id
-      1 initialUsers
-      1 './model-interfaces'
-      2 name
-      2 password
-      1 'test'
-      1 'test@test.example.com'
-      1 User
-      1 '098f6bcd4621d373cade4e832627b4f6'
-      1 '21232f297a57a5a743894a0e4a801fc3'
-Total operands (first run): 19 of 15 unique operands
-
-2nd run / corrections: 
-Total corrections to count: 0 of 0 unique operators
-
-n2 and N2 for src/app/modules/auth/user/initialUsers.ts: 15 : 19
+n2 and N2 for src/app/modules/auth/login/login.service.ts: 32 : 66
 
 
 File: src/app/modules/auth/user/model-interfaces.ts
@@ -935,24 +899,19 @@ with filtering:
       2 ADD
       1 '@angular/core'
       1 BehaviorSubject
-      1 call
       1 console
       1 'creating new empty user: '
-      4 data
+      3 data
       2 debug
       1 '../../../../debug'
       2 EDIT
-      1 first
       6 id
-      3 initialUsers
+      2 initialUsers
       1 './initialUsers'
       1 Injectable
       1 length
       5 list
-      1 load
       2 LOAD
-      1 loads
-      2 mock
       1 './model-interfaces'
       3 name
       1 number
@@ -961,7 +920,6 @@ with filtering:
       1 'rxjs/BehaviorSubject'
       1 'rxjs/Observable'
       3 string
-      1 through
       3 type
       7 user
       2 User
@@ -972,12 +930,12 @@ with filtering:
       2 UserStore
       3 void
       1 1
-Total operands (first run): 84 of 41 unique operands
+Total operands (first run): 75 of 35 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/auth/user/user.service.ts: 41 : 84
+n2 and N2 for src/app/modules/auth/user/user.service.ts: 35 : 75
 
 
 File: src/app/modules/auth/user/user.store.ts
@@ -1121,17 +1079,13 @@ with filtering:
       1 '../../../../debug'
       1 './edit'
       1 get
-      1 got
       8 id
       1 'id'
       1 image
-      1 in
       1 Input
-      1 is
-      7 item
+      6 item
       1 '../model-interfaces'
       1 navigationExtras
-      1 no
       2 OnDestroy
       2 OnInit
       2 params
@@ -1146,18 +1100,14 @@ with filtering:
       1 styleUrls
       2 Subscription
       1 templateUrl
-      1 the
       1 typeof
       1 'undefined'
-      1 was
-      1 we
-      2 what
-Total operands (first run): 82 of 52 unique operands
+Total operands (first run): 72 of 44 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/blog-item/blog-item.component.ts: 52 : 82
+n2 and N2 for src/app/modules/blog/blog-item/blog-item.component.ts: 44 : 72
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.html
@@ -1535,28 +1485,23 @@ with filtering:
       1 './blog.store'
       6 blogStore
       2 BlogStore
-      1 call
       1 console
       1 'creating new empty entry: '
-      4 data
+      3 data
       2 debug
       1 '../../../debug'
       2 EDIT
       2 entries
       5 entry
-      1 first
       1 guid
       6 id
-      3 initialEntries
+      2 initialEntries
       1 './initialEntries'
       1 Injectable
       1 length
       4 list
-      1 load
       2 LOAD
-      1 loads
       2 Math
-      2 mock
       1 './model-interfaces'
       1 number
       1 Observable
@@ -1568,17 +1513,16 @@ with filtering:
       1 'rxjs/Observable'
       1 s4
       2 string
-      1 through
       3 type
       3 void
       3 1
       1 16
-Total operands (first run): 92 of 49 unique operands
+Total operands (first run): 83 of 43 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/blog.service.ts: 49 : 92
+n2 and N2 for src/app/modules/blog/blog.service.ts: 43 : 83
 
 
 File: src/app/modules/blog/blog.store.ts
@@ -1590,7 +1534,6 @@ with filtering:
      11 action
       2 ADD
       1 'ADD'
-      1 all
       1 BehaviorSubject
       1 BlogEntry
       3 BlogStore
@@ -1605,34 +1548,25 @@ with filtering:
       5 entry
       1 guid
       5 id
-      1 is
       2 LOAD
       1 'LOAD'
       2 Math
       1 './model-interfaces'
       1 'new state: '
-      1 only
-      1 place
-      1 propagate
       1 'received action: '
       2 REMOVE
       1 'REMOVE'
       1 'rxjs/BehaviorSubject'
       1 s4
-      1 state
-      1 store
-      2 the
-      1 to
       2 type
-      1 where
       2 1
       1 16
-Total operands (first run): 91 of 42 unique operands
+Total operands (first run): 80 of 32 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/blog.store.ts: 42 : 91
+n2 and N2 for src/app/modules/blog/blog.store.ts: 32 : 80
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html
@@ -1696,18 +1630,16 @@ with filtering:
       1 componentInstance
       1 'dc2a4182-71a0-4fed-98dd-22b4d5104e40'
       1 declarations
-      1 dir
       1 './edit-blog-entry-form.component'
       4 EditBlogEntryFormComponent
       1 'EditBlogEntryFormComponent'
       2 errors
       5 fixture
-      5 form
+      4 form
       2 FormsModule
       1 'id'
       1 imports
       1 inject
-      1 is
       2 LoginService
       1 MdSnackBar
       2 MockBlogService
@@ -1731,20 +1663,18 @@ with filtering:
       1 'should validate the title correctly'
       1 snapshot
       3 TestBed
-      1 the
       1 'title'
       4 titleControl
       1 url
       3 useClass
       2 UserService
       1 useValue
-      1 ViewChild
-Total operands (first run): 109 of 66 unique operands
+Total operands (first run): 104 of 62 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts: 66 : 109
+n2 and N2 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts: 62 : 104
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts
@@ -1850,86 +1780,19 @@ Total corrections to count: 0 of 0 unique operators
 n2 and N2 for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 91 : 150
 
 
-File: src/app/modules/blog/initialEntries.ts
------------------------------
-with filtering:
-===============
-      2 000
-      2 'a8655eb5-ca5c-459a-a094-d0e704e80a69'
-      1 'administrator'
-      1 'another one'
-      3 author
-      1 'be7f7340-2c3f-4534-9ec2-cbcc9ddccc2d'
-      1 BlogEntry
-      1 'cat1.jpg'
-      1 'cat2.gif'
-      1 'Cats always work :-)'
-      3 date
-      1 'dc2a4182-71a0-4fed-98dd-22b4d5104e40'
-      1 'e16d3ee5-f6ff-4638-94fe-1dcf6fba0b4c'
-      3 id
-      3 image
-      1 initialEntries
-      1 'jumpy cat'
-      1 'Just a little\n test'
-      1 './model-interfaces'
-      1 null
-      1 s
-      3 tags
-      1 'Testentry'
-      1 'Test user\'
-      3 text
-      1 'The test user himself'
-      3 title
-      1 'Told ya, everybody loves cats'
-      3 user
-      1 01
-      1 04
-      1 05
-      1 05T12
-      1 05T14
-      1 06
-      1 10
-      1 11
-      1 12
-      1 23
-      1 31T11
-      1 46
-      1 977
-      1 2016
-      2 2017
-      1 '54726e40-3297-11e7-93ae-92361f002671'
-Total operands (first run): 64 of 45 unique operands
-
-2nd run / corrections: 
-Total corrections to count: 0 of 0 unique operators
-
-n2 and N2 for src/app/modules/blog/initialEntries.ts: 45 : 64
-
-
 File: src/app/modules/blog/model-interfaces.ts
 -----------------------------
 with filtering:
 ===============
-      1 author
-      1 be
       1 BlogEntry
-      1 by
-      1 in
-      1 logged
-      1 name
-      1 settable
-      1 should
       8 string
       2 Tag
-      1 the
-      2 user
-Total operands (first run): 22 of 13 unique operands
+Total operands (first run): 11 of 3 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/model-interfaces.ts: 13 : 22
+n2 and N2 for src/app/modules/blog/model-interfaces.ts: 3 : 11
 
 
 File: src/app/modules/shared/dateFormat.pipe.ts
@@ -2032,9 +1895,6 @@ with filtering:
       2 ActivatedRoute
       1 '@angular/core'
       1 '@angular/router'
-      1 back
-      1 Bug
-      1 Goes
       1 Injectable
       1 NavigationService
       3 queryParams
@@ -2042,13 +1902,12 @@ with filtering:
       1 'redirect'
       3 router
       1 Router
-      1 to
-Total operands (first run): 23 of 17 unique operands
+Total operands (first run): 19 of 13 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/shared/navigation.service.ts: 17 : 23
+n2 and N2 for src/app/modules/shared/navigation.service.ts: 13 : 19
 
 
 File: src/app/modules/shared/shared.module.ts
