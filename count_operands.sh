@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# Optimized for angular/typescript!
+# This should work generically for angular & react
 IDENTIFIER="\w{1,}(?=\s)|\w{1,}(?=,)|\w{1,}(?=;)|\w{1,}(?=:)"
 TYPENAME="bool |any |string |number |void "
 # CONSTANT="'\w+'|(\s|=)\[0-9]+|\[0-9]+\.\[0-9]*"
-CONSTANT="'[\w ]*'|(?=!!')(\d+(\.\d+)?)"
+# TODO: How to ignore numbers at beginning of a string constant, like '55 comments'?
+CONSTANT="'.*?'|\`.*\`|(?<!')(?<!\w)(\d+(\.\d+)?)(?!')"
 
-RESERVED='(^@[A-Z]\w+$)|^static$|^const$|^from$|^let$|^private$|^protected$|^public$|^export$|^var$|^if$|^import$|^else$|^break$|^case$|^class$|^continue$|^default$|^do$|^for$|^new$|^return$|^switch$|^while$|^this$|^try$|^catch$|^throw$|^throws$|^finally$|^instanceof$|^interface$|^extends$|^implements$|^abstract$|true|false'
+RESERVED='(^@[A-Z]\w+$)|^as$|^static$|^const$|^from$|^let$|^private$|^protected$|^public$|^export$|^var$|^if$|^import$|^else$|^break$|^case$|^class$|^continue$|^default$|^do$|^for$|^new$|^return$|^switch$|^while$|^this$|^try$|^catch$|^throw$|^throws$|^finally$|^instanceof$|^interface$|^extends$|^implements$|^abstract$|true|false'
 
 PATTERN="$IDENTIFIER|$TYPENAME|$CONSTANT"
 
@@ -38,7 +39,7 @@ let corrN1=$corrN1+0
 echo -n "Total corrections to count: "
 echo "$corrN1 of $corrn1 unique operators"
 echo
-echo -n "n1 and N1 for $1: "
+echo -n "n2 and N2 for $1: "
 let totalN1=$resN1+$corrN1
 let totaln1=$resn1+$corrn1
 echo "$totaln1 : $totalN1"
