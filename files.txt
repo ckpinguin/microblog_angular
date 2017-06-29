@@ -23,7 +23,6 @@ src/app/modules/auth/login/login.guard.ts
 src/app/modules/auth/login/login.service.mock.ts
 src/app/modules/auth/login/login.service.spec.ts
 src/app/modules/auth/login/login.service.ts
-src/app/modules/auth/user/initialUsers.ts
 src/app/modules/auth/user/model-interfaces.ts
 src/app/modules/auth/user/user.service.mock.ts
 src/app/modules/auth/user/user.service.spec.ts
@@ -47,7 +46,6 @@ src/app/modules/blog/blog.store.ts
 src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html
 src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts
 src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts
-src/app/modules/blog/initialEntries.ts
 src/app/modules/blog/model-interfaces.ts
 src/app/modules/shared/dateFormat.pipe.ts
 src/app/modules/shared/navbar/navbar.component.html
