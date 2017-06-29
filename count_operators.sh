@@ -18,8 +18,14 @@ OPERATORS="$OPERATOR_ARITH|$OPERATOR_ASSIGN|$OPERATOR_COMP|$OPERATOR_TERN|$OPERA
 
 # stuff, that falls down with above regex (a pro surely could do all of this better)
 # we use perl-re with negative lookahead for this
-#CORRECTIONS="(?<!')(?<=\w)\.(?=\w)|(?<=\))\.|(?<=\s)\.(?!\.)|(?<!')(?<=\w):"
-CORRECTIONS="(?<!')(?<=\w)\.(?=\w)(?!')|(?<=\))\.|(?<=\s)\.(?!\.)"
+# It's really very hard to get the . operator right. 20% too high is estimated,
+# because . in './example.dotted' gets counted (1 time), because the point is
+# not directly after '
+CORRECTIONS="(?<!')(?<=\w)\.(?=\w)|(?<=\))\.|(?<=\s)\.(?!\.)|(?<!')(?<=\w):"
+#CORRECTIONS="(?<!')(?:(\w+))\.(?=\w)(?!')|(?<=\))\.|(?<=\s)\.(?!\.)"
+#CORRECTIONS="(?:(?<![\"'])\.|(?![\"']))|(?<=\))\.|(?<=\s)\.(?!\.)"
+#CORRECTIONS="(?:(?<!['])\w+)\.(?!['])|(?<=\))\.|(?<=\s)\.(?!\.)|(?<!')(?<=\w):"
+#CORRECTIONS="(?:(?<!['])(?:\w+))\.|(?<=\))\.|(?<=\s)\.(?!\.)"
 #echo $CORRECTIONS
 PATTERN="$SCSPEC|$TYPE_QUAL|$RESERVED|$OPERATORS"
 
