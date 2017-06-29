@@ -996,6 +996,7 @@ File: src/app/modules/blog/blog-item/blog-item.component.html
 -----------------------------
 with filtering:
 ===============
+      1 author
       1 br
       1 by
       1 click
@@ -1009,13 +1010,15 @@ with filtering:
       1 img
       6 item
       1 on
+      1 text
+      1 title
       1 Written
-Total operands (first run): 28 of 14 unique operands
+Total operands (first run): 31 of 17 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/blog/blog-item/blog-item.component.html: 14 : 28
+n2 and N2 for src/app/modules/blog/blog-item/blog-item.component.html: 17 : 31
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.spec.ts
@@ -2016,7 +2019,7 @@ with filtering:
       1 Component
       7 control
       2 controlPath
-      1 displayName
+      2 displayName
       2 error
       4 errors
       3 form
@@ -2035,6 +2038,7 @@ with filtering:
       1 null
       1 'path'
       1 'required'
+      1 requiredLength
       1 selector
       1 ShowErrorComponent
       1 './show-error.component.html'
@@ -2046,12 +2050,12 @@ with filtering:
       1 `${this.displayName} ist ein Pflichtfeld`
       1 touched
       1 Zeichen
-Total operands (first run): 64 of 38 unique operands
+Total operands (first run): 66 of 39 unique operands
 
 2nd run / corrections: 
 Total corrections to count: 0 of 0 unique operators
 
-n2 and N2 for src/app/modules/shared/show-error/show-error.component.ts: 38 : 64
+n2 and N2 for src/app/modules/shared/show-error/show-error.component.ts: 39 : 66
 
 
 File: src/debug.ts
