@@ -24,8 +24,10 @@ export class BlogStore {
     }
 
     dispatch(action) {
-        this.entries = this.reduce(this.entries, action); // only place where the store is mutated
-        this.entries$.next(this.entries); // propagate the new state to all listeners
+        // only place where the store is mutated
+        this.entries = this.reduce(this.entries, action);
+        // propagate the new state to all listeners
+        this.entries$.next(this.entries);
     }
 
     reduce(entries: Array<BlogEntry>, action) {

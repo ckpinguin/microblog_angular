@@ -77,7 +77,8 @@ describe('EditBlogEntryFormComponent', () => {
 
     it('should validate the title correctly', ( ) => {
         fixture.whenStable().then(() => {
-            const form = component.form.form; // form is from the @ViewChild dir.
+            // form is from the @ViewChild dir.
+            const form = component.form.form;
             const titleControl = form.get('title');
             expect(titleControl.errors['required']).toBeTruthy();
             titleControl.setValue('A vanilla title');

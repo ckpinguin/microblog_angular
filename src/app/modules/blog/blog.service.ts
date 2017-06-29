@@ -28,8 +28,10 @@ export class BlogService {
     }
 
     constructor(private blogStore: BlogStore) {
-        this.entries$ = blogStore.entries$; // pass-through as Observable
-        this.findEntries(); // first call loads initialEntries (mock data)
+        // pass-through as Observable
+        this.entries$ = blogStore.entries$;
+        // first call loads initialEntries (mock data)
+        this.findEntries();
     }
 
     // This is the public API:
@@ -44,7 +46,8 @@ export class BlogService {
 
     // TODO: use search params to filter data, at the moment this just return all data
     public findEntries(): Array<BlogEntry> {
-        const entries = initialEntries; // load mock data
+        // load mock data
+        const entries = initialEntries;
         this.blogStore.dispatch({ type: LOAD, data: entries });
         return this.blogStore.entries$.getValue();
     }

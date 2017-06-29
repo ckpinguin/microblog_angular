@@ -27,9 +27,11 @@ import { appRouting, routingComponents, routingProviders } from './app.routing';
         BrowserModule,
         BrowserAnimationsModule,
         appRouting,
-        SharedModule.forRoot() // as singleton here
+        // as singleton here
+        SharedModule.forRoot()
     ],
-    providers: [ // Global i.e. Singleton services
+    // Global aka Singleton services
+    providers: [
         routingProviders,
         LoginService,
         UserService,

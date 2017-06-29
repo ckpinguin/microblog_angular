@@ -23,7 +23,8 @@ export class MockLoginService {
                 console.log('password correct, logging in');
                 this.setCurrentUser(user.id);
                 this.loggedIn = true;
-                result = true; // this is ignored?
+                // this is ignored?
+                result = true;
             } else {
                 console.log('password wrong!');
                 result = false;

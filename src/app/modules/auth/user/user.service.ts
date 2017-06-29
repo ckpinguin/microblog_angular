@@ -14,8 +14,10 @@ export class UserService {
     public users$: Observable<Array<User>>;
  
     constructor(private userStore: UserStore) {
-        this.users$ = userStore.users$; // pass-through as Observable
-        this.findUsers(); // first call loads initialUsers (mock data)
+        // pass-through as Observable
+        this.users$ = userStore.users$;
+        // first call loads initialUsers (mock data)
+        this.findUsers();
     }
 
     // This is the public API:
@@ -30,7 +32,8 @@ export class UserService {
 
     // TODO: use search params to filter data, at the moment this just return all data
     private findUsers(): Array<User> {
-        const users = initialUsers; // load mock data
+        // load mock data
+        const users = initialUsers;
         this.userStore.dispatch({ type: LOAD, data: users });
         return this.userStore.users$.getValue();
     }

@@ -25,7 +25,8 @@ export class LoginService {
                 if (debug) console.log('password correct, logging in');
                 this.setCurrentUser(user.id);
                 this.loggedIn = true;
-                result = true; // this is ignored?
+                // this is ignored?
+                result = true;
             } else {
                 if (debug) console.log('password wrong!');
                 result = false;

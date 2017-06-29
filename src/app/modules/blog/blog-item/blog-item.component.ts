@@ -26,9 +26,12 @@ export class BlogItemComponent implements OnInit, OnDestroy {
             .subscribe(params => {
                 const id = (params['id'] || '');
                 if (debug) console.log('received route param id: ', id);
-                this.item = ('undefined' === typeof this.item) // if no item was inputted
-                     ? this.item = this.blogService.getEntry(id) // what is in the db
-                     : this.item; // what we got from input
+                // if no item was inputted
+                this.item = ('undefined' === typeof this.item)
+                    // what is in the db
+                    ? this.item = this.blogService.getEntry(id)
+                    // what we got from input
+                    : this.item;
             });
     }
 

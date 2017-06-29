@@ -7,8 +7,10 @@ export interface BlogEntry {
     text?: string;
     image?: string;
     date?: string;
-    user?: string; // user id
-    author?: string; // author name (should be settable by the logged in user)
+    // user id
+    user?: string;
+    // author name (should be settable by the logged in user)
+    author?: string;
     tags?: Tag[];
 }
 

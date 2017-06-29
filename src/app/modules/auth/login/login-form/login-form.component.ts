@@ -13,7 +13,8 @@ import { MdSnackBar } from '@angular/material';
     styleUrls: [ './login-form.component.styl' ],
 })
 export class LoginFormComponent {
-    @ViewChild(NgForm) form: NgForm; // Needed for unit tests
+    // Needed for unit tests
+    @ViewChild(NgForm) form: NgForm;
 
     constructor(
         private navigationService: NavigationService,
