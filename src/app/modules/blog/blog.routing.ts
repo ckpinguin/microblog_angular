@@ -9,7 +9,8 @@ import { LoginGuard } from '../auth/login/login.guard';
 export const blogRoutes: Routes = [ {
     path: '', component: BlogPageComponent, data: { title: 'Blog' },
     children: [
-        { path: '', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is working
+        // here, aux-outlet is working
+        { path: '', component: BlogListComponent, outlet: 'list-outlet' },
         // { path: 'items', component: BlogListComponent, outlet: 'list-outlet' }, // here, aux-outlet is NOT working (see bugs in github)
         { path: 'new', component: EditBlogEntryFormComponent, canActivate: [ LoginGuard ], data: { title: 'New entry' } },
         { path: ':id', // component: BlogItemComponent, // pathMatch: 'full',

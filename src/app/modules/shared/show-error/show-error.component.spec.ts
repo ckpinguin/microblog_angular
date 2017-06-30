@@ -9,7 +9,8 @@ describe('ShowErrorComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            providers: [NgForm], // injected
+            // injected
+            providers: [NgForm],
             declarations: [ShowErrorComponent]
         }).compileComponents();
     }));

@@ -24,8 +24,10 @@ export class UserStore {
     }
 
     dispatch(action) {
-        this.users = this.reduce(this.users, action); // only place where the store is mutated
-        this.users$.next(this.users); // propagate the new state to all listeners
+        // only place where the store is mutated
+        this.users = this.reduce(this.users, action);
+        // propagate the new state to all listeners
+        this.users$.next(this.users);
     }
 
     reduce(users: Array<User>, action) {

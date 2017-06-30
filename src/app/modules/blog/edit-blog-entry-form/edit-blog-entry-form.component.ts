@@ -20,8 +20,10 @@ import { LoginService } from '../../auth/login/login.service';
     styleUrls: [ './edit-blog-entry-form.component.styl' ]
 })
 export class EditBlogEntryFormComponent implements OnInit {
-    @ViewChild(NgForm) form: NgForm; // Needed for unit tests
-    @Input() inputEntry: BlogEntry; // optional, can only work with routing parameters (see ngOnInit)
+    // Needed for unit tests
+    @ViewChild(NgForm) form: NgForm;
+    // optional, can only work with routing parameters (see ngOnInit)
+    @Input() inputEntry: BlogEntry;
 
     private callPath: string;
     private _entry: BlogEntry;
@@ -84,7 +86,8 @@ export class EditBlogEntryFormComponent implements OnInit {
             });
         }
         this.show = false;
-        this.router.navigate([ '..' ]); // Bug?: Goes back to /
+        // BUG?: Goes back to /
+        this.router.navigate([ '..' ]);
         return false;
     }
 
@@ -92,7 +95,8 @@ export class EditBlogEntryFormComponent implements OnInit {
     // cancelling (still keeping the old values!)
     onCancel() {
         this.show = false;
-        this.router.navigate([ '..' ]); // Bug: Goes back to /
+        // BUG: Goes back to /
+        this.router.navigate([ '..' ]);
         return false;
     }
 
