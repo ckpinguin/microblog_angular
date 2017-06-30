@@ -3,7 +3,7 @@
 # Optimized for angular/typescript!
 SCSPEC='static'
 TYPE_QUAL='const|let|private|protected|public'
-RESERVED='(@[A-Z]\w+)| if |import |else|break|case|class |continue|default:|do |for |new\(|return|switch |while |this|try|catch|throw|throws|finally|instanceof |interface |extends |implements |abstract |true|false'
+RESERVED='(@[A-Z]\w+)| if |import |else|break|case|class |continue|default:|do |for |new\(|return|switch |while |this|try|catch|throw|throws|finally|instanceof |interface |extends |implements |abstract |true|false|\*ngFor|\*ngIf'
 
 # Most arithmetic operators should have consequently whitespace before and after to be found consistently!
 OPERATOR_ARITH="\s\+\s|\+\+|\s-\s|--|\s\*\s|\s/\s|%"

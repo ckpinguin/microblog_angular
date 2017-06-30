@@ -1,546 +1,1016 @@
 File: src/app/app.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/app.component.html: 0 : 0
 
 
 File: src/app/app.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/app.component.spec.ts: 0 : 0
 
 
 File: src/app/app.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       1 if 
       1 while 
-Total nodes (first run): 
+counted: 2 n=2 e=4
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/app.component.ts: 2 : 4
 
 
 File: src/app/app.module.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/app.module.ts: 0 : 0
 
 
 File: src/app/app.routing.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/app.routing.ts: 0 : 0
 
 
 File: src/app/app.tokens.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/app.tokens.ts: 0 : 0
 
 
 File: src/app/modules/admin/admin-page/admin-page.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/admin/admin-page/admin-page.component.html: 0 : 0
 
 
 File: src/app/modules/admin/admin-page/admin-page.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/admin/admin-page/admin-page.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/admin/admin-page/admin-page.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/admin/admin-page/admin-page.component.ts: 0 : 0
 
 
 File: src/app/modules/admin/admin.module.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/admin/admin.module.ts: 0 : 0
 
 
 File: src/app/modules/admin/admin.routing.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/admin/admin.routing.ts: 0 : 0
 
 
 File: src/app/modules/auth/auth-component/auth.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/auth-component/auth.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/auth/auth-component/auth.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/auth-component/auth.component.ts: 0 : 0
 
 
 File: src/app/modules/auth/auth.module.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/auth.module.ts: 0 : 0
 
 
 File: src/app/modules/auth/auth.routing.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/auth.routing.ts: 0 : 0
 
 
 File: src/app/modules/auth/login/login-form/login-form.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login-form/login-form.component.html: 0 : 0
 
 
 File: src/app/modules/auth/login/login-form/login-form.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login-form/login-form.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/auth/login/login-form/login-form.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       1 if 
-Total nodes (first run): 
+counted: 1 n=1 e=2
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login-form/login-form.component.ts: 1 : 2
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login-page/login-page.component.html: 0 : 0
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login-page/login-page.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/auth/login/login-page/login-page.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       4 if 
-Total nodes (first run): 
+counted: 4 n=4 e=8
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login-page/login-page.component.ts: 4 : 8
 
 
 File: src/app/modules/auth/login/login.guard.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       1 if 
-Total nodes (first run): 
+counted: 1 n=1 e=2
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login.guard.ts: 1 : 2
 
 
 File: src/app/modules/auth/login/login.service.mock.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       1 if 
-Total nodes (first run): 
+counted: 1 n=1 e=2
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login.service.mock.ts: 1 : 2
 
 
 File: src/app/modules/auth/login/login.service.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login.service.spec.ts: 0 : 0
 
 
 File: src/app/modules/auth/login/login.service.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       3 if 
-Total nodes (first run): 
+counted: 3 n=3 e=6
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/login/login.service.ts: 3 : 6
 
 
 File: src/app/modules/auth/user/model-interfaces.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/user/model-interfaces.ts: 0 : 0
 
 
 File: src/app/modules/auth/user/user.service.mock.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/user/user.service.mock.ts: 0 : 0
 
 
 File: src/app/modules/auth/user/user.service.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/user/user.service.spec.ts: 0 : 0
 
 
 File: src/app/modules/auth/user/user.service.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
+      1  ? EDIT :
       1 if 
-Total nodes (first run): 
+counted: 1 n=1 e=2
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/auth/user/user.service.ts: 1 : 2
 
 
 File: src/app/modules/auth/user/user.store.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       3 if 
-Total nodes (first run): 
-n and e for src/app/modules/auth/user/user.store.ts: 3 : 6
+counted: 3 n=3 e=6
+NODE1_EDGE1:
+===============
+      1 switch 
+counted: 1 n=1 e=1
+EDGE1:
+===============
+      4 case 
+counted: 4 e=4
+
+n and e for src/app/modules/auth/user/user.store.ts: 4 : 11
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-item/blog-item.component.html: 0 : 0
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-item/blog-item.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/blog/blog-item/blog-item.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       1 if 
-Total nodes (first run): 
+counted: 1 n=1 e=2
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-item/blog-item.component.ts: 1 : 2
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-list/blog-list.component.html: 0 : 0
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-list/blog-list.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-list/blog-list.component.ts: 0 : 0
 
 
 File: src/app/modules/blog/blog-page/blog-page.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-page/blog-page.component.html: 0 : 0
 
 
 File: src/app/modules/blog/blog-page/blog-page.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-page/blog-page.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/blog/blog-page/blog-page.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       3 if 
-Total nodes (first run): 
+counted: 3 n=3 e=6
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog-page/blog-page.component.ts: 3 : 6
 
 
 File: src/app/modules/blog/blog.module.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog.module.ts: 0 : 0
 
 
 File: src/app/modules/blog/blog.routing.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog.routing.ts: 0 : 0
 
 
 File: src/app/modules/blog/blog.service.mock.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog.service.mock.ts: 0 : 0
 
 
 File: src/app/modules/blog/blog.service.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog.service.spec.ts: 0 : 0
 
 
 File: src/app/modules/blog/blog.service.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
+      1  ? EDIT :
       1 if 
-Total nodes (first run): 
+counted: 1 n=1 e=2
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/blog.service.ts: 1 : 2
 
 
 File: src/app/modules/blog/blog.store.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       3 if 
-Total nodes (first run): 
-n and e for src/app/modules/blog/blog.store.ts: 3 : 6
+counted: 3 n=3 e=6
+NODE1_EDGE1:
+===============
+      1 switch 
+counted: 1 n=1 e=1
+EDGE1:
+===============
+      4 case 
+counted: 4 e=4
+
+n and e for src/app/modules/blog/blog.store.ts: 4 : 11
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.html: 0 : 0
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-      1 for 
       5 if 
-Total nodes (first run): 
-n and e for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 6 : 12
+      1  ? this._entry.author :
+counted: 5 n=5 e=10
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
+n and e for src/app/modules/blog/edit-blog-entry-form/edit-blog-entry-form.component.ts: 5 : 10
 
 
 File: src/app/modules/blog/model-interfaces.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/blog/model-interfaces.ts: 0 : 0
 
 
 File: src/app/modules/shared/dateFormat.pipe.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/shared/dateFormat.pipe.ts: 0 : 0
 
 
 File: src/app/modules/shared/navbar/navbar.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/shared/navbar/navbar.component.html: 0 : 0
 
 
 File: src/app/modules/shared/navbar/navbar.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/shared/navbar/navbar.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/shared/navbar/navbar.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/shared/navbar/navbar.component.ts: 0 : 0
 
 
 File: src/app/modules/shared/navigation.service.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/shared/navigation.service.ts: 0 : 0
 
 
 File: src/app/modules/shared/shared.module.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/shared/shared.module.ts: 0 : 0
 
 
 File: src/app/modules/shared/show-error/show-error.component.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/shared/show-error/show-error.component.html: 0 : 0
 
 
 File: src/app/modules/shared/show-error/show-error.component.spec.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/app/modules/shared/show-error/show-error.component.spec.ts: 0 : 0
 
 
 File: src/app/modules/shared/show-error/show-error.component.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       1 for 
       2 if 
-Total nodes (first run): 
-n and e for src/app/modules/shared/show-error/show-error.component.ts: 3 : 6
+counted: 3 n=3 e=6
+NODE1_EDGE1:
+===============
+      1 switch 
+counted: 1 n=1 e=1
+EDGE1:
+===============
+      2 case 
+counted: 2 e=2
+
+n and e for src/app/modules/shared/show-error/show-error.component.ts: 4 : 9
 
 
 File: src/debug.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/debug.ts: 0 : 0
 
 
 File: src/environments/environment.prod.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/environments/environment.prod.ts: 0 : 0
 
 
 File: src/environments/environment.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/environments/environment.ts: 0 : 0
 
 
 File: src/index.html
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/index.html: 0 : 0
 
 
 File: src/main.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
       1 if 
-Total nodes (first run): 
+counted: 1 n=1 e=2
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/main.ts: 1 : 2
 
 
 File: src/polyfills.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/polyfills.ts: 0 : 0
 
 
 File: src/test.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/test.ts: 0 : 0
 
 
 File: src/typings.d.ts
 -----------------------------
-with filtering:
+NODE1_EDGE2:
 ===============
-Total nodes (first run): 
+counted: 0 n=0 e=0
+NODE1_EDGE1:
+===============
+counted: 0 n=0 e=0
+EDGE1:
+===============
+counted: 0 e=0
+
 n and e for src/typings.d.ts: 0 : 0
 
 
