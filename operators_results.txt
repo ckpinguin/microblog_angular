@@ -959,6 +959,7 @@ with filtering:
       1 ===
       1 =>
       1 ||
+      1                     :
       1  + 
       7 ,
      11 ;
@@ -977,7 +978,7 @@ with filtering:
      11 this
       3 try
       1 typeof 
-Total operators (first run): 77 of 22 unique operators
+Total operators (first run): 78 of 23 unique operators
 
 2nd run / corrections: 
      11 :
@@ -990,7 +991,7 @@ Total corrections to count: 34 of 2 unique operators
       6 import 
 Import stuff to count: 16 of 1 import stuff
 
-n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.ts: 25 : 127
+n1 and N1 for src/app/modules/blog/blog-item/blog-item.component.ts: 26 : 128
 
 
 File: src/app/modules/blog/blog-list/blog-list.component.html
